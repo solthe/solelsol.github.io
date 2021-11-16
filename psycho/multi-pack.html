@@ -254,154 +254,170 @@
 
 
             a {
-    cursor: pointer;
-  }
-  a:hover {
-    text-decoration: none;
-  }
+                cursor: pointer;
+            }
 
-  .section {
-    position: relative;
-    width: 100%;
-    display: block;
-  }
-  .full-height {
-    min-height: 100vh;
-  }
-  .over-hide {
-    overflow: hidden;
-  }
-  .padding-tb {
-    padding: 100px 0;
-  } 
-  [type="radio"]:checked,
-  [type="radio"]:not(:checked) {
-    opacity: 0;
-    position: fixed;
-    width: 0;
-  }
-  .checkbox:checked + label,
-  .checkbox:not(:checked) + label {
-    display: inline-block;
-    background-color: rgb(255, 255, 255);
-    opacity: 0.8;
-    padding: 10px 10px;
-    font-family: sans-serif, Arial;
-    font-size: 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin: 15px;
-    left: 45vw;
-    bottom: 35vh;
-    position: relative;
-    filter: blur(1.5px);
-  }
+            a:hover {
+                text-decoration: none;
+            }
 
-  .checkbox:checked + label {
-    transform: scale(1.3);
-    background-color: rgb(217, 151, 45);
-  }
+            .section {
+                position: relative;
+                width: 100%;
+                display: block;
+            }
 
-  .slider-height-padding {
-    padding-top: 420px;
-  }
-  ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 500px;
-    z-index: -1;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  ul li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+            .full-height {
+                min-height: 100vh;
+            }
 
-    display: block;
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: 500px;
-    border: none;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/images/Asset\ 10.png");
-    border-radius: 50%;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 2.7;
-    color: #ffffff;
-    writing-mode: vertical-rl;
-    opacity: 0;
-    pointer-events: none;
-    box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  ul li span {
-    mix-blend-mode: difference;
-  }
-  ul li:nth-child(2) {
-    background-image: url("/images/Asset\ 11.png");
-  }
-  ul li:nth-child(3) {
-    background-image: url("/images/Asset\ 8.png");
-  }
-  ul li:nth-child(4) {
-    background-image: url("/images/Asset\ 7.png");
-  }
+            .over-hide {
+                overflow: hidden;
+            }
 
-  .checkbox.frst:checked ~ ul li:nth-child(1) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-  .checkbox.scnd:checked ~ ul li:nth-child(2) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-  .checkbox.thrd:checked ~ ul li:nth-child(3) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-  .checkbox.foth:checked ~ ul li:nth-child(4) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
+            .padding-tb {
+                padding: 100px 0;
+            }
 
-  @media (max-width: 767px) {
-    .slider-height-padding {
-      padding-top: 340px;
-    }
-    ul li {
-      height: 300px;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-  }
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+                opacity: 0;
+                position: fixed;
+                width: 0;
+            }
 
-  @media (max-width: 575px) {
-    .slider-height-padding {
-      padding-top: 240px;
-    }
+            .checkbox:checked+label,
+            .checkbox:not(:checked)+label {
+                display: inline-block;
+                background-color: rgb(255, 255, 255);
+                opacity: 0.8;
+                padding: 10px 10px;
+                font-family: sans-serif, Arial;
+                font-size: 16px;
+                border-radius: 50%;
+                cursor: pointer;
+                margin: 15px;
+                left: 45vw;
+                bottom: 35vh;
+                position: relative;
+                filter: blur(1.5px);
+            }
 
-    ul li {
-      height: 200px;
-    }
-  }
-}
+            .checkbox:checked+label {
+                transform: scale(1.3);
+                background-color: rgb(217, 151, 45);
+            }
+
+            .slider-height-padding {
+                padding-top: 420px;
+            }
+
+            ul {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 500px;
+                z-index: -1;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            ul li {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                display: block;
+                z-index: 100;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                height: 500px;
+                border: none;
+                background-size: cover;
+                background-position: center;
+                background-image: url("/images/Asset\ 10.png");
+                border-radius: 50%;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+                font-weight: 900;
+                font-size: 16px;
+                letter-spacing: 2px;
+                line-height: 2.7;
+                color: #ffffff;
+                writing-mode: vertical-rl;
+                opacity: 0;
+                pointer-events: none;
+                box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+
+            ul li span {
+                mix-blend-mode: difference;
+            }
+
+            ul li:nth-child(2) {
+                background-image: url("/images/Asset\ 11.png");
+            }
+
+            ul li:nth-child(3) {
+                background-image: url("/images/Asset\ 8.png");
+            }
+
+            ul li:nth-child(4) {
+                background-image: url("/images/Asset\ 7.png");
+            }
+
+            .checkbox.frst:checked~ul li:nth-child(1) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.scnd:checked~ul li:nth-child(2) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.thrd:checked~ul li:nth-child(3) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.foth:checked~ul li:nth-child(4) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            @media (max-width: 767px) {
+                .slider-height-padding {
+                    padding-top: 340px;
+                }
+
+                ul li {
+                    height: 300px;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            @media (max-width: 575px) {
+                .slider-height-padding {
+                    padding-top: 240px;
+                }
+
+                ul li {
+                    height: 200px;
+                }
+            }
+        }
 
         .in-brief {
             text-align: center;
@@ -511,12 +527,65 @@
         }
 
 
+        /* Center tables for demo */
+        table {
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+        }
+
+        /* Default Table Style */
+        table {
+            color: #ccc;
+
+            border: 1px solid #ccc;
+
+            font-size: 12pt;
+            text-align: center;
+            width: 60vw;
+        }
+
+        table thead th,
+        table tfoot th {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0.5em;
+            text-align: center;
+            color: #ccc;
+            font-weight: 500;
+            width: 10vw;
+        }
+
+        table caption {
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        table th,
+        table td {
+            padding: 0.5em;
+            border: 1px solid lightgrey;
+            text-align: center;
+            line-height: 20px;
+            color: #777;
+        }
+
+        table:hover {
+            background: #222;
+            transform: 0.5 ease-in-out;
+        }
+
+        table tfoot th:hover {
+            background: #222;
+        }
+
 
         .column {
             float: left;
-            width: 400px; 
-            height: 400px;
-            margin: 5%;
+            width: 30.33%;
+            height: 600px;
+            padding: 5%;
 
         }
 
@@ -527,8 +596,18 @@
             clear: both;
         }
 
+
         caption {
             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .grdding {
+            columns: 2;
+            column-gap: 10px;
+            grid-auto-rows: auto;
+
+            margin: 0 5rem 5rem 5rem;
+            padding: 10px;
         }
     </style>
 
@@ -541,20 +620,19 @@
 
 <svg class="nav__link" onclick="location.href='/index.html#brain'"
     style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:white;filter: drop-shadow(0px 3px 6px #76ff03);z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
-    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;"
-                    xml:space="preserve">
-                    <style type="text/css">
-                        .st0 {
-                            fill-rule: evenodd;
-                            clip-rule: evenodd;
-                        }
-                    </style>
-                    <g>
-                        <path
-                            d="M94.4,41.6c0-4.4-2.6-8.4-6.6-10.2c-1-6.2-6.1-11-12.3-11.5c-1.7-3.5-5.3-5.8-9.3-5.8c0,0,0,0,0,0c0,0,0,0,0,0   c-0.5,0-1,0.1-1.5,0.1c0,0-0.1,0-0.1,0c-0.5,0.1-1.1,0.2-1.6,0.4C61,13,58.5,12,55.9,12c-2.1,0-4.2,0.6-5.9,1.8   c-1.8-0.8-3.8-1.2-5.9-1.2c-4.1,0-8,1.7-10.7,4.8c-0.9-0.2-1.7-0.3-2.6-0.3c-3.6,0-6.9,1.8-8.8,4.9c-0.1,0-0.3,0-0.4,0   c-0.2,0-0.4,0-0.5,0c-0.2,0-0.4,0.1-0.6,0.1c-0.2,0-0.3,0.1-0.5,0.1c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0-0.3,0.1-0.5,0.1   c-0.2,0.1-0.4,0.1-0.5,0.2c-0.2,0.1-0.4,0.1-0.5,0.2c-0.1,0.1-0.3,0.1-0.4,0.2c-0.2,0.1-0.4,0.2-0.6,0.3c0,0,0,0,0,0   c-3.5,1.9-5.9,5.6-6.2,9.8c0,0,0,0.1,0,0.1c-3.2,3-5,7.3-5,11.7c0,8.9,7.3,16.2,16.2,16.2c0.9,0,1.9-0.1,2.8-0.2   c1.2,0.4,2.5,0.6,3.8,0.7c2.6,6.4,7.8,9.8,14.9,9.8c6.8,0,15,6.9,15,15V88L69.8,88l-1.3-9.3c7.9,0.8,15.4-4.3,17.4-12.2   c0.3-1.4,0.5-2.8,0.5-4.1c4.7-1.7,8-6.2,8-11.3c0-1.7-0.3-3.3-1-4.8C94,44.8,94.4,43.2,94.4,41.6z M90.1,47c0.7,1.3,1,2.6,1,4.1   c0,3.4-2,6.5-5.1,7.9c-1.3-5.9-5.9-10.7-11.8-12.2c-0.9-0.2-1.8,0.3-2,1.2c-0.2,0.9,0.3,1.8,1.2,2c5.3,1.3,9.2,5.8,9.7,11.2   c0.2,1.5,0,3-0.3,4.5C81,72.7,74,76.9,67,75.1l-2.3-0.6l1.4,10.2l-4.6,0c-1-9.4-10.4-16.7-18.2-16.7c-5.4,0-9.2-2.2-11.4-6.6   c0-0.1,0-0.2-0.1-0.3c-1.7-3.5-0.2-7.8,3.4-9.5c0.8-0.4,1.2-1.4,0.8-2.2c-0.4-0.8-1.4-1.2-2.2-0.8c-3.8,1.8-5.9,5.6-5.9,9.5   c-0.9-0.1-1.8-0.3-2.6-0.6l-0.4-0.2l-0.4,0.1c-0.8,0.2-1.7,0.3-2.6,0.3c-7.1,0-13-5.8-13-13c0-2.6,0.8-5.2,2.3-7.3   c1.2,3.8,4.4,6.8,8.3,7.8c-0.3,0.5-0.5,1-0.6,1.5c-0.4,1.8-0.2,3.6,0.8,5.2c0.3,0.5,0.8,0.8,1.4,0.8c0.3,0,0.6-0.1,0.8-0.2   c0.8-0.5,1-1.5,0.6-2.2c-0.5-0.8-0.6-1.8-0.4-2.7c0.2-0.9,0.8-1.7,1.6-2.2c0.8-0.5,1-1.5,0.6-2.2c-0.4-0.6-1.1-0.9-1.8-0.7   c-4.7-0.1-8.6-4-8.6-8.7c0-4.8,3.9-8.7,8.7-8.7c0.1,0,0.1,0,0.2,0l1.3,0.1l0.5-1c1.2-2.5,3.7-4,6.4-4c0.9,0,1.7,0.2,2.6,0.5   l1.1,0.4l0.7-1c2.1-2.8,5.4-4.4,8.9-4.4c1.8,0,3.7,0.5,5.3,1.3l1,0.5l0.8-0.7c1.3-1.1,2.9-1.7,4.6-1.7c1.4,0,2.8,0.4,3.9,1.2   c-2.4,1.9-4,4.8-4,8.1c0,0.9,0.7,1.6,1.6,1.6c0.9,0,1.6-0.7,1.6-1.6c0-2.7,1.5-5,3.6-6.2l0.5-0.2c1-0.4,2-0.7,3-0.7   c3,0,5.6,1.9,6.7,4.7l0.4,1.1l1.1,0c5.4,0,9.9,4.3,10.3,9.6l0.1,1.1l1,0.3c3.2,1.1,5.4,4.1,5.4,7.5c0,1.3-0.3,2.7-1,3.8l-0.4,0.8   L90.1,47z M55.7,55.3c0-3-1.5-5.8-4-7.5c0,0,0,0,0,0c-4.3-2-7.3-6.1-7.9-10.8c-0.1-0.7,0.4-1.4,1.1-1.5c0.7-0.1,1.4,0.4,1.5,1.1   c0.6,4.3,3.5,7.9,7.6,9.3c2.9,1,6,0.8,8.8-0.5c2.8-1.3,4.8-3.7,5.8-6.6c0.2-0.7,1-1,1.7-0.8c0.7,0.2,1,1,0.8,1.7   c-1.2,3.6-3.8,6.4-7.2,8c-1.9,0.9-4,1.4-6.1,1.4c-0.4,0-0.8,0-1.3-0.1c1.1,1.8,1.8,3.9,1.8,6.2c0,0.7-0.6,1.3-1.3,1.3   S55.7,56,55.7,55.3z M80.4,40.3c0,0.7-0.6,1.3-1.3,1.3s-1.3-0.6-1.3-1.3c0-5.9-4.8-10.7-10.7-10.7c-0.7,0-1.3-0.6-1.3-1.3   s0.6-1.3,1.3-1.3C74.4,27,80.4,33,80.4,40.3z M46,26.9c0-0.7,0.6-1.3,1.3-1.3c5.7,0,10.4,4.6,10.4,10.4c0,0.7-0.6,1.3-1.3,1.3   s-1.3-0.6-1.3-1.3c0-4.3-3.5-7.8-7.8-7.8C46.6,28.2,46,27.6,46,26.9z M42.9,56.6c-0.2,0.4-0.7,0.6-1.1,0.6c-0.2,0-0.5-0.1-0.7-0.2   c-0.6-0.4-0.8-1.2-0.4-1.8c2.2-3.5,1.1-8.1-2.4-10.3c-0.6-0.4-0.8-1.2-0.4-1.8c0.4-0.6,1.2-0.8,1.8-0.4   C44.4,45.7,45.8,51.9,42.9,56.6z M41.7,33.6c-2,0-3.8-0.9-5.2-2.2c-2.3,3.3-6.1,5.1-9.9,5.1c-2,0-4.1-0.5-6-1.6   c-0.6-0.4-0.8-1.2-0.5-1.8c0.4-0.6,1.2-0.8,1.8-0.5c4.5,2.6,10.3,1.1,13-3.5c-0.5-1.1-0.8-2.3-0.8-3.5c0-0.7,0.6-1.3,1.3-1.3   c0.7,0,1.3,0.6,1.3,1.3c-0.1,2.8,2.2,5.2,5,5.3c0.7,0,1.3,0.6,1.3,1.3C43,33.1,42.4,33.6,41.7,33.6C41.7,33.6,41.7,33.6,41.7,33.6z    M72.2,59c0.6,0.4,0.7,1.2,0.3,1.8c-2.5,3.6-6.5,5.6-10.6,5.6c-2.5,0-5-0.7-7.2-2.2c-0.6-0.4-0.7-1.2-0.3-1.8   c0.4-0.6,1.2-0.7,1.8-0.3c2.3,1.5,5,2.1,7.7,1.6c2.7-0.5,5-2,6.6-4.3C70.8,58.8,71.6,58.6,72.2,59z" />
-                    </g>
-                </svg>
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+    viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+    <style type="text/css">
+        .st0 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+        }
+    </style>
+    <g>
+        <path
+            d="M94.4,41.6c0-4.4-2.6-8.4-6.6-10.2c-1-6.2-6.1-11-12.3-11.5c-1.7-3.5-5.3-5.8-9.3-5.8c0,0,0,0,0,0c0,0,0,0,0,0   c-0.5,0-1,0.1-1.5,0.1c0,0-0.1,0-0.1,0c-0.5,0.1-1.1,0.2-1.6,0.4C61,13,58.5,12,55.9,12c-2.1,0-4.2,0.6-5.9,1.8   c-1.8-0.8-3.8-1.2-5.9-1.2c-4.1,0-8,1.7-10.7,4.8c-0.9-0.2-1.7-0.3-2.6-0.3c-3.6,0-6.9,1.8-8.8,4.9c-0.1,0-0.3,0-0.4,0   c-0.2,0-0.4,0-0.5,0c-0.2,0-0.4,0.1-0.6,0.1c-0.2,0-0.3,0.1-0.5,0.1c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0-0.3,0.1-0.5,0.1   c-0.2,0.1-0.4,0.1-0.5,0.2c-0.2,0.1-0.4,0.1-0.5,0.2c-0.1,0.1-0.3,0.1-0.4,0.2c-0.2,0.1-0.4,0.2-0.6,0.3c0,0,0,0,0,0   c-3.5,1.9-5.9,5.6-6.2,9.8c0,0,0,0.1,0,0.1c-3.2,3-5,7.3-5,11.7c0,8.9,7.3,16.2,16.2,16.2c0.9,0,1.9-0.1,2.8-0.2   c1.2,0.4,2.5,0.6,3.8,0.7c2.6,6.4,7.8,9.8,14.9,9.8c6.8,0,15,6.9,15,15V88L69.8,88l-1.3-9.3c7.9,0.8,15.4-4.3,17.4-12.2   c0.3-1.4,0.5-2.8,0.5-4.1c4.7-1.7,8-6.2,8-11.3c0-1.7-0.3-3.3-1-4.8C94,44.8,94.4,43.2,94.4,41.6z M90.1,47c0.7,1.3,1,2.6,1,4.1   c0,3.4-2,6.5-5.1,7.9c-1.3-5.9-5.9-10.7-11.8-12.2c-0.9-0.2-1.8,0.3-2,1.2c-0.2,0.9,0.3,1.8,1.2,2c5.3,1.3,9.2,5.8,9.7,11.2   c0.2,1.5,0,3-0.3,4.5C81,72.7,74,76.9,67,75.1l-2.3-0.6l1.4,10.2l-4.6,0c-1-9.4-10.4-16.7-18.2-16.7c-5.4,0-9.2-2.2-11.4-6.6   c0-0.1,0-0.2-0.1-0.3c-1.7-3.5-0.2-7.8,3.4-9.5c0.8-0.4,1.2-1.4,0.8-2.2c-0.4-0.8-1.4-1.2-2.2-0.8c-3.8,1.8-5.9,5.6-5.9,9.5   c-0.9-0.1-1.8-0.3-2.6-0.6l-0.4-0.2l-0.4,0.1c-0.8,0.2-1.7,0.3-2.6,0.3c-7.1,0-13-5.8-13-13c0-2.6,0.8-5.2,2.3-7.3   c1.2,3.8,4.4,6.8,8.3,7.8c-0.3,0.5-0.5,1-0.6,1.5c-0.4,1.8-0.2,3.6,0.8,5.2c0.3,0.5,0.8,0.8,1.4,0.8c0.3,0,0.6-0.1,0.8-0.2   c0.8-0.5,1-1.5,0.6-2.2c-0.5-0.8-0.6-1.8-0.4-2.7c0.2-0.9,0.8-1.7,1.6-2.2c0.8-0.5,1-1.5,0.6-2.2c-0.4-0.6-1.1-0.9-1.8-0.7   c-4.7-0.1-8.6-4-8.6-8.7c0-4.8,3.9-8.7,8.7-8.7c0.1,0,0.1,0,0.2,0l1.3,0.1l0.5-1c1.2-2.5,3.7-4,6.4-4c0.9,0,1.7,0.2,2.6,0.5   l1.1,0.4l0.7-1c2.1-2.8,5.4-4.4,8.9-4.4c1.8,0,3.7,0.5,5.3,1.3l1,0.5l0.8-0.7c1.3-1.1,2.9-1.7,4.6-1.7c1.4,0,2.8,0.4,3.9,1.2   c-2.4,1.9-4,4.8-4,8.1c0,0.9,0.7,1.6,1.6,1.6c0.9,0,1.6-0.7,1.6-1.6c0-2.7,1.5-5,3.6-6.2l0.5-0.2c1-0.4,2-0.7,3-0.7   c3,0,5.6,1.9,6.7,4.7l0.4,1.1l1.1,0c5.4,0,9.9,4.3,10.3,9.6l0.1,1.1l1,0.3c3.2,1.1,5.4,4.1,5.4,7.5c0,1.3-0.3,2.7-1,3.8l-0.4,0.8   L90.1,47z M55.7,55.3c0-3-1.5-5.8-4-7.5c0,0,0,0,0,0c-4.3-2-7.3-6.1-7.9-10.8c-0.1-0.7,0.4-1.4,1.1-1.5c0.7-0.1,1.4,0.4,1.5,1.1   c0.6,4.3,3.5,7.9,7.6,9.3c2.9,1,6,0.8,8.8-0.5c2.8-1.3,4.8-3.7,5.8-6.6c0.2-0.7,1-1,1.7-0.8c0.7,0.2,1,1,0.8,1.7   c-1.2,3.6-3.8,6.4-7.2,8c-1.9,0.9-4,1.4-6.1,1.4c-0.4,0-0.8,0-1.3-0.1c1.1,1.8,1.8,3.9,1.8,6.2c0,0.7-0.6,1.3-1.3,1.3   S55.7,56,55.7,55.3z M80.4,40.3c0,0.7-0.6,1.3-1.3,1.3s-1.3-0.6-1.3-1.3c0-5.9-4.8-10.7-10.7-10.7c-0.7,0-1.3-0.6-1.3-1.3   s0.6-1.3,1.3-1.3C74.4,27,80.4,33,80.4,40.3z M46,26.9c0-0.7,0.6-1.3,1.3-1.3c5.7,0,10.4,4.6,10.4,10.4c0,0.7-0.6,1.3-1.3,1.3   s-1.3-0.6-1.3-1.3c0-4.3-3.5-7.8-7.8-7.8C46.6,28.2,46,27.6,46,26.9z M42.9,56.6c-0.2,0.4-0.7,0.6-1.1,0.6c-0.2,0-0.5-0.1-0.7-0.2   c-0.6-0.4-0.8-1.2-0.4-1.8c2.2-3.5,1.1-8.1-2.4-10.3c-0.6-0.4-0.8-1.2-0.4-1.8c0.4-0.6,1.2-0.8,1.8-0.4   C44.4,45.7,45.8,51.9,42.9,56.6z M41.7,33.6c-2,0-3.8-0.9-5.2-2.2c-2.3,3.3-6.1,5.1-9.9,5.1c-2,0-4.1-0.5-6-1.6   c-0.6-0.4-0.8-1.2-0.5-1.8c0.4-0.6,1.2-0.8,1.8-0.5c4.5,2.6,10.3,1.1,13-3.5c-0.5-1.1-0.8-2.3-0.8-3.5c0-0.7,0.6-1.3,1.3-1.3   c0.7,0,1.3,0.6,1.3,1.3c-0.1,2.8,2.2,5.2,5,5.3c0.7,0,1.3,0.6,1.3,1.3C43,33.1,42.4,33.6,41.7,33.6C41.7,33.6,41.7,33.6,41.7,33.6z    M72.2,59c0.6,0.4,0.7,1.2,0.3,1.8c-2.5,3.6-6.5,5.6-10.6,5.6c-2.5,0-5-0.7-7.2-2.2c-0.6-0.4-0.7-1.2-0.3-1.8   c0.4-0.6,1.2-0.7,1.8-0.3c2.3,1.5,5,2.1,7.7,1.6c2.7-0.5,5-2,6.6-4.3C70.8,58.8,71.6,58.6,72.2,59z" />
+    </g>
+</svg>
 
 <body>
 
@@ -566,8 +644,7 @@
 
         <div class="links ttu tracked f6 avenir pt5 b tc nb4">
             <a style="color:  #76ff03;
-            text-align:center;" target="_blank">Neuroscience ·</a> <a
-                style="color: #76ff03
+            text-align:center;" target="_blank">Neuroscience ·</a> <a style="color: #76ff03
                 ;text-align:center " target="_blank">psychology</a>
         </div>
 
@@ -581,100 +658,345 @@
             </div>
             <div class="folio-2 pt3" style="height: 130px;">
                 <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">A packaging that shapes the sensory attributes before tasting; attempt to visualize taste.
+                <p class="f8 ttu avenir tracked lh-hi article-red">A packaging that shapes the sensory attributes before
+                    tasting; attempt to visualize taste.
                 </p>
             </div>
             <div class="folio-3 pt3" style="height: 130px;">
                 <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red "> <b> · in-depth research</b><br><b> · Sensory workshop</b><br>· Qualitative coding
-                    <br> <b>· Sensory Design</b> <br> · Visualization 
+                <p class="f8 ttu avenir tracked lh-hi article-red "> <b> · in-depth research</b><br><b> · Sensory
+                        workshop</b><br>· Qualitative coding
+                    <br> <b>· Sensory Design</b> <br> · Visualization
                 </p>
             </div>
             <div class="folio-4 pt3">
                 <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Visualizing taste can contribute to desiging one's expectations towards foods; a packaging can be the mediator.</b>
+                <p class="f8 ttu avenir tracked lh-hi article-red">Visualizing taste can contribute to desiging one's
+                    expectations towards foods; a packaging can be the mediator.</b>
                 </p>
             </div>
         </div>
 
         <h2 style="color:    #76ff03
-        ;filter:blur(1px);margin-top:20%;margin-bottom:10%;" class="f2 ttu avenir tracked tc lh-copy ph7 b">
-            Attempts from visualizing taste to creating a sensory packaging - are shaping the intangible.</h2>
+        ;filter:blur(1px);margin-top:20%;margin-bottom:10%;" class="f2 ttu avenir tracked tc lh-copy pa5 b">
+            After the mechanism analysis, attempts from visualizing taste to creating a sensory packaging - are shaping
+            the intangible.</h2>
 
 
 
-
-            <div style="padding-top: 50%;" class="section full-height over-hide px-4 px-sm-0">
-            
-                <div class="container">
-                    <div style="color:#ccc;font-weight:300;" class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Sensory Workshop Sneak peek </div>
-                    <div class="row full-height justify-content-center">
-                        <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
-                            <div class="section mx-auto text-center slider-height-padding">
-                                <input class="checkbox frst" type="radio" id="slider-1" name="slider" checked />
-                                <label for="slider-1"></label>
-                                <input class="checkbox scnd" type="radio" name="slider" id="slider-2" />
-                                <label for="slider-2"></label>
-                                <input class="checkbox thrd" type="radio" name="slider" id="slider-3" />
-                                <label for="slider-3"></label>
-                                <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
-                                <label for="slider-4"></label>
-                                <ul>
-                                    <li style="position:absolute;top:20%; text-indent: 2rem; color: white;">
-                                        <span>INGREDIENT SELECTION</span>
-                                    </li>
-                                    <li style="text-indent: 2rem;">
-                                        <span>SENSORY WORKSHEET</span>
-                                    </li>
-                                    <li style="text-indent: 2rem;">
-                                        <span>SENSORY WORKSHOP</span>
-                                    </li>
-                                    <li style="text-indent: 2rem;">
-                                        <span>USED MATERIALS</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+        <div class="container">
+            <div style="color:#ccc;font-weight:300;" class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Project Overview
+            </div>
+            <div class="row full-height justify-content-center">
+                <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+                    <div class="section mx-auto text-center slider-height-padding">
+                        <input class="checkbox frst" type="radio" id="slider-1" name="slider" checked />
+                        <label for="slider-1"></label>
+                        <input class="checkbox scnd" type="radio" name="slider" id="slider-2" />
+                        <label for="slider-2"></label>
+                        <input class="checkbox thrd" type="radio" name="slider" id="slider-3" />
+                        <label for="slider-3"></label>
+                        <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
+                        <label for="slider-4"></label>
+                        <ul>
+                            <li style="position:absolute;top:20%; text-indent: 2rem; color: white;">
+                                <span>Multi-sensorial item</span>
+                            </li>
+                            <li style="text-indent: 2rem;">
+                                <span>Sensory Framework</span>
+                            </li>
+                            <li style="text-indent: 2rem;">
+                                <span>Sensory cues</span>
+                            </li>
+                            <li style="text-indent: 2rem;">
+                                <span>Sensory cues</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-    <h2 style= "color:#e040fb;filter:blur(1px)" class="f2 ttu avenir tracked tc lh-copy ph7 b">
-        After the design framework comes the mechanics...<br>continued in part two ↓
-    </h2>
-    
-    
-    
-    
         </div>
-    
-    
-       
-        <div style="border: 1px solid #000;
-        color: #222;
-        background-color: #ccc;
-        border-radius: 8px;
-        padding: 20px 20px;
-        display: inline-block;
-        width: 20vw;
-        margin: 10%;
-        left: 60%;
-        align-items: center;
-        position: relative;
-        justify-content: center;
-        cursor: pointer;
-        line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button" onclick="location.href='/crafts/multi-interface-part-2.html'"> Part Two →  <br>
-        <p class="f8 tts avenir"> Multi-sensory interface pt.2 </p></div>
-    
-        
-    
-    
-        <script src="/blob.js"></script>
-        <script src="/scrollTrigger.js"></script>
-        <script>
-            ScrollReveal().reveal(document.querySelectorAll('div','h2','table'), { delay: 500 });
-        </script>
-    
+        <div class="container">
+
+            <h2 style="color:#76ff03;filter:blur(1px); padding-top: 50px;" class="f2 ttu avenir tracked tc b">
+                Abstract </h2>
+            <div style="line-height: 2; color:#ccc;font-weight:300; " class="links tracked f6 avenir pa5 tj nb4"><strong
+                    style="color:#76ff03;font-weight: 700;">We encounter
+                    countless products</strong> a day and before its physical usage all we can rely on for information
+                is
+                its outer packaging. Meanwhile, it is proven that thorough taste education and sensorial stimuli enable
+                better joy in consuming different food items. With visualized taste elements and sensorial attributes
+                carefully designed into food packaging, consumers can expect and perform better taste experience of
+                which
+                formerly focused on its visual elements only.
+            </div>
+
+            <h2 style="color:#76ff03;filter:blur(1px); padding-top: 50px;" class="f2 ttu avenir tracked tc b">
+                Research Questions </h2>
+            <div style="line-height: 2; color:#ccc;font-weight:300; " class="links tracked f6 avenir pa5 tj nb4"><strong
+                    style="color:#ccc;font-weight: 700;">There exists countless food, people had built
+                    their own experience and preference ---- throughout their entire life. People eat to live. But there
+                    is so much more than eating to survive in current culture.
+                </strong><br><br>
+                1. Can you visualize taste? <br>
+                2. When you visualize taste, does it only involve describing ’the taste’ itself? <br>
+                3. Does amplifying other senses lead to changing taste perception? <br>
+                4. Can being able to visualize the taste beforehand lead to changing perceived taste and overall food
+                experience? <br>
+                5. Would specific visualizing method help neophobia (people hesitant to try new foods) to try specific
+                food more than a regular packaging would? <br>
+            </div>
+
+            <div style="color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%;"
+                class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Process Overview</div>
+
+            <img style="border: 1px ; align-items: center; transform: scale(1.1); padding-top: -10%;"
+                src="/images/m-p chart.png"></img>
+
+            <div style="color:#ccc;font-weight:300; margin-top: -10%; margin-bottom: -10%;"
+                class="links ttu tracked f5 fw1 avenir pt5 tc nb4">METHODOLOGY</div>
+            <div style="line-height: 2; color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%; line-height: 2;"
+                class="links tracked f6 avenir pa5 tj nb4">Following items were selected as the exploration input
+                variables: <b style="font-weight: 700;">Strawberry candy, Lemon, Beer, and Salted chips. </b>
+                The sensory exploration was conducted in a form of a creative workshop, as a means to understand the
+                sensory interactions emerging from each food item, the level of intensity and pleasure for each sensory
+                cue and which sensory attributes can amplify the hedonistic properties.
+                Consequently, the workshop consisted of three levels: <b style="font-weight: 700;">the general
+                    interpretation and imagery, levels of intensity and pleasure, and sense amplification.</b> </div>
+
+            <div class="gridding">
+                <div style="color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%;"
+                    class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Level 1: General Interpretation</div>
+                <img style="position: absolute; left: 50%; transform:translate(5%,65%); width:400px; height: 250px; padding-right:20% "
+                    src="/images/m-p1.png">
+
+                <div style="line-height: 2; color:#ccc; font-weight:300; margin-top: 10%; margin-right: 50%; line-height: 2;"
+                    class="links tracked f6 avenir pa5 tj nb4">Following test is conducted to generate informative
+                    insights on people’s insights on certain food, without consuming it. Certain expectations,
+                    prejudice, judgements and biased level can be analyzed from here.
+                </div>
+            </div>
+            <div class="gridding">
+                <div style="color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%;"
+                    class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Level 1-1: Taste Imagery</div>
+                <img style="position: absolute; left: 50%; transform:translate(5%,65%); width:400px; height: 250px; padding-right:20% "
+                    src="/images/m-p2.png">
+
+                <div style="line-height: 2; color:#ccc; font-weight:300; margin-top: 10%; margin-right: 50%; line-height: 2;"
+                    class="links tracked f6 avenir pa5 tj nb4">Following test is conducted to witness any trends on the
+                    ‘images’ that can be utilized in visualizing the taste and corresponding sensory factors that can
+                    well be visualized too.
+                </div>
+            </div>
+            <div class="gridding">
+                <div style="color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%;"
+                    class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Level 2: Level of Senses/ Intensity/ Pleasure
+                </div>
+                <img style="position: absolute; left: 50%; transform:translate(5%,65%); width:400px; height: 250px; padding-right:20% "
+                    src="/images/m-p3.png">
+
+                <div style="line-height: 2; color:#ccc; font-weight:300; margin-top: 10%; margin-right: 50%; line-height: 2;"
+                    class="links tracked f6 avenir pa5 tj nb4">Following tests are conducted to collect insights on what
+                    are the sensory cues that involve the most when eating certain food; if not taste, what is it and
+                    how can they be targeted and amplified in the future.
+
+                </div>
+            </div>
+            <div class="gridding">
+                <div style="color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%;"
+                    class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Level 3: Sense Amplification
+                </div>
+                <img style="position: absolute; left: 50%; transform:translate(5%,65%); width:400px; height: 250px; padding-right:20% "
+                    src="/images/m-p4.png">
+
+                <div style="line-height: 2; color:#ccc; font-weight:300; margin-top: 10%; margin-right: 50%; line-height: 2;"
+                    class="links tracked f6 avenir pa5 tj nb4">Following test is designed to discover the maximized
+                    sensory ability to enhance one’s food experience. With the same item but with different sensory
+                    variables, the participant focuses on finding the best fitting experience for him or herself.
+                </div>
+            </div>
+            <div style="color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%;"
+                class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Results
+            </div>
+            <img style=" margin-top: 15%;" src="/images/m-p result0.png">
+
+            <img style="background-color: white; margin-top: 5%;" src="/images/m-p result.png">
+
+
+        </div>
+
+
+
+        <aside style="padding:10%; margin-bottom: 50%" class="in-brief">
+            <table style="font-weight:300;" class="links ttu tracked tc f6 fw1 avenir pt5 tc nb4">
+                <caption style="color:#ccc;font-weight:300; padding-bottom:40px;" class="f5 ttu avenir tracked ">Summary
+                    Results</caption>
+                <thead>
+                    <tr>
+                        <th>Sensory Modalities</th>
+                        <th>Strawberry candy</th>
+                        <th>Lemon</th>
+                        <th>Coffee</th>
+                        <th>Salted chips</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sight</td>
+                        <td
+                            style="height: 150px; background-repeat: no-repeat; background-image:url('/images/m-p\ 11.png')">
+                        </td>
+                        <td style="background-image:url('/images/m-p\ 11.png')"></td>
+                        <td style="background-image:url('/images/m-p\ 12.png')"></td>
+                        <td style="background-image:url('/images/m-p\ 13.png')"></td>
+                    </tr>
+                    <tr>
+                        <td>Smell </td>
+                        <td>Strawberry odor
+                        </td>
+                        <td>Strawberry odor</td>
+                        <td>Burnt wood
+                        </td>
+                        <td>Strawberry odor
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sound </td>
+                        <td>Classical Harp
+                        </td>
+                        <td>Classical Harp
+                        </td>
+                        <td>Classical Harp
+                        </td>
+                        <td>Staccato, violin
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Touch</td>
+                        <td>Warm, soft paper
+                        </td>
+                        <td>Ice cold glass
+
+                        </td>
+                        <td>Ice cold glass
+
+                        </td>
+                        <td>None
+
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </aside>
+        <div style="color:#ccc;font-weight:300; margin-top: -20%; margin-bottom: 0%; "
+            class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Procedure
+        </div>
+        <img style="margin-left:10%; width: 80%; background-color: black; margin-top: 5%;" src="/images/m-m.png">
+        <img style="margin-left:10%; width: 80%; background-color: black; margin-top: 5%;" src="/images/m-m2.png">
+
+        <div class="container">
+            <div style="color:#ccc;font-weight:300; margin-top: 5%; margin-bottom: -10%;"
+                class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Discussion</div>
+            <div style="line-height: 2; color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%; line-height: 2;"
+                class="links tracked f6 avenir pa5 tj nb4"><b style="font-weight: 700;">CONGRUENCY IS THE KEY. </b>
+                <br> · Vision > touch > smell > taste > sound <br>
+                · Interactions between senses: color for the smell, sound for the feel<br>
+                · Based on the research congruent sounds, vision, smell represented apparent satisfaction level. <br>
+                · However for the ‘negative’ tastes such as sour and bitter, participants preferred the stimuli that
+                overcompensates the taste, rather than congruent stimuli.
+            </div>
+            <div style="line-height: 2; color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%; line-height: 2;"
+                class="links tracked f6 avenir pa5 tj nb4"><b style="font-weight: 700;">RELAIONSHIP WITH THE PRIMITIVE
+                    NATURE. </b>
+                <br>· All of the five participants, when asked to draw and visualize different aspect of certain taste,
+                they based their thoughts starting from taste’s very origin.
+                <br>· One can assume that the pure form of basic taste comes directly from nature despite the abdundant
+                artificial taste enahancers
+                <br> · We often associate the color of the taste from the taste’s origin: salty=> sea salt=> sea => blue
+            </div>
+            <div style="line-height: 2; color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%; line-height: 2;"
+                class="links tracked f6 avenir pa5 tj nb4"><b style="font-weight: 700;">FEASIBILITY OF VISUALIZING
+                    TASTE.</b>
+                <br> · Witnessed the different elements clearly affecting and transforming one’s taste perception that
+                can be further investigated to collect a detailed database
+                <br> · Witnessed a set of universal and repetitive visuals of perceived taste between participants that
+                can be utilized in forming a taste idea or packaging design.
+                <br> · Selected the salted potato ships to have its packaging designed multi-sensorially. Implemented
+                the results ot its sensory modalities and observed interactions upon the public.
+            </div>
+        </div>
+
+        <div class="container">
+            <div style="color:#ccc;font-weight:300; margin-top: 10%; "
+            class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Visualizing and Prototyping</div>
+
+        <img style="margin-top: 15%; border: 1px ; align-items: center; transform: scale(1.1); padding-top: -10%;"
+            src="/images/posters.png"></img>
+
+           
+            <div style="color:#ccc;font-weight:300; margin-top: 20%;"
+            class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Exhibition and Presentation</div>
+          
+
+        <img style="margin-bottom: 20%; border: 1px ; margin-top: 18%; align-items: center; transform: scale(1.1); padding-top: 0%;"
+            src="/images/IMG_0888.jpg"></img>
+
+               <video width = 100% controls>
+                   <source src ="/images/IMG_0887_2.mp4" type = "video/mp4">
+            </div>
+
+
+
+
+
+
+
+
+            <div style="border: 1px solid #000;
+            color: #222;
+            background-color: #ccc;
+            border-radius: 8px;
+            padding: 20px 20px;
+            display: inline-block;
+            width: 20vw;
+            margin: 10%;
+            left: 60%;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
+                onclick="location.href='/crafts/AIpersona.html'"> Next Project → <br>
+                <p class="f8 tts avenir"> AI Chatbot Personas </p>
+            </div>
+
+            <div style="border: 1px solid rgb(255, 226, 226);
+            color: #ccc;
+            border-radius: 8px;
+            padding: 20px 20px;
+            display: inline-block;
+            width: 20vw;
+            margin: 10%;
+            right: 45%;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button"
+                onclick="location.href='/crafts/multi-interface.html'">← Previous Project <br>
+                <p class="f8 tts avenir"> Multi-sensory interface pt.1 </p>
+            </div>
+
+
+
+
+            <script src="/blob.js"></script>
+            <script src="/scrollTrigger.js"></script>
+            <script>
+                ScrollReveal().reveal(document.querySelectorAll('div', 'h2', 'table'), { delay: 500 });
+            </script>
+
 
 </body>
 
