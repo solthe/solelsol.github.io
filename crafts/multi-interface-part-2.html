@@ -1,0 +1,815 @@
+<!doctype html>
+<html>
+
+<head>
+    <div id="cursorBlob" style="top: 8px; left:-18px"></div>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multisensorial Interface</title>
+    <link rel="stylesheet" href="/css/malo.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <style>
+
+        footer {
+
+        }
+       body {
+  overflow-x: hidden;
+  background: rgb(25, 28, 37);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+
+.article-red {
+  color: #75b5b0;
+}
+
+.bg-article-red {
+  background-color: #ff4a46;
+}
+
+.container {
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.f8 {
+  font-size: 0.65rem;
+}
+.lh-hi {
+  line-height: 2em;
+}
+
+button {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  filter: blur(3px);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 40px 8px orange;
+}
+
+svg.earReal {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  top: 20vh;
+  left: 40vw;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+
+  border-radius: 50%;
+  filter: drop-shadow(0px 1px 3px aquamarine);
+  fill: white;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  cursor: pointer;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+#cursorBlob {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(
+    120deg,
+    #ff1744,
+    #e040fb,
+    #2979ff,
+    #ff7b00,
+    #76ff03
+  );
+  filter: blur(5px);
+  background-size: 1600% 1600%;
+  position: absolute;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 1;
+  transition: 0.15s linear;
+  border-radius: 50%;
+  animation: blobBackground 15s ease infinite;
+}
+#cursorBlob:before {
+  position: absolute;
+  content: "";
+  border: 1px solid white;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+#cursorBlob:after {
+  position: absolute;
+  content: "";
+  border: 2px solid white;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: animate 2s 1s linear infinite;
+}
+@keyframes animate {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes blobRadius {
+  0%,
+  100% {
+    border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+  }
+  20% {
+    border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+  }
+  40% {
+    border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+  }
+  60% {
+    border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+  }
+  80% {
+    border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+  }
+}
+@keyframes blobBackground {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #212121;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: #fff;
+  list-style: none;
+  cursor: pointer;
+  font-size: 10vw;
+  font-family: "Montserrat", sans-serif;
+  transition: 1s ease-in;
+}
+
+.nav:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.nav:hover {
+  transform: translateX(25px);
+}
+
+@media (min-width: 500px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.75rem;
+    /*row length vertical */
+    grid-auto-rows: 92px;
+    max-width: 900px;
+    margin: 80px auto;
+    border-top: 1px solid rgb(255, 255, 255);
+  }
+
+  .folio-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-right: 1px solid rgb(255, 255, 255);
+  }
+
+  .folio-2 {
+    grid-column-start: 4;
+    grid-column-end: 2;
+    grid-row-start: 1;
+
+    border-right: 1px solid rgb(255, 255, 255);
+  }
+
+  .folio-3 {
+    grid-column-start: 7;
+    grid-column-end: 4;
+
+    border-right: 1px solid rgb(255, 255, 255);
+  }
+
+  .folio-4 {
+    grid-column: span 3;
+  }
+  .folio-5 {
+    grid-column-start: 12;
+    grid-column-end: 7;
+    grid-row-start: 1;
+  }
+  .folio-6 {
+    grid-column-start: 13;
+    grid-column-end: 7;
+    grid-row-start: 3;
+  }
+
+  
+
+  a {
+    cursor: pointer;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+  .section {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .full-height {
+    min-height: 100vh;
+  }
+  .over-hide {
+    overflow: hidden;
+  }
+  .padding-tb {
+    padding: 100px 0;
+  }
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+  .checkbox:checked + label,
+  .checkbox:not(:checked) + label {
+    position: relative;
+
+    width: 100%;
+    left: 25vw;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 6px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    background-image: url("/images/eye.svg");
+    background-color: #75b5b0;
+    box-shadow: 0 3px 10px 0 #75b5b0;
+
+    animation: border-transform 6s linear infinite alternate forwards;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  .checkbox.scnd + label {
+    background-image: url("/images/nose.svg");
+  }
+  .checkbox.thrd + label {
+    background-image: url("/images/ear.svg");
+  }
+
+  .checkbox.foth + label {
+    background-image: url("/images/hand.svg");
+  }
+
+  .checkbox:checked + label {
+    transform: scale(1.3);
+    background-color: rgb(217, 151, 45);
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    animation-play-state: running;
+  }
+  @keyframes border-transform {
+    0%,
+    100% {
+      border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    }
+    14% {
+      border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+    }
+    28% {
+      border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    }
+    42% {
+      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+    56% {
+      border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    }
+    70% {
+      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+    84% {
+      border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+    }
+  }
+
+  .slider-height-padding {
+    padding-top: 460px;
+  }
+
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 400px;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/images/visual.png");
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 2.7;
+    color: #ffffff;
+    writing-mode: vertical-rl;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  ul li span {
+    mix-blend-mode: difference;
+  }
+  ul li:nth-child(2) {
+    background-image: url("/images/me.png");
+  }
+  ul li:nth-child(3) {
+    background-image: url("/images/this.gif");
+  }
+  ul li:nth-child(4) {
+    background-image: url("/images/touch.png");
+  }
+
+  .checkbox.frst:checked ~ ul li:nth-child(1) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  }
+  .checkbox.scnd:checked ~ ul li:nth-child(2) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  }
+  .checkbox.thrd:checked ~ ul li:nth-child(3) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  }
+  .checkbox.foth:checked ~ ul li:nth-child(4) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 767px) {
+    .slider-height-padding {
+      padding-top: 340px;
+    }
+    ul li {
+      height: 300px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .slider-height-padding {
+      padding-top: 240px;
+    }
+
+    ul li {
+      height: 200px;
+    }
+  }
+}
+
+.in-brief {
+  text-align: center;
+  margin: 0 5rem 5rem 5rem;
+}
+.in-brief h3 {
+  text-align: center;
+  border-left: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+  display: inline-block;
+  padding: 0 30px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.2rem;
+  font-size: 80%;
+  margin: 0;
+  position: relative;
+  top: 0px;
+  height: 30px;
+}
+.in-brief-content {
+  columns: 3;
+  column-gap: 30px;
+  grid-auto-rows: auto;
+  font-size: 0.8rem;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 60px;
+}
+
+.tree {
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  justify-content: center;
+}
+.hi {
+  border: 1px solid rgb(255, 226, 226);
+  color: #ccc;
+  border-radius: 8px;
+  padding: 8px 20px;
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  line-height: 1.2;
+}
+.p,
+.np {
+  display: flex;
+  align-content: center;
+}
+.first,
+.second,
+.third {
+  display: flex;
+  flex-direction: column;
+}
+.hi:before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: rgb(255, 229, 229);
+  position: absolute;
+  left: -41px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+}
+.first > .p > .hi:before {
+  display: none;
+}
+.hi {
+  min-width: 200px;
+  max-width: 200px;
+}
+.hi:hover {
+  background: #222;
+}
+.hi:hover + .second .hi {
+  background: #222;
+}
+.hi:hover + .third .hi {
+  background: #222;
+}
+
+#another_button {
+  background-color: none;
+}
+
+#another_button:hover {
+  transform: scale(105%);
+  color: #222;
+  filter: blur(1px);
+}
+
+
+
+        .column {
+            float: left;
+            width: 30.33%;
+            height: 400px;
+            padding: 5%;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        caption {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+</head>
+
+<button class="nav__link" style="z-index:3; position: fixed;" onclick="location.href='/index.html'">
+</button>
+
+<svg class="nav__link" onclick="location.href='/index.html#hand'"
+    style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:white;filter: drop-shadow(0px 3px 6px #e040fb);z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+    viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve">
+    <g>
+        <path
+            d="M80.484,48.521c-1.281-1.131-2.956-1.755-4.715-1.755c-2.183,0-4.227,0.967-5.595,2.639l-6.933,8.236V23.748   c0-3.733-3.038-6.771-6.772-6.771c-1.563,0-3.003,0.531-4.15,1.424v-6.629C52.319,8.037,49.281,5,45.547,5   c-3.733,0-6.771,3.037-6.771,6.772v2.286c-1.147-0.893-2.589-1.425-4.151-1.425c-3.734,0-6.771,3.038-6.771,6.771v4.498   c-1.155-0.913-2.603-1.465-4.15-1.465c-3.734,0-6.772,3.037-6.772,6.771v41.58c0,14.48,8.856,24.21,22.039,24.21   c6.268,0,12.802-0.885,18.133-7.295L81.371,58.78C83.953,55.669,83.541,51.054,80.484,48.521z M79.358,57.102L55.09,86.025   c-4.384,5.273-9.615,6.354-16.12,6.354c-11.795,0-19.418-8.475-19.418-21.589V29.21c0-2.288,1.862-4.15,4.151-4.15   c2.25,0,4.15,1.9,4.15,4.15v19.674c0,0.723,0.587,1.31,1.311,1.31s1.311-0.587,1.311-1.31V19.405c0-2.326,1.823-4.149,4.15-4.149   s4.151,1.823,4.151,4.149v27.306c0,0.724,0.586,1.312,1.31,1.312c0.725,0,1.311-0.588,1.311-1.312V11.772   c0-2.328,1.824-4.151,4.15-4.151c2.328,0,4.151,1.823,4.151,4.151v36.057c0,0.723,0.587,1.31,1.311,1.31   c0.723,0,1.311-0.587,1.311-1.31V23.748c0-2.287,1.861-4.149,4.15-4.149s4.15,1.862,4.15,4.149v37.485   c0,0.55,0.344,1.043,0.862,1.23c0.519,0.19,1.096,0.034,1.451-0.387l9.258-10.998c0.88-1.075,2.184-1.691,3.578-1.691   c1.12,0,2.178,0.39,3.011,1.124C80.755,52.149,81.012,55.106,79.358,57.102z" />
+    </g>
+</svg>
+
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.8.1/tachyons.min.css'>
+
+
+    <div class="container">
+
+        <div class="links ttu tracked f6 avenir pt5 b tc nb4">
+            <a style="color: #e040fb; text-align:center;" target="_blank">Publications ·</a> <a
+                style="color: #e040fb;text-align:center " target="_blank">Prototypes</a>
+        </div>
+
+
+        <h2 style="padding-top:70px;" class="f3 georgia tracked tc lh-copy ph8 b">
+            Building a Multi-sensory Interface II.  <br><small>2021.08-2021.10</small>
+        </h2>
+        <div class="grid">
+            <div class="folio-1 f4 tr pt3 pr3" style="height: 130px;">
+                <li class="article-red fa fa-compass" aria-hidden="true"></li>
+            </div>
+            <div class="folio-2 pt3" style="height: 130px;">
+                <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red">Sensory workshop<br> and interface implementation
+                </p>
+            </div>
+            <div class="folio-3 pt3" style="height: 130px;">
+                <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red "> <b> · Sensory workshop</b><br>· Qualitative coding
+                    <br> <b>· Interface Design</b> <br> · Mechanical Prototyping <br> · quantitative analysis</p>
+            </div>
+            <div class="folio-4 pt3">
+                <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red">Prototyping the interface into everyday design to
+                    <br><b>receive public reactions.</b></p>
+            </div>
+        </div>
+
+        <h2 style="color:#e040fb;filter:blur(1px);margin-top:20%;" class="f2 ttu avenir tracked tc lh-copy ph7 b">
+            Process Overivew</h2>
+
+        <h2 style="margin-top: -5%; margin-bottom: 10%; font-weight: 300; padding:60px; color: white;"
+            class="f3 ttu tc avenir tracked lh-hi">
+            1. Sensory Framework construction → 2. Sensory workshop → 3. Interface design → <a
+                style="text-decoration: underline;">4. prototype implementation→ 5. Public testing</a> → 6.
+            Quantitative and qualitative analysis.
+        </h2>
+
+
+        <div class="row">
+            <div class="column" style="margin-left: 110px;background-image:url('/images/1.gif');background-repeat: no-repeat;
+                background-size: contain;">
+
+            </div>
+            <div class="column" style="margin-left: -30px;background-image:url('/images/p9.gif');background-repeat: no-repeat;
+                background-size: contain;">
+
+            </div>
+            <div class="column" style="margin-left: -30px;margin-right: 20px;background-image:url('/images/5.gif');background-repeat: no-repeat;
+                background-size: contain;">
+
+            </div>
+        </div>
+
+
+        <aside style="margin-top: 20%" class="in-brief">
+            <h3 class="f3 georgia tracked tc lh-copy ph8 b">Prototype Framework</h3>
+            <div class="in-brief-content">
+                <p class="f7 avenir tracked lh-hi "><strong style="color:#75b5b0;">The interface</strong>,
+                    was primarily prototyped, for this time, to help increase people get familiar with unfamiliar foods.
+                    Ingredient Exposure was devised as the user touches each presented
+                    ingredient, and designated sensory stimuli were activated accordingly. In case of audio stimulation,
+                    it was transmitted through embedded speakers (audio-visual and multi-sensorial). To implement
+                    olfactory modalities, fragrance oils from Nature In Flavor co., Ltd. were utilized to match each
+                    ingredient’s smell attributes which were then diffused by planting Arduino humidifier module. 
+                    Tactile stimulations were formulated through modeling clays, resin, and appropriate
+                    ornamental components, each fixed with a tact switch attached to the pertinent ingredient.
+                </p>
+            </div>
+        </aside>
+
+        <div style="margin-top: 0%;" class="section full-height over-hide px-4 px-sm-0">
+
+            <div class="container">
+                <div style="color:#ccc;font-weight:300; margin-top: 10%;"
+                    class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Prototype </div>
+                <div class="row full-height justify-content-center">
+                    <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+                        <div class="section mx-auto text-center slider-height-padding">
+                            <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked />
+                            <label for="slide-1"></label>
+                            <input class="checkbox scnd" type="radio" name="slider" id="slider-2" />
+                            <label for="slider-2"></label>
+                            <input class="checkbox thrd" type="radio" value="PLAY" onclick="play()" name="slider"
+                                id="slider-3" />
+                            <label for="slider-3">
+                            </label>
+                            <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
+                            <label for="slider-4"></label>
+                            <ul>
+                                <li style="position:absolute;top:20%; text-indent: 2rem; color: white;">
+                                    <span>audio-visual Interface design</span>
+                                </li>
+                                <li style="text-indent: 2rem;">
+                                    <span>Scent exertion</span>
+                                </li>
+                                <li style="text-indent: 2rem;">
+                                    <span>trial prototype</span>
+                                </li>
+                                <li style="text-indent: 2rem;">
+                                    <span>tactile stimulation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe style="margin-left: 15%; background-color: #222; border: 1px solid rgba(0, 0, 0, 0.1); align-items: center;" width="400" height="480" src="https://framer.com/embed/Sensory--tnmeOiNGDAtX60GoRSwa/l40_eI0Ez?highlights=0" allowfullscreen></iframe>
+        <p style="margin-left: 60%; margin-top:-27%;" class = "f8 ttu avenir tracked lh-hi b">Audio-visual prototype can be seen from here</p>
+        
+        <div style="margin-top:30%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
+        class="links ttu tracked f5 fw1 avenir  tc nb4 b">Building the olfactory interface was a hardcore journey and finally, <br> the messy prototype was produced. </div>
+
+
+        <div class="row">
+            <div class="column" style="margin-left: 110px;background-image:url('/images/trial1.jpg');background-repeat: no-repeat;
+                background-size: contain;">
+            <h1 style="margin-top:30%; opacity:0.7; margin-right: 05%; font-weight:700;" class="links ttu f4 fw1 avenir tr nb4 b">Dissecting an air diffuser</h1>
+            </div>
+            <div class="column" style="margin-left: -30px;background-image:url('/images/trial3.jpg');background-repeat: no-repeat;
+                background-size: contain;">
+                 <h1 style="margin-top:30%; opacity:0.7; margin-right: 05%; font-weight:700;" class="links ttu f4 fw1 avenir tr nb4 b">Agonizing the Servo motors </h1>
+
+            </div>
+            <div class="column" style="margin-left: -30px;margin-right: 20px;background-image:url('/images/trial2.gif');background-repeat: no-repeat;
+                background-size: contain;">
+                 <h1 style="margin-top:30%; opacity:0.7; margin-right: 05%; font-weight:700;" class="links ttu f4 fw1 avenir  tr  nb4 b">Using ultrasonic sensor</h1>
+
+            </div>
+        </div>
+
+
+        <img style="margin-left: 10%; margin-top:13%;"src = "/images/press.gif">        <p style="margin-left: 70%; margin-top:-17%;" class = "f8 ttu avenir tracked lh-hi b">hooking up the <br> arduino humidifier module</p>
+
+
+
+        <h2 style="margin-top:27%; color:#e040fb;filter:blur(1px)" class="f2 ttu avenir tracked tc lh-copy ph6 b">
+            Self-ording kiosk machine had multi-sensorial interface implemented at an expo.
+        </h2>
+
+        <h2 style="margin-top:10%; color:#e040fb;filter:blur(1px)" class="f2 ttu avenir tracked tc lh-copy ph6 b">
+            92 participants tried the machine out of which 43 were food neophobic!
+        </h2>
+
+        <img style="width:70%; margin: 15%;opacity:0.7;" src = "/images/QA.png">        <p style="margin-left: 15%; margin-top:-50%;" class = "f8 ttu avenir tracked lh-hi b">Baseline and endline Food Familiarity pre and post experiment:  <br> highly significant difference found in food familarity among the multi-sensorial interface group</p>
+
+        <img style="width:70%; margin-top:50%; margin-left: 15%; margin-bottom: 20%;opacity:0.7;" src = "/images/chart.png">        <p style="margin-left: 15%; margin-top:-67%;" class = "f8 ttu avenir tracked lh-hi b">Willingness to try, satisfaction level and familiarity Mean± SE: <br> significance found in multi-sensorial group
+        </p>
+
+        <img style="width:70%; margin-top:55%; margin-left: 15%; margin-bottom: 20%;opacity:0.7;" src = "/images/QA results.png">        <p style="margin-left: 15%; margin-top:-50%;" class = "f8 ttu avenir tracked lh-hi b">Qualitative Interface Analysis
+        </p>
+
+
+
+
+   
+
+        <h2 style="margin-top: 40%; color:#e040fb;filter:blur(0px)" class="f3 ttu avenir tracked tc lh-copy ph7 b ">
+            Results indicated that <br><small class = "fw1" style="color:#ccc; font-size: 0.8em;" > the idea of receiving all non-taste sensory information prior to tasting the food item is phenomenal. This drives me to conduct further research on whether this framework would work with other unfamiliar items (or with familar items) in subsequent multisensory environments, while streamlining the prototype.</small>
+            <br>
+            <br>
+            • <br><br>
+            • <br><br>
+            • <br><br><br>
+            please read more in the soon-to-be published paper: "Multi-sensorial interface increases food familarity". </h2>
+
+
+
+        
+
+<img style="margin-left: 15%; margin-top:14%; margin-bottom:19%; background-color: #222; border: 1px solid rgba(0, 0, 0, 0.1); align-items: center;" width="500" height="400" src="/images/hamyang.jpg" ></i>
+<p style="margin-left: 65%; margin-top:-40%; margin-bottom: 15%;" class = "f8 ttu avenir tracked ph4 lh-hi b">this is me awkwardly pointing at nothing after 2 weeks of experiment; the scenery at the expo certainly paid off :)</p>
+
+    </div>
+
+   
+    <div style="border: 1px solid #000;
+    color: #222;
+    background-color: #ccc;
+    border-radius: 8px;
+    padding: 20px 20px;
+    display: inline-block;
+    width: 20vw;
+    margin: 10%;
+    left: 60%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button" onclick="location.href='/crafts/AIpersona.html'"> Next Project →  <br>
+    <p class="f8 tts avenir"> AI Chatbot Personas </p></div>
+
+    <div style="border: 1px solid rgb(255, 226, 226);
+    color: #ccc;
+    border-radius: 8px;
+    padding: 20px 20px;
+    display: inline-block;
+    width: 20vw;
+    margin: 10%;
+    right: 40%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button" onclick="location.href='/crafts/multi-interface.html'">← Previous Project <br>
+    <p class="f8 tts avenir"> Multi-sensory interface pt.1 </p></div>
+
+
+    <script src="/blob.js"></script>
+    <script src="/scrollTrigger.js"></script>
+    <script>
+        ScrollReveal().reveal(document.querySelectorAll('div', 'h2', 'table'), { delay: 500 });
+    </script>
+    <script>
+        function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+        if (document.getElementsByClassName("slider").addEventListener("click", () => {
+            audio.pause();
+        }));
+
+    }
+</script>
+
+    
+    <audio id="audio" src="/images/this.mp3"></audio>
+
+</body>
+
+
+
+</html>
