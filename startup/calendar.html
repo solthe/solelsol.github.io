@@ -1,0 +1,692 @@
+<!doctype html>
+<html>
+
+<head>
+    <div id="cursorBlob" style="top: 8px; left:-18px"></div>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saucy Calendar</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        footer {}
+
+        body {
+            overflow-x: hidden;
+            background: rgb(254, 255, 233);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .article-red {
+            color: #75b5b0;
+        }
+
+        .bg-article-red {
+            background-color: #ff4a46;
+        }
+
+        .container {
+            padding-right: 120px;
+            padding-left: 120px;
+        }
+        .con {
+            width: 100vw;
+            height: 80vh;
+            align-items: center;
+            background-color: #920420;
+            padding: 0;
+            font-size: 2em;
+            vertical-align:bottom;
+            writing-mode: vertical-rl;
+            align-items: flex-end;
+    
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+      
+        }
+
+        .f8 {
+            font-size: 0.65rem;
+        }
+
+        .lh-hi {
+            line-height: 2em;
+        }
+
+        button {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: orange;
+            filter: blur(3px);
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            z-index: 100;
+            cursor: pointer;
+            box-shadow: inset 0px 0px 40px 8px orange;
+        }
+
+        svg.earReal {
+            position: absolute;
+            display: inline-block;
+            color: white;
+            top: 20vh;
+            left: 40vw;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+
+            border-radius: 50%;
+            filter: drop-shadow(0px 1px 3px aquamarine);
+            fill: white;
+            box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+            cursor: pointer;
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+        #cursorBlob {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(120deg,
+                    #ff1744,
+                    #e040fb,
+                    #2979ff,
+                    #ff7b00,
+                    #76ff03);
+            filter: blur(5px);
+            background-size: 1600% 1600%;
+            position: absolute;
+            mix-blend-mode: difference;
+            pointer-events: none;
+            z-index: 1;
+            transition: 0.15s linear;
+            border-radius: 50%;
+            animation: blobBackground 15s ease infinite;
+        }
+
+        #cursorBlob:before {
+            position: absolute;
+            content: "";
+            border: 1px solid white;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-radius: 50%;
+            animation: animate 1s linear infinite;
+        }
+
+        #cursorBlob:after {
+            position: absolute;
+            content: "";
+            border: 2px solid white;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-radius: 50%;
+            animation: animate 2s 1s linear infinite;
+        }
+
+        @keyframes animate {
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes blobRadius {
+
+            0%,
+            100% {
+                border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+            }
+
+            20% {
+                border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+            }
+
+            40% {
+                border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+            }
+
+            60% {
+                border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+            }
+
+            80% {
+                border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+            }
+        }
+
+        @keyframes blobBackground {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: #212121;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__link {
+            color: #fff;
+            list-style: none;
+            cursor: pointer;
+            font-size: 10vw;
+            font-family: "Montserrat", sans-serif;
+            transition: 1s ease-in;
+        }
+
+        .nav:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        .nav:hover {
+            transform: translateX(25px);
+        }
+
+        @media (min-width: 500px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-gap: 0.75rem;
+                /*row length vertical */
+                grid-auto-rows: 92px;
+                max-width: 900px;
+                margin: 80px auto;
+                border-top: 1px solid #222;
+            }
+
+            .folio-1 {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                border-right: 1px solid #222;
+            }
+
+            .folio-2 {
+                grid-column-start: 4;
+                grid-column-end: 2;
+                grid-row-start: 1;
+
+                border-right: 1px solid #222;
+            }
+
+            .folio-3 {
+                grid-column-start: 7;
+                grid-column-end: 4;
+
+                border-right: 1px solid #222;
+            }
+
+            .folio-4 {
+                grid-column: span 3;
+            }
+
+            .folio-5 {
+                grid-column-start: 12;
+                grid-column-end: 7;
+                grid-row-start: 1;
+            }
+
+            .folio-6 {
+                grid-column-start: 13;
+                grid-column-end: 7;
+                grid-row-start: 3;
+            }
+
+
+            a {
+                cursor: pointer;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .section {
+                position: relative;
+                width: 100%;
+                display: block;
+            }
+
+            .full-height {
+                min-height: 100vh;
+            }
+
+            .over-hide {
+                overflow: hidden;
+            }
+
+            .padding-tb {
+                padding: 100px 0;
+            }
+
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+                opacity: 0;
+                position: fixed;
+                width: 0;
+            }
+
+            .checkbox:checked+label,
+            .checkbox:not(:checked)+label {
+                display: inline-block;
+                background-color: #222;
+                opacity: 0.8;
+                padding: 10px 10px;
+                font-family: sans-serif, Arial;
+                font-size: 16px;
+                border-radius: 50%;
+                cursor: pointer;
+                margin: 15px;
+                left: 45vw;
+                bottom: 35vh;
+                position: relative;
+                filter: blur(1.5px);
+            }
+
+            .checkbox:checked+label {
+                transform: scale(1.3);
+                background-color: rgb(217, 151, 45);
+            }
+
+            .slider-height-padding {
+                padding-top: 420px;
+            }
+
+            ul {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 500px;
+                z-index: -1;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            ul li {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                display: block;
+                z-index: 100;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                height: 500px;
+                border: none;
+                background-size: cover;
+                background-position: center;
+                background-image: url("/images/Asset\ 10.png");
+                border-radius: 50%;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+                font-weight: 900;
+                font-size: 16px;
+                letter-spacing: 2px;
+                line-height: 2.7;
+                color: #ffffff;
+                writing-mode: vertical-rl;
+                opacity: 0;
+                pointer-events: none;
+                box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+
+            ul li span {
+                mix-blend-mode: difference;
+            }
+
+            ul li:nth-child(2) {
+                background-image: url("/images/Asset\ 11.png");
+            }
+
+            ul li:nth-child(3) {
+                background-image: url("/images/Asset\ 8.png");
+            }
+
+            ul li:nth-child(4) {
+                background-image: url("/images/Asset\ 7.png");
+            }
+
+            .checkbox.frst:checked~ul li:nth-child(1) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.scnd:checked~ul li:nth-child(2) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.thrd:checked~ul li:nth-child(3) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.foth:checked~ul li:nth-child(4) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            @media (max-width: 767px) {
+                .slider-height-padding {
+                    padding-top: 340px;
+                }
+
+                ul li {
+                    height: 300px;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            @media (max-width: 575px) {
+                .slider-height-padding {
+                    padding-top: 240px;
+                }
+
+                ul li {
+                    height: 200px;
+                }
+            }
+        }
+
+
+
+        .in-brief-content {
+            columns: 2;
+            column-gap: 40px;
+            line-height: 1.5;
+            grid-auto-rows: auto;
+            padding: 30px;
+            text-align: justify;
+        }
+
+        .tree {
+            display: flex;
+            flex-direction: row;
+            padding: 5%;
+            justify-content: center;
+        }
+
+        .hi {
+            border: 1px solid rgb(255, 226, 226);
+            color: #ccc;
+            border-radius: 8px;
+            padding: 8px 20px;
+            display: flex;
+            margin: 20px;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            line-height: 1.2;
+        }
+
+        .p,
+        .np {
+            display: flex;
+            align-content: center;
+        }
+
+        .first,
+        .second,
+        .third {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hi:before {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: rgb(255, 229, 229);
+            position: absolute;
+            left: -41px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .first>.p>.hi:before {
+            display: none;
+        }
+
+        .hi {
+            min-width: 200px;
+            max-width: 200px;
+        }
+
+        .hi:hover {
+            background: #222;
+        }
+
+        .hi:hover+.second .hi {
+            background: #222;
+        }
+
+        .hi:hover+.third .hi {
+            background: #222;
+        }
+
+        #another_button {
+            background-color: none;
+        }
+
+        #another_button:hover {
+            transform: scale(105%);
+            color: #222;
+            filter: blur(1px);
+        }
+
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+</head>
+
+<button class="nav__link" style="z-index:3; position: fixed;" onclick="location.href='/index.html'">
+</button>
+
+<svg class="nav__link" onclick="location.href='/index.html#mouth'"
+    style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:white;filter: drop-shadow(0px 3px 6px #ff1744 );z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"# 
+    version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100"
+    xml:space="preserve">
+    <path
+        d="M53.9,17.6c1.5-0.2,3,0.2,4.5,0.6c3,0.9,5.2,3.3,8,4.5c1.9,0.9,4,1.3,6.1,1.6c1.2,0.2,2.3,1,3.5,1.2c3,0.6,6.1,1.8,8,4.3  c1.4,1.7,2.4,3.7,3,5.8c1.1,3.8,2,7.7,2.8,11.5c0.6,2.5,1.3,4.9,1.1,7.5c-0.2,2.3,0.2,4.6-0.4,6.9c-4.2,7-9.7,13.5-16.8,17.6  c-3.2,1.6-6.5,2.9-10,3.7c-2.2,0.3-4.4,1.3-6.6,0.8c-4.3-0.2-8.2-2-12.1-3.6c-1.5-0.8-3.1-1.6-4.7-2.2c-2.5-1.4-5.4-2.2-7.9-3.6  c-4.5-2.3-8.1-5.8-11.1-9.8C18.3,59.6,16,54.3,14,49c-2.4-5.4-5.3-11-5-17.1c0.1-1.2,0.8-2.3,1.8-3c3.8-2.5,8.4-3.2,12.6-4.5  c3.5-1.1,7-2.1,10.7-2.7c2.5-0.5,4.9-1.3,7.4-1.8C45.6,19,49.8,18.4,53.9,17.6 M31.7,24.8c-6.8,1.6-13.7,2.9-20,6  c1.6,0.6,3.2,1.3,4.9,1.5c4.3,0.8,8.7-0.1,13-0.6c3-0.2,6-0.5,9-0.9c4.5-0.5,9-2,13.5-1.1c1.9,0.6,3.5,2.1,4.8,3.6  c1.5,1.7,3.4,3.1,5.5,4c1.5,0.4,3.1,0.3,4.6,0.1c2.9-0.7,6-1.1,9-0.6c-0.9,0.7-2.9,1.1-2.3,2.6c1.8,5,4.3,9.8,7.3,14.2  c1.5,2.3,3.6,4.3,4.2,7.1c0.6,1.5,2.4,1.8,3.9,2.1c-0.2-2-0.6-4-1.2-5.9c-1.5-6.7-2.3-13.5-4.4-20.1c-1.2-3-2.6-6.3-5.7-7.7  c-3-1.3-6.3-0.3-9.3-1.1c-5.1-0.9-7.9-6.1-12.9-7.3C47.6,20.7,39.7,23.6,31.7,24.8 M42.1,33.4c-2.6,0.4-5.3,0.5-8,0.8  c7.7,5.3,16.1,9.6,24.7,13.4c4.3,1.8,8.9,2.6,13.5,3.2c1.5,0.4,3,0.8,4.5,1.1c-0.5-1.6-1.6-3-2.3-4.5c-1.1-2.6-2.4-5.2-3-7.9  c-2.2,0.5-4.3,1.2-6.6,0.8c-4.6-0.8-8.9-3.1-12.2-6.2c-0.7-0.6-1.3-1.4-2.2-1.5C47.6,32.2,44.9,33,42.1,33.4 M11,33.2  c0.3,5.1,2.8,9.7,4.8,14.3c1.3,3.2,2.4,6.4,3.9,9.5c1.5,2.9,3,5.9,5.3,8.3c2,1.9,3.8,4.2,6.4,5.4c2.5,1.2,5.2,2.3,7.7,3.5  c3.8,1.7,8,2.6,11.9,4.1c4,1.1,8.3,2,12.3,0.7c1.8-0.5,3.4-1.6,5-2.4c2.5-1.1,4.9-2.4,7.2-3.8c3.9-2.6,7.2-6,10.6-9.1  c-4.8-0.8-9.7-1.3-14.5-2.2c-5-0.9-10.1-1.4-15.1-2.1c-3.1-0.5-6.3-0.3-9.3-1.3c-1.3-0.4-1.9-1.6-3-2.3c-2.8-2.1-4.7-5-7.2-7.3  c-3-2.7-6.2-5.2-9.8-7.1c-2.3-1.2-4.3-3.1-6.3-4.7c-0.6-0.4-1-1.1-1.8-1.1c-1.7-0.3-3.4-0.3-5-0.9C13.2,34,12.1,33.5,11,33.2  L11,33.2z" />
+</svg>
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.8.1/tachyons.min.css'>
+
+
+
+        <div class="links ttu tracked f6 avenir pt5 b tc nb4">
+            <a style="color:   #ff1744;
+            text-align:center;" target="_blank">Business ·</a> <a style="color:  #ff1744;
+                ;text-align:center " target="_blank">Startup</a>
+        </div>
+
+
+        <h2 style="padding-top:70px;" class="f3 georgia tracked tc lh-copy ph8 b">
+            Saucy Calendar<br>2020.07-2020.10<small></small>
+        </h2>
+
+        <div class="grid">
+            <div style=" height:130px; margin-left: 0%; margin-right: 20%;" class="folio-1 f4 tr pt3 pr3">
+                <li class="article-red fa fa-compass" aria-hidden="true"></li>
+            </div>
+            <div style=" height:130px; margin-left:0%; margin-right:-50%;" class="folio-2 pt3">
+                <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red b ">A sauce visualization project.
+                </p>
+            </div>
+            <div class="folio-3 pt3" style=" height:130px; margin-left: 45%; margin-right: -35%;border-right: 1px solid #222;
+            ">
+                <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red fw5 "> <b> · Adobe Indesign</b><br><b> · Adobe Illustrator <br> · Creative Drawing
+                </p>
+            </div>
+
+            <div class="folio-5 pt3" style="margin-right: -200%; margin-left: 100%;">
+                <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red fw5">Sauce has been around for a while. I thought a sauce bottle captures the culture and the history of that region more than anything else.
+            </div>
+        </div>
+
+        <h2 style="color:     #ff1744;
+        ;filter:blur(1px);margin-top:-10%;margin-bottom:-10%;" class="f2 ttu avenir tracked tc lh-copy pa7 b">
+A hot, spicy calendar on the way. Was I hungry making this? Licked off the screen once or twice..       </h2>     
+
+<div style="line-height: 1.5; color:#222; font-weight:300;margin-top: -30%; margin-left: 100px; margin-right:100px;"
+                        class="links tracked f6 avenir pa7 tj ttu b nb4">
+                        <b style = "font-weight: 700;"> We take many sauces for granted. </b>Although humans have practiced eating for millions of years, while foods and cuisines may change, the sauces remain.
+        They have been on our table for too long; a country's unique cultural traces and traits are usually imprinted on a sauce. Discover and define what are the emblems and significance of a sauce with the<b style ="font-weight: 700;" > wildly creative visual representations </b>of them throuh animals.    
+    </div>
+
+            <div style = "background-image: url('/images/sauce_페이지_01.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">Calendar Cover</div>
+            <div style = "background-image: url('/images/sauce_페이지_02.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">Calendar Overview</div>
+            <div style = "background-image: url('/images/sauce_페이지_03.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">January Sriracha Rooster</div>
+            <div style = "background-image: url('/images/sauce_페이지_04.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">February Mustard Devil</div>
+            <div style = "background-image: url('/images/sauce_페이지_05.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">March Chimichurri Elephant</div>
+            <div style = "background-image: url('/images/sauce_페이지_06.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">April Tabasco Snake</div>
+            <div style = "background-image: url('/images/sauce_페이지_07.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">May Maoynnaise Owl</div>
+            <div style = "background-image: url('/images/sauce_페이지_08.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">June Olive Oil Sparrow</div>
+            <div style = "background-image: url('/images/sauce_페이지_09.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">July Hummus Crocodile</div>
+            <div style = "background-image: url('/images/sauce_페이지_10.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">August Gochujang Tiger</div>
+            <div style = "background-image: url('/images/sauce_페이지_11.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">September Guacamole Skull</div>
+            <div style = "background-image: url('/images/sauce_페이지_12.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">October Bechamel Crane</div>
+            <div style = "background-image: url('/images/sauce_페이지_13.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">November Fish sauce Fish</div>
+            <div style = "background-image: url('/images/sauce_페이지_14.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con">December Ketchup Cat</div>
+
+           
+              
+            <div style="line-height: 1.5; margin-top: 10%;color:#222; font-weight:300;"
+            class="links tracked f5 avenir pa6 tc ttu  nb4">
+   Design Process</div>
+            <img style= "position: absolute; width: 30vw; right: 55%;"  src = '/images/sautrial1.png'>
+            <img style= "position: absolute; width: 30vw; left:55%;"  src = '/images/sautrial2.png'>
+                   
+            <div style="line-height: 1.5; margin-top: 20%;color:#222; font-weight:300;"
+                    class="links tracked f6 avenir pa6 tc nb4">You can see the full presentation from here. 
+            </div>
+            <div style="border: 2px solid #000;
+            color: #222;
+            background-color: #ff1744;
+            border-radius: 8px;
+            height: 70px;
+            padding: 20px 20px;
+            display: inline-block;
+            left: 43%;
+            width: 200px;
+            align-items: center;
+            position: absolute;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
+                    onclick="location.href='https://drive.google.com/file/d/1zRr7ThRfZeKz_3iMx9QjoLDxK7F5pPU1/view?usp=sharing'">  Saucendar<br>
+                    <p class="f8 tts avenir"> Full Presentation</p>
+                </div>
+
+
+
+
+            <div style="border: 1px solid #000;
+            margin-top: -20%;
+            color: #222;
+            background-color: #ccc;
+            border-radius: 8px;
+            padding: 20px 20px;
+            display: inline-block;
+            width: 20vw;
+            margin: 10%;
+            left: 60%;
+            bottom: 40%;
+
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
+                onclick="location.href='/crafts/multi-interface.html'"> Next Project → <br>
+                <p class="f8 tts avenir"> Multi-sensorial Interface </p>
+            </div>
+
+            <div style="border: 1px solid #222;
+           bottom: 40%;
+    
+
+            color: #222;
+            border-radius: 8px;
+            padding: 20px 20px;
+            display: inline-block;
+            width: 20vw;
+            margin: 10%;
+            right: 40%;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button"
+                onclick="location.href='/startup/BI.html'">← Previous Project <br>
+                <p class="f8 tts avenir"> Skincare Bar Identity </p>
+            </div>
+
+                <script src="/blob.js"></script>
+                <script src="/scrollTrigger.js"></script>
+                <script>
+                    ScrollReveal().reveal(document.querySelectorAll('div', 'h2', 'table'), { delay: 500 });
+                </script>
+
+
+</body>
+
+
+
+</html>
