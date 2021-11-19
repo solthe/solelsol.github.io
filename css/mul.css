@@ -345,7 +345,7 @@ svg.earReal {
     border: none;
     background-size: cover;
     background-position: center;
-    background-image: url("/images/workshop4.jpg");
+    background-image: url("../images/workshop4.jpg");
     border-radius: 50%;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
@@ -365,13 +365,13 @@ svg.earReal {
     mix-blend-mode: difference;
   }
   ul li:nth-child(2) {
-    background-image: url("/images/workshop1.jpg");
+    background-image: url("../images/workshop1.jpg");
   }
   ul li:nth-child(3) {
-    background-image: url("/images/workshop2.jpg");
+    background-image: url("../images/workshop2.jpg");
   }
   ul li:nth-child(4) {
-    background-image: url("/images/workshop30.jpg");
+    background-image: url("../images/workshop30.jpg");
   }
 
   .checkbox.frst:checked ~ ul li:nth-child(1) {

@@ -309,7 +309,7 @@ svg.earReal {
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    background-image: url("/images/eye.svg");
+    background-image: url("../images/eye.svg");
     background-color: #75b5b0;
     box-shadow: 0 3px 10px 0 #75b5b0;
 
@@ -319,14 +319,14 @@ svg.earReal {
     animation-play-state: paused;
   }
   .checkbox.scnd + label {
-    background-image: url("/images/ear.svg");
+    background-image: url("../images/ear.svg");
   }
   .checkbox.thrd + label {
-    background-image: url("/images/hand.svg");
+    background-image: url("../images/hand.svg");
   }
 
   .checkbox.foth + label {
-    background-image: url("/images/brain.svg");
+    background-image: url("../images/brain.svg");
   }
 
   .checkbox:checked + label {
@@ -390,7 +390,7 @@ svg.earReal {
     border: none;
     background-size: cover;
     background-position: center;
-    background-image: url("/images/stopdetails.png");
+    background-image: url("../images/stopdetails.png");
     border-radius: 50%;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
@@ -410,13 +410,13 @@ svg.earReal {
     mix-blend-mode: difference;
   }
   ul li:nth-child(2) {
-    background-image: url("/images/stopdetails.png");
+    background-image: url("../images/stopdetails.png");
   }
   ul li:nth-child(3) {
-    background-image: url("/images/bus stop.gif");
+    background-image: url("../images/bus stop.gif");
   }
   ul li:nth-child(4) {
-    background-image: url("/images/idea.png");
+    background-image: url("../images/idea.png");
   }
 
   .checkbox.frst:checked ~ ul li:nth-child(1) {
