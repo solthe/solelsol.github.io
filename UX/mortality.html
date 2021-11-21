@@ -1,0 +1,1021 @@
+<!doctype html>
+<html>
+
+
+<head>
+    <div id="cursorBlob" style="top: 8px; left:-18px"></div>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Happens</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+            background: rgb(25, 28, 37);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+        }
+
+        .article-red {
+            color: #75b5b0;
+        }
+
+        .bg-article-red {
+            background-color: #ff4a46;
+        }
+
+        .container {
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+
+        .f8 {
+            font-size: 0.65rem;
+        }
+
+        .lh-hi {
+            line-height: 2em;
+        }
+
+        button {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: orange;
+            filter: blur(3px);
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            z-index: 100;
+            cursor: pointer;
+            box-shadow: inset 0px 0px 40px 8px orange;
+        }
+
+        svg.earReal {
+            position: absolute;
+            display: inline-block;
+            color: white;
+            top: 20vh;
+            left: 40vw;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+
+            border-radius: 50%;
+            filter: drop-shadow(0px 1px 3px aquamarine);
+            fill: white;
+            box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+            cursor: pointer;
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+        #cursorBlob {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(120deg,
+                    #ff1744,
+                    #e040fb,
+                    #2979ff,
+                    #ff7b00,
+                    #76ff03);
+            filter: blur(5px);
+            background-size: 1600% 1600%;
+            position: absolute;
+            mix-blend-mode: difference;
+            pointer-events: none;
+            z-index: 1;
+            transition: 0.15s linear;
+            border-radius: 50%;
+            animation: blobBackground 15s ease infinite;
+        }
+
+        #cursorBlob:before {
+            position: absolute;
+            content: "";
+            border: 1px solid white;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-radius: 50%;
+            animation: animate 1s linear infinite;
+        }
+
+        #cursorBlob:after {
+            position: absolute;
+            content: "";
+            border: 2px solid white;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-radius: 50%;
+            animation: animate 2s 1s linear infinite;
+        }
+
+        @keyframes animate {
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes blobRadius {
+
+            0%,
+            100% {
+                border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+            }
+
+            20% {
+                border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+            }
+
+            40% {
+                border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+            }
+
+            60% {
+                border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+            }
+
+            80% {
+                border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+            }
+        }
+
+        @keyframes blobBackground {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: #212121;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__link {
+            color: #fff;
+            list-style: none;
+            cursor: pointer;
+            font-size: 10vw;
+            font-family: "Montserrat", sans-serif;
+            transition: 1s ease-in;
+        }
+
+        .nav:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        .nav:hover {
+            transform: translateX(25px);
+        }
+
+        @media (min-width: 500px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-gap: 0.75rem;
+                /*row length vertical */
+                grid-auto-rows: 92px;
+                max-width: 900px;
+                margin: 80px auto;
+                border-top: 1px solid rgb(255, 255, 255);
+            }
+
+            .folio-1 {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                border-right: 1px solid rgb(255, 255, 255);
+            }
+
+            .folio-2 {
+                grid-column-start: 4;
+                grid-column-end: 2;
+                grid-row-start: 1;
+
+                border-right: 1px solid rgb(255, 255, 255);
+            }
+
+            .folio-3 {
+                grid-column-start: 7;
+                grid-column-end: 4;
+
+                border-right: 1px solid rgb(255, 255, 255);
+            }
+
+            .folio-4 {
+                grid-column: span 3;
+            }
+
+            .folio-5 {
+                grid-column-start: 12;
+                grid-column-end: 7;
+                grid-row-start: 1;
+            }
+
+            .folio-6 {
+                grid-column-start: 13;
+                grid-column-end: 7;
+                grid-row-start: 3;
+            }
+
+
+            a {
+                cursor: pointer;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .section {
+                position: relative;
+                width: 100%;
+                display: block;
+            }
+
+            .full-height {
+                min-height: 100vh;
+            }
+
+            .over-hide {
+                overflow: hidden;
+            }
+
+            .padding-tb {
+                padding: 100px 0;
+            }
+
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+                opacity: 0;
+                position: fixed;
+                width: 0;
+            }
+
+            .checkbox:checked+label,
+            .checkbox:not(:checked)+label {
+                display: inline-block;
+                background-color: rgb(255, 255, 255);
+                opacity: 0.8;
+                padding: 10px 10px;
+                font-family: sans-serif, Arial;
+                font-size: 16px;
+                border-radius: 50%;
+                cursor: pointer;
+                margin: 15px;
+                left: 23vw;
+                bottom: 15vh;
+                position: relative;
+                filter: blur(1.5px);
+            }
+
+            .checkbox:checked+label {
+                transform: scale(1.3);
+                background-color: rgb(217, 151, 45);
+            }
+
+            .slider-height-padding {
+                padding-top: 420px;
+            }
+
+            ul {
+                position: absolute;
+                top: 0;
+                left: 3vw;
+                display: block;
+                width: 700px;
+                z-index: -1;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            ul li {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                display: block;
+                z-index: 100;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                height: 300px;
+                border: none;
+                background-size: cover;
+                background-position: center;
+                background-image: url("../images/tobedead/Asset\ 20@4x.png");
+                border-radius: 50%;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+                font-weight: 900;
+                font-size: 16px;
+                letter-spacing: 2px;
+                line-height: 2.7;
+                color: #ffffff;
+                writing-mode: vertical-rl;
+                opacity: 0;
+                pointer-events: none;
+                box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+
+            ul li span {
+                mix-blend-mode: difference;
+            }
+
+            ul li:nth-child(2) {
+                background-image: url("../images/tobedead/Asset\ 23@4x.png");
+            }
+
+            ul li:nth-child(3) {
+                background-image: url("../images/bereave/Asset\ 12@4x.png");
+            }
+
+            ul li:nth-child(4) {
+                background-image: url("../images/legacy/Asset\ 17@4x.png");
+            }
+
+            ul li:nth-child(5) {
+                background-image: url("../images/legacy/Asset\ 19@4x.png");
+            }
+            ul li:nth-child(6) {
+                background-image: url("../images/legacy/Asset\ 19@4x.png");
+            }
+
+            .checkbox.frst:checked~ul li:nth-child(1) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.scnd:checked~ul li:nth-child(2) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.thrd:checked~ul li:nth-child(3) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.foth:checked~ul li:nth-child(4) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            .checkbox.foth:checked~ul li:nth-child(5) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+            .checkbox.foth:checked~ul li:nth-child(6) {
+                opacity: 1;
+                pointer-events: auto;
+                border-radius: 16px;
+            }
+
+            @media (max-width: 767px) {
+                .slider-height-padding {
+                    padding-top: 340px;
+                }
+
+                ul li {
+                    height: 300px;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            @media (max-width: 575px) {
+                .slider-height-padding {
+                    padding-top: 240px;
+                }
+
+                ul li {
+                    height: 200px;
+                }
+            }
+        }
+
+        .in-brief {
+            text-align: center;
+            margin: 0rem 5rem 5rem 5rem;
+        }
+
+        .in-brief h3 {
+            text-align: center;
+            border-left: 1px solid rgb(255, 255, 255);
+            border-right: 1px solid rgb(255, 255, 255);
+            display: inline-block;
+            padding: 0 30px;
+            color: rgb(255, 255, 255);
+            letter-spacing: 0.2rem;
+            font-size: 80%;
+            margin: 0;
+            position: relative;
+            top: 0px;
+            height: 30px;
+        }
+
+        .in-brief-content {
+            columns: 3;
+            column-gap: 30px;
+            grid-auto-rows: auto;
+            font-size: 0.8rem;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 60px;
+        }
+
+        .tree {
+            display: flex;
+            flex-direction: row;
+            padding: 5%;
+            justify-content: center;
+        }
+
+        .hi {
+            border: 1px solid rgb(255, 226, 226);
+            color: #ccc;
+            border-radius: 8px;
+            padding: 10px 10px;
+            display: flex;
+            margin: 20px;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            line-height: 1.2;
+        }
+
+        .p,
+        .np {
+            display: flex;
+            align-content: center;
+        }
+
+        .first,
+        .second,
+        .third {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hi:before {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: rgb(255, 229, 229);
+            position: absolute;
+            left: -41px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .first>.p>.hi:before {
+            display: none;
+        }
+
+        .hi {
+            min-width: 200px;
+            max-width: 200px;
+        }
+
+        .hi:hover {
+            background: #222;
+        }
+
+        .hi:hover+.second .hi {
+            background: #222;
+        }
+
+        .hi:hover+.third .hi {
+            background: #222;
+        }
+
+        #another_button {
+            background-color: none;
+        }
+
+        #another_button:hover {
+            transform: scale(105%);
+            color: #222;
+            filter: blur(1px);
+        }
+
+
+        /* Center tables for demo */
+        table {
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+        }
+
+        /* Default Table Style */
+        table {
+            color: #ccc;
+
+            border: 1px solid #ccc;
+
+            font-size: 12pt;
+            text-align: center;
+            width: 60vw;
+        }
+
+        table thead th,
+        table tfoot th {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0.5em;
+            text-align: center;
+            color: #ccc;
+            font-weight: 500;
+            width: 10vw;
+        }
+
+        table caption {
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        table th,
+        table td {
+            padding: 0.5em;
+            border: 1px solid lightgrey;
+            text-align: center;
+            line-height: 20px;
+            color: #777;
+        }
+
+        table:hover {
+            background: #222;
+            transform: 0.5 ease-in-out;
+        }
+
+        table tfoot th:hover {
+            background: #222;
+        }
+
+
+        .column {
+            float: left;
+            width: 30.33%;
+            height: 600px;
+            padding: 5%;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        caption {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .grdding {
+            columns: 2;
+            column-gap: 10px;
+            grid-auto-rows: auto;
+
+            margin: 0 5rem 5rem 5rem;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<button class="nav__link" style="z-index:3; position: fixed;" onclick="location.href='../index.html'">
+</button>
+
+<svg class="nav__link" onclick="location.href='../index.html#ear'"
+    style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:white;filter: drop-shadow(0px 1px 3px #ff7b00);z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+    viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve">
+    <g>
+        <path
+            d="M50.303,0.345C38.875-1.332,31.925,3.328,28.107,7.531c-6.093,6.704-8.234,16.803-6.786,22.694   c0.33,1.341,1.685,2.161,3.025,1.831c1.341-0.33,2.16-1.684,1.831-3.025c-0.969-3.94,0.448-12.435,5.63-18.137   c4.367-4.806,10.344-6.691,17.771-5.601c17.614,2.583,25.499,20.083,25.499,36.28c0,12.635-4.263,23.459-13.822,35.095   l-1.231,1.502c-8.01,9.782-14.924,18.231-23.52,16.627c-11.985-2.24-11.587-15.556-11.564-16.115   c0.063-1.379-1.004-2.549-2.383-2.611c-1.399-0.074-2.549,1.003-2.612,2.383c-0.288,6.288,2.609,18.823,15.641,21.258   c1.067,0.2,2.105,0.295,3.118,0.295c9.903,0,17.35-9.094,25.189-18.669l1.226-1.495c10.346-12.593,14.959-24.396,14.959-38.269   C80.076,23.225,70.87,3.363,50.303,0.345z" />
+        <path
+            d="M27.79,74.057c1.067,0.764,2.088,1.07,3.051,1.069c2.478,0,4.577-2.027,6.11-3.509c1.561-1.509,3.175-3.068,5.05-3.416   c8.032-1.492,13.19-6.093,15.332-13.675c1.369-4.848,0.833-9.001-1.592-12.344c-4.51-6.213-14.272-7.46-18.797-7.699   c-1.565-4.041-1.911-8.325-0.09-12.101c1.643-3.406,3.988-5.645,6.783-6.473c3.042-0.902,6.625-0.179,10.359,2.087   c11.086,6.727,12.118,26.603,7.958,37.33c-2.372,6.116-3.903,9.219-8.611,13.254c-1.049,0.898-1.17,2.478-0.271,3.525   c0.495,0.577,1.195,0.873,1.899,0.873c0.576,0,1.154-0.198,1.626-0.602c5.739-4.92,7.614-9.041,10.02-15.242   c4.789-12.351,3.975-34.917-10.026-43.413c-4.972-3.017-9.941-3.92-14.374-2.607c-4.183,1.239-7.595,4.384-9.867,9.095   c-4.492,9.313,0.493,20.477,7.426,27.41c0.977,0.976,2.559,0.976,3.536,0c0.976-0.976,0.976-2.559,0-3.536   c-1.29-1.29-2.496-2.753-3.562-4.317c3.907,0.523,9.417,1.868,11.944,5.351c1.501,2.069,1.771,4.702,0.826,8.048   c-1.603,5.677-5.343,8.987-11.432,10.118c-3.354,0.622-5.715,2.903-7.612,4.736c-0.789,0.763-2.11,2.039-2.569,2.087   c0-0.001-0.068-0.018-0.208-0.118c-0.832-0.595-1.048-0.954,0.35-3.976c0.72-1.557,1.465-3.166,1.186-4.864   c-0.898-5.473-0.042-6.766,0.242-7.031c0.21-0.196,0.776-0.21,1.515-0.04c1.189,0.277,1.626,0.957,1.783,1.479   c0.161,0.535,0.032,0.957-0.05,1.046c-1.042,0.903-1.156,2.48-0.254,3.524c0.902,1.046,2.482,1.16,3.526,0.257   c1.563-1.351,2.214-3.68,1.657-5.935c-0.648-2.628-2.716-4.587-5.53-5.242c-3.126-0.726-5.022,0.284-6.064,1.26   c-2.8,2.623-2.411,7.519-1.765,11.421c-0.009,0.352-0.475,1.358-0.784,2.024C25.39,66.338,23.304,70.848,27.79,74.057z" />
+    </g>
+</svg>
+
+
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.8.1/tachyons.min.css'>
+
+
+        <div class="links ttu tracked f6 avenir pt5 b tc nb4">
+            <a style="color: #ff7b00; text-align:center;" target="_blank">UX RESEARCH ·</a> <a
+                style="color: #ff7b00;text-align:center " target="_blank">design</a>
+        </div>
+
+
+        <h2 style="padding-top:70px;" class="f3 georgia tracked tc lh-copy ph8 b">
+            Mortality and Social Media: Instagram Commemoration<br><small>2020.10.25-2021.2.1</small>
+        </h2>
+        <div class="grid">
+            <div style=" height:130px; margin-left: 0%; margin-right: 20%;" class="folio-1 f4 tr pt3 pr3">
+                <li class="article-red fa fa-compass" aria-hidden="true"></li>
+            </div>
+            <div style=" height:130px; margin-left:0%; margin-right:-50%;" class="folio-2 pt3">
+                <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red ">· User research on mortality<br> · Commemoration prototype<br>· Instagram Implementation <br>· Publication
+                </p>
+            </div>
+            <div class="folio-3 pt3" style=" height:130px; margin-left: 45%; margin-right: -35%;border-right: 1px solid #222;
+            ">
+                <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red "> <b>· In-depth Interview</b><br>· Observation<br> · Thematic Analysis <br> <b>· Value Sensitive Design </b> <br> · User testing
+                </p>
+            </div>
+
+            <div class="folio-5 pt3" style="margin-right: -200%; margin-left: 30%;">
+                <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red"> Our society avoids the topic of death, <br>
+                    and yet there are countless loved ones <br> passing away and not commemorated  <br> enough. Commemoration service for <br> social media is in grave need.
+            </div>
+        </div>
+
+        <div style="margin-top: 10%" class = "links tracked tc f7 fw1 i avenir ph7 lh-copy tc nb4"> 
+Project by: Eunsol Choi, Soonho Kwon, Minseok Kim, Sunah Hwang, Dongwoo Kim <br>
+My role was Conceptualization, User Research, UI Desing, User Testing, Qualitative Data Analysis  <br>        
+This project was a part of Yonsei University’s course <br>
+IID3013 User Experience Research Methods 2020 Fall semester </div>
+
+        <h2 style="color:orange;filter:blur(1px); margin-top: 20%; font-weight: 700;" class="f2 ttu avenir b tracked tc lh-copy ph7 b">
+            What happens to my social media account afetr I die? How can I manage it when I'm not there anymore?
+        </h2>
+
+
+        
+<div style="margin-top: 5%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tj nb4"> 
+    We’d probably wonder what’ll happen to my family, friends, my dog or cat that’s left behind.. but<b> hardly about our Instagram account or other social media, maybe because it’s deemed less important, </b> or is something that’s valued less than physical connections. Our identity on social media after demise, is something that’s been explored for many years, and digital traces and presence is one example. 
+        </div>
+    
+    <h2 style="margin-top:10%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+        Preceding Studies
+    </h2>
+    <div style="margin-top: 5%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tj nb4"> 
+There has been recent studies on <b>'thanatosensitivity'</b> that creates and uses technologies that allow us to comprehend, reflect, and discuss the mortality.          
+    <img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 40vw; margin-bottom: -10%;"
+src="../images/dig.png"></img>
+
+<h2 style="margin-top:35%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+    Digital Traces
+</h2>
+<div style="margin-top: 5%" class = "links tracked tc f5 fw1 avenir pa4 lh-copy tj nb4"> 
+So, we thought about what is the one place we leave a lot of traces consciously or unconsciously on daily basis? Digital presence is deeply stemmed in our life through our social media accounts. 
+But there was a fatal problem that there was <b> no way in reality that people can manage their own accounts </b>after death according to their own will and autonomy in these platforms. 
+ </div>   
+<div style="margin-left: 40%;margin-top: 10%" class = "links tracked tc f5 fw1 avenir pa4 lh-copy tj nb4"> 
+   In an attempt to examine ways to successfully manage the digital traces as well as to <b> provide an online commemoration opportunity, </b>we aimed to sensitively design the commemoration system that considers every stakeholders’ volition, and that can be implemented into everyday life technology.  </div>       
+<img style= "position: absolute; left: 50%; transform:translate(-170%,-70%); width: 15vw; margin-bottom: -10%;"
+src="../images/instagram.svg"></img>
+<h2 style="margin-top:25%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy pa4 b">
+    Value Sensitive Design
+</h2>
+<div style="margin-top: 5%" class = "links tracked tc b f5 fw1 avenir pa4 lh-copy tj nb4"> 
+    <i style = "color:rgb(217, 151, 45); font-weight: 500; text-decoration: underline;" > · Privacy issues <br>
+    · Absence of a manager </i><br><br>
+    Privacy is easily violated, without the owner and unstructured security system and it is aggravated from not having a person to literally manage the account.   <br><br>
+    In order to reconcile social media and after death situation with the use of technological interaction. That is, to consider the digital volition, or the general volition of <b> EACH </b>stakeholder involved in the process, and as a whole it is both resulted as and embraced by a thanatosensitive design to bring the concept of mortality into our daily activity.
+ </div>  
+ <h2 style="color:#75b5b0;filter:blur(1px); margin-top: 20%; font-weight: 700;" class="f2 ttu avenir tracked tc lh-copy b">
+    Research Goal: <br>To Extract <i style = "color:#ccc;"> Values </i> According to <i style = "color: #ccc"> 
+Human Volition</i> and Design
+Commemorative Space in Instagram
+Dedicated to<i style = "color: #ccc">  Remember
+and Recover.</i>
+</h2>
+<h2 style="color:white; margin-top: 10%; margin-left:10%; font-weight: 500;" class="f4 avenir tracked tl pa5 lh-copy">
+<i style = "color: orange;"> RG1: </i> Investigate user perception on commemoration <br>
+<i style = "color: orange"> RG2: </i> Discuss how social media is, and can be utilized as a
+commemoration tool <br>
+<i style = "color: orange;"> RG3: </i> Design social media system for death preparation and
+commemoration <br>
+<i style = "color: orange"> RG4: </i> Evaluate the newly proposed system
+</h2>
+    
+    <aside style="margin-top: 10%;padding:100px;" class="in-brief">
+            <h3 class="f3 georgia tracked tc lh-copy ph8 b">Research Structure</h3>
+            <div class="links ttu tracked f6 fw1 avenir pt5 tc nb4" style="border: 0px solid #ccc; padding: 60px;">
+                <div class="tree">
+                    <div class="first">
+                        <div class="p">
+                            <div class="hi"style="font-weight:700; line-height: 2;">Exploratory Research</div>
+                            <div class="second">
+                                <div class="p"><div class="hi"style="font-weight:500;">In-depth Interview</div>
+                                    <div class="third"><div class="hi">Transcript Coding</div><div class="hi">Affinity diagraming</div></div>
+                                </div>
+                                <div class="p"><div class="hi"style="font-weight:500;">Design Requirements</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="p">
+                        <div class="hi"style="font-weight:700;">Prototyping and UT</div>
+                        <div class="second">
+                            <div class="p"><div class="hi"style="font-weight:500;">UI Design according to Design Requirements</div>
+                                <div class="third"><div class="hi">Pilot UT</div></div>
+                            </div>
+                            <div class="p"><div class="hi"style="font-weight:500;">User Testing</div>
+                                <div class="third"><div class="hi">Evaluation</div><div class="hi">Final Design Solution</div></div>
+                            </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+</aside>
+
+<h2 style="margin-top:0%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy pa4 b">
+    Exploratory Study
+</h2>
+<div style="margin-top: 5%" class = "links tracked tc b i f4 fw1 avenir pa4 lh-copy tc nb4"> 
+    <i style = "color:rgb(217, 151, 45); font-weight: 500; text-align:center;" > “One can no more look steadily at death than at the sun.”<br>
+        - Herman Feifel, thantologist. </i><br><br></div>
+        <div style="margin-top: 5%" class = "links tracked b f5 fw1 avenir pa4 lh-copy tj nb4"> 
+            With our in-depth interviews, we first approached the users’ thoughts on death, in online situation.
+
+Death, involves not only the phase where we’re no longer here, but also the stages right before. 
+However, that is often overlooked and not carefully or intensely touched upon. 
+It’s a subject that is difficult to address, to point at, and is often avoided to talk about. 
+Likewise, it is something that involves so many stakeholders, that in one research it is unfathomable to understand everyone’s needs. However, it was necessary and promising enough to analyze three main stakeholders, who perform separate tasks in very distinct places. 
+
+    </div> 
+    <h2 style="color:orange; margin-top: 10%;  font-weight: 500;" class="f4 avenir tracked tc pa5 lh-copy">
+       Stakeholders
+        </h2>
+    <h2 style="color:white; margin-top: 0%;font-weight: 500; " class="f5 avenir tracked tj pa4 lh-copy">
+        <i style = "color: orange;"> Before Death: </i> how do users want their Instagram be or be managed, after their death? <br>
+        <i style = "color: orange"> After Death: </i> how have users commemorated the loss of their close ones or processed their deaths? <br>
+        <i style = "color: orange;"> Legacy Contact: </i> how was it like to manage the post-mortality or their closed ones? 
+<br><br>
+       <b style = "text-align: center; font-weight:100;"> After 5 hrs of affinity diagraming, findings were extracted!</b> 
+        </h2>
+        <img style= "margin-top: -10%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 50vw; margin-bottom: 10%;"
+        src="../images/affinity.png"></img>
+
+        <h2 style="color:orange; margin-top: 60%;  font-weight: 500;" class="f4 avenir tracked tc pa5 lh-copy">
+            Findings
+             </h2>
+         <h2 style="color:white; margin-top: 0%; " class="f5 avenir tracked tj pa4 lh-copy">
+             <i style = "color: orange;font-weight: 500;"> Theme 1 Processing Death</i>  <br>
+             Processing death begins from the moment the person receives the obituary. He or she goes through following emotional stages: a denial, fear, followed by sorrow, then regret. <br><br>
+
+             <i style = "color: orange;font-weight: 500;"> Theme 2 Purposes and Practices
+             of Commemoration </i> <br>
+             Essence of purposes and practices of commemoration in fact was both to memorialize the deceased, but also for the sake of the bereaved.<br><br>
+             <i style = "color: orange;font-weight: 500;"> Theme 3 Commemorative
+             Communities </i> <br>
+             It is born with the common purpose to honor the loved ones, and renew the connections with them, and reaffirm the relationship within the community.<br><br>
+             <i style = "color: orange;font-weight: 500;"> Theme 4 Online Commemoration:
+             Pros and Cons  </i> <br>
+             Some said online platforms certainly lower that barrier and increase accessibility to commemorate and share experiences between the bereaved. Yet, some were doubtful about the sincerity of online commemoration.<br><br>
+             <i style = "color: orange;font-weight: 500;"> Theme 5 Using Social Media
+             After Death </i> <br>
+             Possibility and potential that social media can entail as an expression tool after someone’s death.
+             </h2>
+          
+
+             <h2 style="margin-top:45%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy b">
+                Role of writing and community in recovery.
+            </h2>
+            <div style="margin-top: 5%" class = "links tracked f5 fw1 avenir pa4 lh-copy tj i nb4"> 
+           <b> Two motives of commemoration: Remembrance and Recovery.</b> <br>
+           Sharing emotional recoverty: Community<br><br>
+          <i> “I liked it when someone posted a picture that I have never seen of him (...) it felt really good. It was
+like seeing a side of him I never knew.” (B3)</i>  <br> <br>
+“If someone is facing the same experience as I am, if that person reads what I wrote, that person
+might find his own way of going through with it.” (B5) <br>
+             </div> 
+
+             <h2 style="margin-top:35%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy b">
+                Aperiodic space detached from daily activities.
+            </h2>
+            <div style="margin-top: 5%" class = "links tracked f5 fw1 avenir pa4 lh-copy tj  nb4"> 
+                We defined that an aperiodic space is a space separate from daily lives, yet not so faroff that the bereaved finds if difficult to return back to daily life. 
+                We suggest that this space could be provided within social media and the profile page of the dead. 
+             </div> 
+
+             <h2 style="margin-top:35%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy b">
+                Malleable Naure of Account after Death.
+            </h2>
+            <div style="margin-top: 5%" class = "links tracked f5 fw1 avenir i pa4 lh-copy tj  nb4"> 
+                Social media accounts are representation of oneʼs identity in digital space.<br>
+When the owner passes away, it transforms into a space that shares the news, memorialize and is
+visited by the bereaved. Dissemination, preservation and community.<br><br>
+“ I think the essence of commemoration will always be the same (...) we may only feel strange and
+unfamiliar since itʼs so new, but the act itself may not be so different in essence ” (B5)
+
+             </div> 
+
+             <h2 style="color:orange; margin-top: 10%;  font-weight: 500;" class="f4 avenir tracked tc pa5 lh-copy">
+                Design Requirements
+                 </h2>
+             <h2 style="color:white; margin-top: 0%; " class="f5 avenir tracked tj pa4 lh-copy">
+                 <i style = "color: orange;font-weight: 500;"> A SYSTEM </i>  <br>
+                 to set up commemorative space before death.<br>
+                <i style = "color: #ccc; font-size: 0.8em; ">  Identified Values: Privacy, Volition </i><br>
+                 <br>
+                 <i style = "color: orange;font-weight: 500;"> A MANAGER </i>  <br>
+                 to run the commemorative space.<br>
+                <i style = "color: #ccc; font-size: 0.8em; ">  Identified Values: Protection, Volition, Security</i><br>
+                 <br>
+                 <i style = "color: orange;font-weight: 500;"> A SPACE </i>  <br>
+                 to recover and perpetuate the memory.<br>
+                <i style = "color: #ccc; font-size: 0.8em; "> Identified Values: Recovery, Remembrance, Privacy, Sincerity </i><br>
+                 <br>
+
+                 </h2>
+
+                 <h2 style="color:orange; margin-top: 10%;  font-weight: 500;" class="f4 avenir tracked tc pa5 lh-copy">
+                    Design Solution: Re-imagining Commemorative Space
+                     </h2>
+                
+
+
+            <h2 style="color:white; margin-top: 0%; " class="f5 avenir tracked tj pa4 lh-copy">
+             
+                   1. Setting up the Commemoration Account : All Users<br>
+                  </i>  <br>
+                   2. Management Account for Account Manager : Legacy Contact<br>
+                  </i>  <br>
+                   3. Encountering the Commemoration Acount : The Bereaved - followers<br>
+                   </i>  <br><br>
+                </h2>
+               
+   
+            <div style = "margin-top: -20%;" class="row full-height justify-content-center">
+                <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+                    <div class="section mx-auto text-center slider-height-padding">
+                        <input class="checkbox frst" type="radio" id="slider-1" name="slider" checked />
+                        <label for="slider-1"></label>
+                        <input class="checkbox scnd" type="radio" name="slider" id="slider-2" />
+                        <label for="slider-2"></label>
+                        <input class="checkbox thrd" type="radio" name="slider" id="slider-3" />
+                        <label for="slider-3"></label>
+                        <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
+                        <label for="slider-4"></label>
+                
+                        <ul>
+                            <li style="position:absolute;top:20%; text-indent: 2rem; color: white;">
+                                <span>Instructions</span>
+                            </li>
+                            <li style="text-indent: 2rem;">
+                                <span>Assign Account manager</span>
+                            </li>
+                            <li style="text-indent: 2rem;">
+                                <span>Assign Account manager</span>
+                            </li>
+                            <li style="text-indent: 2rem;">
+                                <span>Learn about Commemoration Accounte</span>
+                            </li>
+                            <li style="text-indent: 2rem;">
+                                <span>Legacy contact's role</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+           
+            <h2 style="color:orange; margin-top: 0%;  font-weight: 500;" class="f4 avenir tracked tc pa5 lh-copy">
+                User Testing
+                 </h2>
+            <div style="margin-top: 0%" class = "links tracked tc b f5 fw1 avenir pa4 lh-copy tj nb4"> 
+                The prototype is largely divided into three distinct sections each focusing on
+                :<br>
+                A. All Instagram Users <br>
+                B. Account Manager<br>
+                C. Commemoration Account Followers <br>
+                * A. Setting up the Commemoration Account <br>
+                * B. Managing the account as an Account Manager<br>
+                * C. Commemorating with the Commemoration Account <br>
+
+                → Six Participants 
+            </div>
+
+            <h2 style="margin-top:10%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy pa4 b">
+                UT Results
+            </h2>
+            <div style="margin-top: 5%" class = "links tracked tc b f4 fw1 avenir pa4 lh-copy tj nb4"> 
+                <i style = "color: orange;font-weight: 500;">   A. Setting up the Commemoration Account </i> <br>
+→ Rare opportunity to delve into the thought of dying <br>
+→ Tedious customization process deemed necessary<br>
+<i style = "color: orange;font-weight: 500;">  B. Managing the account as an Account Manager</i> <br> 
+→ Its role vital to handle emergencies <br>
+→ Connecting the deceased with the bereaved <br> 
+<i style = "color: orange;font-weight: 500;">  C. Commemorating with the Commemoration Account </i><br> 
+→ Community and space to relieve fear and sorrow <br> 
+→ Thoughtful UI design involving each stakeholderʼs values <br>
+            </div>
+
+            <h2 style="margin-top:10%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy pa4 b">
+                Evaluation Summary
+            </h2>
+            <div style="margin-top: 5%" class = "links tracked tc b f4 fw1 avenir pa4 lh-copy tj nb4"> 
+                Chance to contemplate death <br>
+                Importance of volition before death <br>
+                Significance of space for sharing <br> <br><br>
+
+                
+            </div>
+
+            <h2 style="margin-top:10%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy pa4 b">
+                Publication
+            </h2>
+            <div style="margin-top: 5%" class = "links tracked tc i f6 avenir pa4 lh-copy tl nb4"> 
+
+            Followning project was then published at Interact 2021. Bari, Italy.  <br><br><br>
+            <img src = "../images/interact.png"> <br> <br> <br>
+            I had the honor to be the oral presenter at the virutal conference. 
+            Full paper can be found here: <a style = "color:#75b5b0 " href = "https://link.springer.com/chapter/10.1007/978-3-030-85616-8_26"> https://link.springer.com/chapter/10.1007/978-3-030-85616-8_26 </a>  <br> <br>
+
+
+            <video width = 100% controls>
+                <source src ="../images/presentation.mov" type = "video/mp4">
+            
+             
+            </div>
+
+            <div style="border: 1px solid #000;
+  
+            color: #222;
+            background-color: #ccc;
+            border-radius: 8px;
+            padding: 20px 20px;
+            display: inline-block;
+            width: 20vw;
+            margin: 10%;
+            left: 60%;
+            bottom: 40%;
+        
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
+                onclick="location.href='/visual/chicken-review.html'"> Next Project → <br>
+                <p class="f8 tts avenir"> At the Bus stop </p>
+            </div>
+        
+
+    <script src="../blob.js"></script>
+    <script src="../scrollTrigger.js"></script>
+    <script>
+        ScrollReveal().reveal(document.querySelectorAll('div','h2','table'), { delay: 500 });
+    </script>
+
+
+</body>
+
+
+
+</html>
