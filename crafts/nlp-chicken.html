@@ -664,6 +664,11 @@
             </div>
         </div>
       
+        <div style="margin-top: 10%" class = "links tracked tc f7 fw1 i avenir ph7 lh-copy tc nb4"> 
+            Project by: Eunsol Choi, Jungyeom Kim, Soohyun Yoon, Youbeen Lee. Adivsor: Donghwan Kim <br>
+            My role was Natrual Language Processing, Data Analysis, Data Visualization, Empirical Finding, Documentation  <br>        
+            This project was a part of Yonsei University’s course <br>
+            IID2019-01 Social Computing 2020 Fall semester </div>
 
 
         <h2 style="margin-top: 15%; margin-bottom: 5%; color:#e040fb;filter:blur(1px)" class="f2 ttu avenir tracked tc b lh-copy ph7 b">
@@ -680,9 +685,9 @@ Every day 180,000 Reviews are written in Tripadivsor... do we trust the reviews 
                 <div class="tree">
                     <div class="first">
                         <div class="p">
-                            <div class="hi"style="font-weight:700;">Data Collection + Text Mining on Chicken Review and Ratings</div>
+                            <div class="hi"style="font-weight:700; line-height: 1.7;">Data Collection and Text Mining on Chicken Reviews</div>
                             <div class="second">
-                                <div class="p"><div class="hi"style="font-weight:500;">Data Analysis</div>
+                                <div class="p"><div class="hi"style="font-weight:500;">Data Processing and Analysis</div>
                                     <div class="third"><div class="hi">Trend Comparison: Google, Naver</div><div class="hi">Trend Analysis</div></div>
                                 </div>
                                 <div class="p"><div class="hi"style="font-weight:500;">Natural Language Processing</div>
@@ -699,132 +704,249 @@ Every day 180,000 Reviews are written in Tripadivsor... do we trust the reviews 
 <h2 style="margin-top:-1%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
     Preceding Studies
 </h2>
-<div class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> The 'provided data' from Dacon Tournament (from 2008 to 2017.11) was collected.
-    Then, we had to further collect the data those from 2017.12 ~ 2012.12 from the Korean National Price Open System, through crawling.
-<br> The columns used are ‘dong’, ‘jibun’, ‘Apt_name’, ‘use_area(m2)’, ‘transaction_year’,
-‘transaction_month’, ‘date(1~10)’, ‘date(11~20)’, ‘date(21~)’, ‘floor’, ‘year_found’.   </div>
+<div class = "links tracked f6 fw1 avenir ph7 lh-copy tj nb4"> 
+    Reviews are vital both for the restaurant's improvement and also for objective deicision making for the consumers. <br>
+    However, for both parties, to glimpse through all reviews is demanding and also due to many factors, the reviews and ratings do not necessarily match as every customer has different standards and values they place the weight on.
+    Previous attempts to empirically and objectively analyze and group the reviews are: <br>
+    <br>
+    <b> 
+    ·   Empirical Modeling on Positive and Negative Reviews <br>
+    ·   Category Classification: taste, delivery, atmosphere, etc. <br>
+    ·   Sentimental Analysis on joy, sadness, fear, anger, disgust, surprise <br>
+    ·   Sentimental dictionary </b><br>
+      </div>
 
-<img style= "margin-top: 4%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 30vw; margin-bottom: -10%;"
-src="../images/apt1.png"></img>
-
-<div style= "margin-top: 30%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> We then processed the data according to the date (early, middle, late) through one-hot encoding. We replaced the outlier and anomaly to dummy data. 
-    Converting the data to Object type, we label encoded the apartment name and dong (town name) and finally checked the irregularity in correlation. Following was the sorted data:
-</div>
-<img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 50vw; margin-bottom: 10%;"
-src="../images/apt2.png"></img>
-
-
-
-
-<div style= "margin-top: 30%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-    Finding the right model was as follows. Rather than having random extraction as the train data, we manually selected data from fairly even distribution on the year, month and day data, and used the LignGBM model for the algorithmic modeling. 
-    Compared to XGBoost, Light GBM was deemed more efficient in terms of memory consumption as well.</div>
+      <div style = "margin-top: 10%;" class = "links tracked f6 fw1 avenir ph7 lh-copy tc nb4"> 
+          Typical Delivery App Review Format
+          </div>
+<img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-43%,40%); width: 50vw; margin-bottom: -10%;"
+src="../images/review.png"></img>
 
 
-<table style= "margin-top: 7%" class ="links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"  >
+
+
+<h2 style="margin-top:50%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+    Methodology
+</h2>
+<img style= "margin-top: -20%; position: absolute; left: 50%; transform:translate(-100%,40%); width: 30vw; margin-bottom: -10%;"
+src="../images/chicken.jpg"></img>
+
+<div style= "margin-top: 0%; margin-left: 35%;" class = "links tracked f6 fw1 avenir ph7 lh-copy tj nb4"> 
+    We sought to first, collect food deliery app review data via web crawling. Then, we analyzed the different ratings and reviews by comparing them with those of other platforms (google, naver). 
+Then, KoNLpy is used as the natural language processing tool, to explored the different trends in the review data. Then, to analyze if there is a trend in the text morphemes themselves, we used
+OKT (Open Korean Text) processor to observe such trend. </div>
+
+<table style= "margin-top: 30%" class ="links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"  >
 <aside>
       <thead>
         <tr>
-          <th>LighGBM</th>
-          <th>XGBoost</th>
+          <th>Methodology</th>
+          <th>Usage</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-            <td>Histogram-based decision algorithm</td>
-            <td>Sorted-based decision algorithm
+            <td>Python Selenium</td>
+            <td>Web crawling of 5,000 review data/ Rating trend comparisons
            </td>
           </tr>
         <tr>
-          <td>=> Efficient in memory consumption</td>
+          <td>KoNLPy</td>
+          <td>Korean natural language processing, standardization of data
+        </td>
         
         </tr>
 
-          <th> => Faster training speed
+          <th> Open Korean Text Processor
          </th>
+         <th> Observing distinct part of speech and morpheme proportions
+        </th>
 
-        </tr>
-</th>>
     </tbody>
     </table>
 </aside>
 
 
-<h2 style="margin-top:30%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
-    Modeling
+<h2 style="margin-top:70%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+    Rating Results
 </h2>
 
 <div style= "margin-top: 0" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-    Setting the train data at 90% and test data at 10% with total amount of data (985,094), validation scoring was conducted. We analyzed that score metrics of RMSE was 0.09. </div>
+    We have analyzed our observed data "Yogi** food delivery application had a fiver-star oriented rating dispersion compared to two other reivew platforms, when comparing the five franchise chicken brands and 65 stores.
+Such a result signifies that the review and rating has lower credibility in Yogi**, while others have more neutral rating dispersion, it meant that the delivery app had more lenient ratings compared to their real sentiments. </div>
 
-    <div style= "margin-top: 10%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-        Based on the python generated models and processed data, we aimed to deploy the Django Framework as the core framework to the prediction website. The website construction plan is as follows:</div> 
 
-        <aside style="margin-top: -10%; padding:100px;" class="in-brief">
-            <div class="links ttu tracked f6 fw1 avenir pt5 tc nb4"">
-                <div class="tree">
-                    <div class="first">
-                        <div class="p">
-                            <div class="hi"style="font-weight:700;">INPUT DATA</div>
-                            <div class="second">
-                                <div class="p"><div class="hi"style="font-weight:500;">Price prediction launched</div><div class="hi">Visualization activated</div>
-                                    <div class="third"><div class="hi">main page loaded</div><div class="hi">prediction modeling activated</div><div class="hi">Website responds.</div>
-                                    
-                                </div>
-                      
-                               
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
+<table style= "margin-top:8%" class ="links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"  >
+
+<aside>
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Number of Stores</th>
+        <th>Number of Reviews</th>
+        <th>Mean Rating</th>
+        <th>Std. D</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>Yogi**</td>
+          <td>65
+         </td>
+         <td>61,693</td>
+          <td> 4.67
+         </td>
+         <td> <b style = "color:white" > 0.169259</b>
+        </td>
+        </tr>
+      <tr>
+        <td>Naver</td>
+        <td>64
+      </td>
+      <td> 16,407
+    </td>
+    <td>4.32
+    </td>
+    <td> 0.187963
+    </td>
+
+      </tr>
+
+        <th> Google
+       </th>
+       <th> 89
+      </th>
+      <th> 1,574
+    </th>
+    <th> 3.72
+    </th>
+    <th> <b style  ="color:white;"> 0.859846 </b>
+    </th>
+    
+
+  </tbody>
+  </table>
 </aside>
-<h2 style="margin-top:-10%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
-   Deploying Django
+
+    <div style= "margin-top: 30%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
+        This drove us to analyze the Yogi** review further and discover the inherent factors to influence its ratings and observe if there is a discrepancy between ratings and the review content. </div> 
+
+
+<h2 style="margin-top:10%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+    Factor Analysis
 </h2>
-<div style= "margin-top: 0%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-    Devised each 'town' to be opened (gu) and correlating street address to match (dong) in views.py. Formulated the data in views.py, with the parameters of the created model.
-</div>
-<img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 50vw; margin-bottom: 10%;"
-src="../images/apt3.png"></img>
 
-<div style= "margin-top: 40%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-    Finally the website input and output service code is requested by post and returned in each command.
-</div>
-<img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 50vw; margin-bottom: 10%;"
-src="../images/apt4.png"></img>
-<div style= "margin-top: 40%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-    The predicted price, according to the input 'town', 'street', and 'apartment' will be visualized along with the final price, and the nearby parks and facilities on a map.
-</div>
-<img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 50vw; margin-bottom: 10%;"
-src="../images/apt5.png"></img>
+<div style= "margin-top: 0" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
+    After factor analysis, it was excavated there was a positive correlation between the taste, quantity and delivery ratings, and that one is very important to one another, and that they altogether have a very strong relationship.
+    This meant that if the delivery was late, the taste was teemed bad, and overall the rating was also resulted as low.  </div>
 
-<h2 style="margin-top:40%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
-  Data Visualization
+    <table style= "margin-top:8%" class ="links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"  >
+
+        <aside>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Taste</th>
+                <th>Quantity</th>
+                <th>Delivery</th>
+                <th>Mean Rating</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td><b style = "color:white" > Taste </b></td>
+                  <td> <b style = "color:white" > 1 </b>
+                 </td>
+                 <td>0.713 </td>
+                  <td> 0.568
+                 </td>
+                 <td> 0.883</b>
+                </td>
+                </tr>
+              <tr>
+                <td><b style = "color:white" >Quantity </b></td>
+                <td>0.713
+              </td>
+              <td> <b style = "color:white" > 1 </b>
+            </td>
+            <td> 0.585
+            </td>
+            <td> 0.877
+            </td>
+        
+              </tr>
+              <tr>
+                <td><b style = "color:white" >Delivery</b></td>
+                <td>0.568
+              </td>
+              <td> 0.585
+            </td>
+            <td> <b style = "color:white" > 1</b>
+            </td>
+            <td> 0.835
+            </td>
+        
+              </tr>
+        
+                <th><b style = "color:white" > Mean Rating</b>
+               </th>
+               <th> 0.883
+              </th>
+              <th>0.877
+            </th>
+            <th> 0.835
+            </th>
+            <th> <b style  ="color:white;">1 </b>
+            </th>
+            
+        
+          </tbody>
+          </table>
+        </aside>
+
+        <div style= "margin-top: 30%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
+            It was shown that taste-quantity had strong positive correlation coefficient of 0.72 , taste-delivery also had 0.58 coefficient and finally quantity-delivery also had a coefficient of 0.57.
+        <br> Then, it was logical for us to conduct a review analysis to find positive correlations between these three factors. After manually sorting out 5,000 review data into positive and negative reviews, we also identified them as positively correlated.  Detailed results are shown in the paper.
+    <br><br> Following is the moprhemes and parts of speech that comprised the negative and positive reviews - it turns out certain parts of speech and its frequency indicated negative content, including the numbers.</div>
+
+
+
+<img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 40vw; margin-bottom: 10%;"
+src="../images/morphemes.png"></img>
+
+<h2 style="margin-top:50%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+    Negative Word Dictionary
  </h2>
-<div style= "margin-top: 0%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-    Alongside the prediction, general data representation on seoul's fluctuating prices according to the selected variables are showcased in the website. Responsive visualization is conducted upon the users' requests.
-</div>
-<img style= "margin-top: -8%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 50vw; margin-bottom: 10%;"
-src="../images/apt-visual1.gif"></img>
-<img style= "margin-top: 25%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 50vw; margin-bottom: 10%;"
-src="../images/apt-visual2.gif"></img>
+ <div style= "margin-top: 0%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
+Finally, based on the polarity identification, we have created a negative word dictionary of which is chicken-review specialized, under four main topics and 20
+sub-topic classifications after extracting a total of 367 negative words.   </div>
+
+<img style= "margin-top: -10%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 40vw; margin-bottom: 10%;"
+src="../images/nlp-chart.png"></img>
+
+<h2 style="margin-top:60%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+    Conclusion
+ </h2>
+
+<div style= "margin-top: 5%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
+    Although we had focused primarily on one delivery app and one type of food, fried chicken (because we all love it), we analyzed if there was a discrepancy between the ratings and reviews, and it turns out
+ many customers rate the restaurant higher than they actually think, provided their review content was analyzed. In the flood of reviews, we hoped that providing a negaitve word dictionary based on sentimental polarity analysis, and 
+provided indicators for both the owners and customers about the polarity of the reviews. We also idenfitifed certain parts of speech and the presence of numbers could provide negative connotations. We hope that this approach to explore the delivery review data can 
+assist so many parties involved in the delivery app culture, that is basically bombarded every day due to its popularity.  </div>
+
+<h2 style="margin-top:20%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
+    Publication
+ </h2>
+
+ <div style= "margin-top: 5%; margin-bottom: 10%;" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
+    Following article is published in the Journal of Korea Contents Association, "BEHIND CHICKEN RATINGS: An Exploratory Analysis of Yogiyo Reviews Through
+    Text Mining" https://doi.org/10.5392/JKCA.2021.21.11. </div>
 
 
-<h2 style="margin-top:90%;margin-bottom: 5%;" class="f4 ttu avenir tracked tc lh-copy ph7 b">
-   Demonstration
-   </h2>
 
-<div style= "margin-top: 0%" class = "links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"> 
-The live-functioning website is deployed with pythonanywhere.com considering our model heavily relies on the python framework.
-<br> <a style="color:white; font-weight: 700;" href = "http://eunsolchoi.pythonanywhere.com/">Website Link</a> 
-<br> Nonetheless, since the embedded data is enormous and the LightGBM model takes time to produce the result, the website may load for a while, so if in hurry, here is the video of the final output.
-</div>
-<video style="margin-top: 10%;" width = 100% controls>
-    <source src ="../images/apt.mp4" type = "video/mp4">
 
-    </div>
-
+       
 
     <div style="border: 1px solid #000;
   
@@ -843,8 +965,8 @@ The live-functioning website is deployed with pythonanywhere.com considering our
     justify-content: center;
     cursor: pointer;
     line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
-        onclick="location.href='../visual/chicken-review.html'"> Next Project → <br>
-        <p class="f8 tts avenir"> NLP Chicken Review </p>
+        onclick="location.href='../about/about.html'"> About Page → <br>
+        <p class="f8 tts avenir"> About Me! </p>
     </div>
 
     <div style="border: 1px solid #ccc;
@@ -863,8 +985,8 @@ The live-functioning website is deployed with pythonanywhere.com considering our
     justify-content: center;
     cursor: pointer;
     line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button"
-        onclick="location.href='../psycho/sent-ano.html'">← Previous Project <br>
-        <p class="f8 tts avenir"> Sentiment Anomaly </p>
+        onclick="location.href='../crafts/ai-persona.html'">← Previous Project <br>
+        <p class="f8 tts avenir"> AI Persona Chatbot </p>
     </div>
 
     <script src="../blob.js"></script>
