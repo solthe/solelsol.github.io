@@ -18,11 +18,11 @@ body {
 button {
   position: absolute;
   top: 20px;
-  left: 30px;
+  left: 20px;
   border: none;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background-color: orange;
   filter: blur(3px);
   color: black;
@@ -1150,7 +1150,7 @@ svg.handl {
 .popover .close::after {
   left: 0%;
   bottom: 10%;
-  width: 70px;
+  width: 74px;
   height: 30px;
   position: absolute;
   display: flex;
@@ -1169,8 +1169,8 @@ svg.handl {
 
 @keyframes grow {
   100% {
-    height: 90%;
-    width: 90%;
+    height: 70vh;
+    width: 85vw;
   }
 }
 
