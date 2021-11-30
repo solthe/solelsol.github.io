@@ -21,8 +21,8 @@ button {
   left: 20px;
   border: none;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-color: orange;
   filter: blur(3px);
   color: black;
@@ -1121,7 +1121,7 @@ svg.handl {
   text-transform: uppercase;
   transform: translateY(200px);
   opacity: 0;
-  animation: 1s slideUp ease forwards 0.5s;
+  animation: 0s slideUp ease forwards 0.5s;
   position: relative;
 }
 
@@ -1133,8 +1133,8 @@ svg.handl {
   left: 0;
   bottom: 10px;
   background-color: orange;
-  box-shadow: inset 0px 0px 40px 8px aquamarine;
-  transition: all 0.5s ease;
+  box-shadow: inset 0px 0px 40px 8px rgb(255, 255, 255);
+  transition: all 0s ease;
 }
 
 .stuff_list li:hover:before {
@@ -1144,7 +1144,7 @@ svg.handl {
 .popover p {
   padding: 50px;
   opacity: 0;
-  animation: 1s fadeIn ease forwards 1s;
+  animation: 0s fadeIn ease forwards 1s;
 }
 .about {
   left: 2.4%;
