@@ -547,3 +547,30 @@ svg.earReal {
 .hi:hover + .third .hi {
   background: #222;
 }
+.about {
+  left: 0.2%;
+  top: 42%;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  z-index: 100;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px white;
+  border-radius: 15%;
+  color: rgb(255, 255, 255);
+  content: "ABOUT";
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-family: monospace;
+  position: fixed;
+}
+
+.about:hover {
+  transform: scale(1.1);
+  filter: blur(1px);
+  box-shadow: 3px 6px 8px rgb(0, 0, 0);
+}
