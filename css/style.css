@@ -1101,8 +1101,9 @@ svg.handl {
 .stuff_list {
   list-style-type: none;
   position: fixed;
-  left: 26%;
+  left: 23%;
   bottom: 35%;
+  line-height: 3;
 }
 
 .stuff_list a {
@@ -1120,9 +1121,14 @@ svg.handl {
   padding: 15px 0;
   text-transform: uppercase;
   transform: translateY(200px);
-  opacity: 0;
-  animation: 0s slideUp ease forwards 0.5s;
+  opacity: 1;
+  animation: 1s slideUp ease forwards 0.5s;
   position: relative;
+}
+
+.stuff_list li:hover {
+  filter: blur(1px);
+  transform: translateX(20px);
 }
 
 .stuff_list li::before {
@@ -1138,20 +1144,19 @@ svg.handl {
 }
 
 .stuff_list li:hover:before {
-  width: 100%;
+  position: absolute;
 }
 
 .popover p {
   padding: 50px;
   opacity: 0;
-  animation: 0s fadeIn ease forwards 1s;
+  animation: 1s fadeIn ease forwards 1s;
 }
 .about {
   left: 2.4%;
-  top: 50%;
+  top: 40%;
   width: 74px;
   height: 40px;
-  position: absolute;
   display: flex;
   z-index: 100;
   font-size: 10px;
@@ -1193,9 +1198,11 @@ svg.handl {
   content: "BACK";
   cursor: pointer;
   opacity: 0.4;
-  animation: 1s fadeIn ease forwards 0.5s;
+  animation: 1s fadeIn ease forwards 1s;
   font-family: monospace;
   font-size: 1.1em;
+
+  display: none;
 }
 
 @keyframes grow {
