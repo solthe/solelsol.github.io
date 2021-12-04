@@ -1153,10 +1153,10 @@ svg.handl {
   animation: 1s fadeIn ease forwards 1s;
 }
 .about {
-  left: 2.4%;
+  left: 0.2%;
   top: 40%;
-  width: 74px;
-  height: 40px;
+  width: 80px;
+  height: 50px;
   display: flex;
   z-index: 100;
   font-size: 10px;
@@ -1169,7 +1169,7 @@ svg.handl {
   content: "ABOUT";
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-family: monospace;
   position: fixed;
 }
