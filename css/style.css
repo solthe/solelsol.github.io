@@ -823,7 +823,14 @@ svg.mouthl {
   transform: translateY(15%);
   opacity: 1;
 }
+
 .ear:hover {
+  fill: aqua;
+}
+.ear:active {
+  fill: aqua;
+}
+.ear:visited {
   fill: aqua;
 }
 .ear:hover + #BlobE {
