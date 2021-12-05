@@ -1153,7 +1153,7 @@ svg.mouthl {
   text-transform: uppercase;
   transform: translateY(200px);
   opacity: 1;
-  animation: 1s slideUp ease forwards 0.5s;
+  animation: 0.7s slideUp ease forwards 0.5s;
   position: relative;
 }
 
@@ -1181,7 +1181,7 @@ svg.mouthl {
 .popover p {
   padding: 50px;
   opacity: 0;
-  animation: 1s fadeIn ease forwards 1s;
+  animation: 0s fadeIn ease forwards 1s;
   z-index: -200;
 }
 .about {
