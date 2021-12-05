@@ -197,7 +197,7 @@ svg.mouthl {
   top: 20.5vh;
   left: 67.5vw;
   font-size: 20px;
-
+  z-index: 300;
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
 
@@ -260,6 +260,7 @@ svg.mouthl {
   top: 18.5vh;
   left: 67.5vw;
   font-size: 20px;
+  z-index: 300;
 
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
@@ -320,6 +321,7 @@ svg.mouthl {
   left: 67.5vw;
   font-size: 20px;
   font-weight: 700;
+  z-index: 300;
 
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
@@ -380,6 +382,7 @@ svg.mouthl {
   left: 67.5vw;
   font-size: 20px;
   font-weight: 700;
+  z-index: 300;
 
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
@@ -440,6 +443,7 @@ svg.mouthl {
   left: 67.5vw;
   font-size: 20px;
   font-weight: 700;
+  z-index: 300;
 
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
@@ -517,6 +521,8 @@ svg.mouthl {
     #ff7b00,
     #76ff03
   );
+  z-index: 300;
+
   background-size: 1600% 1600%;
   position: absolute;
   mix-blend-mode: difference;
@@ -564,6 +570,8 @@ svg.mouthl {
   opacity: 0;
   width: 200px;
   height: 200px;
+  z-index: 300;
+
   position: absolute;
   position: fixed;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -638,6 +646,8 @@ svg.mouthl {
   font-weight: 700;
   left: 55vw;
   bottom: 16vh;
+  z-index: 300;
+
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
   margin: 0 auto;
@@ -703,6 +713,8 @@ svg.mouthl {
   font-size: 20px;
   font-weight: 700;
   left: 55vw;
+  z-index: 300;
+
   bottom: 16vh;
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
@@ -735,6 +747,8 @@ svg.mouthl {
   bottom: 0;
   top: 0;
   border-radius: 50%;
+  z-index: 300;
+
   animation: animate 2s linear infinite;
 }
 
@@ -771,6 +785,8 @@ svg.mouthl {
   font-weight: 700;
   left: 55vw;
   bottom: 16vh;
+  z-index: 300;
+
   right: 0;
   box-shadow: inset 0px 0px 40px 8px aquamarine;
   margin: 0 auto;
@@ -790,6 +806,8 @@ svg.mouthl {
   z-index: 1;
   transition: 0.15s linear;
   border-radius: 50%;
+  z-index: 300;
+
   animation: blobBackground 15s ease infinite;
 }
 #BlobH:before {
@@ -895,7 +913,6 @@ svg.mouthl {
 .circle {
   transform-style: preserve-3d;
   animation: animateText 10s linear infinite;
-  z-index: -100;
 }
 
 .circle span {
@@ -911,7 +928,6 @@ svg.mouthl {
   transform: rotateY(calc(var(--i) * calc(360deg / 25))) translateZ(150px);
   border-top: 4px solid black;
   border-bottom: 4px solid black;
-  z-index: -100;
 }
 
 .circle span::before {
@@ -1085,6 +1101,7 @@ svg.mouthl {
 .popover {
   display: none;
   box-shadow: 0px 6px 8px rgba(19, 19, 19, 0.7);
+  z-index: -200;
 }
 
 .popover:target {
@@ -1096,6 +1113,7 @@ svg.mouthl {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -200;
 }
 
 .popover .content {
@@ -1106,7 +1124,7 @@ svg.mouthl {
   width: 0;
   height: 0;
   color: #fff;
-  background-color: rgb(25, 28, 37);
+  background-color: none;
   animation: 0.5s grow ease forwards;
   text-align: left;
 }
@@ -1164,6 +1182,7 @@ svg.mouthl {
   padding: 50px;
   opacity: 0;
   animation: 1s fadeIn ease forwards 1s;
+  z-index: -200;
 }
 .about {
   left: 0.2%;
@@ -1215,7 +1234,7 @@ svg.mouthl {
   animation: 1s fadeIn ease forwards 1s;
   font-family: monospace;
   font-size: 1.1em;
-
+  z-index: -200;
   display: none;
 }
 
