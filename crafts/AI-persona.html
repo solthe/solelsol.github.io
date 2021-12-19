@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Multisensorial Interface</title>
+    <title>AI Persona</title>
     <script src="https://unpkg.com/scrollreveal"></script>
     
     <style>
@@ -23,6 +23,57 @@
   background-position: center;
   color: white;
 }
+table {
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+        }
+
+        /* Default Table Style */
+        table {
+            color: #ccc;
+
+            border: 1px solid #ccc;
+
+            font-size: 12pt;
+            text-align: center;
+            width: 60vw;
+        }
+
+        table thead th,
+        table tfoot th {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0.5em;
+            text-align: center;
+            color: #ccc;
+            font-weight: 500;
+            width: 10vw;
+        }
+
+        table caption {
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        table th,
+        table td {
+            padding: 0.5em;
+            border: 1px solid white;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+
+        table:hover {
+            background: rgb(20, 19, 19);
+            transform: 0.5 ease-in-out;
+        }
+
+        table tfoot th:hover {
+            background: #222;
+        }
 
 .article-red {
   color: #75b5b0;
@@ -613,178 +664,237 @@ svg.earReal {
 
 
         <h2 style="padding-top:70px;" class="f3 georgia tracked tc lh-copy ph8 b">
-            Building a Multi-sensorial Interface II.  <br><small>2021.08-2021.10</small>
+            Designing AI Personas<br><small>2021.04 - 2021.09</small>
         </h2>
 
 
 
         <div class="grid" style = "margin-top: 4%;">
-            <div class="folio-1 f4 tr pt3 pr3" style="height: 130px;">
+            <div class="folio-1 f4 tr pt3 pr3" style="height: 150px;margin-right: 30%;">
                 <li class="article-red fa fa-compass" aria-hidden="true"></li>
             </div>
-            <div class="folio-2 pt3" style="height: 130px;">
+            <div class="folio-2 pt3" style=" margin-right: 10%; padding-right:10%;  margin-left: 0%;height: 150px;">
                 <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Sensory workshop<br> and interface implementation
+                <p class="f8 ttu avenir tracked lh-hi article-red">Designating personas in human-AI collaboration.
                 </p>
             </div>
-            <div class="folio-3 pt3" style="height: 130px;">
+            <div class="folio-3 pt3" style="height: 150px; margin-left: 5%; padding-right: 10%;  ">
                 <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red "> <b> · Sensory workshop</b><br>· Qualitative coding
-                    <br> <b>· Interface Design</b> <br> · Mechanical Prototyping <br> · quantitative analysis</p>
+                <p class="f8 ttu avenir tracked lh-hi article-red "> Geonhee Lee: Research Lead, Persona Design <br> 
+                    Songyi Kim: Statistical Analysis, Experiment Design <br> Eunsol Choi: Literature Reivew, Documentation <br></p>
             </div>
-            <div class="folio-4 pt3">
+            <div class="folio-4 pt3" style = "margin-left: 10%;margin-right: 0%;">
                 <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Prototyping the interface into everyday design to
-                    <br><b>receive public reactions.</b></p>
+                <p class="f8 ttu avenir tracked lh-hi article-red">Groupwork havs different productivity according to the personality combination. The goal is to see if same applies to human-Ai collaboration.</p>
             </div>
         </div>
-        <img style="position: absolute; left: 50%; transform: translate(-55%, 0); width: 60vw;  margin: 30px;border-radius:20px;" src="../images/mul.gif">
+        <img style="position: absolute; left: 50%; transform: translate(-55%, 0); width: 60vw; background:white;margin: 30px;border-radius:20px;" src="../images/robot.png">
 
 
-        <h2 style="color:#e040fb;filter:blur(1px);margin-top:70%;" class="f2 ttu avenir tracked tc lh-copy ph7 b">
+        <h2 style="color:#e040fb;filter:blur(1px);margin-top:60%;" class="f2 ttu avenir tracked tc lh-copy ph7 b">
             Process Overivew</h2>
 
         <h2 style="margin-top: -5%; margin-bottom: 10%; font-weight: 300;  margin-right: 10%; margin-left: 10%;padding:60px; color: white;"
-            class="f3 ttu tc avenir tracked ph7 lh-hi">
-            1. Sensory Framework construction → 2. Sensory workshop → 3. Interface design → <a
-                style="text-decoration: underline;">4. prototype implementation→ 5. Public testing</a> → 6.
-            Quantitative and qualitative analysis.
+            class="f3 ttu tj avenir tracked ph7 lh-hi">
+            1. Brainstorming Literature Review → 2. Experiment Design → 3. AI Persona Design → 4. Wizard of Oz Experiment→ 5. Evaluation
         </h2>
 
 
-        <div class="row">
-            <div class="column" style="margin-left: 110px;background-image:url('../images/1.gif');background-repeat: no-repeat;
-                background-size: contain;">
-
-            </div>
-            <div class="column" style="margin-left: -30px;background-image:url('../images/p9.gif');background-repeat: no-repeat;
-                background-size: contain;">
-
-            </div>
-            <div class="column" style="margin-left: -30px;margin-right: 20px;background-image:url('../images/5.gif');background-repeat: no-repeat;
-                background-size: contain;">
-
-            </div>
-        </div>
+        <h2 style="color:#e040fb;filter:blur(1px);margin-top:10%;" class="f2 ttu avenir tracked tc lh-copy ph6 b">
+            Team member personality is important in groupworks. How about AI personality? What traits do we expect from AI agents? </h2>
 
 
         <aside style="margin-top: 20%" class="in-brief">
-            <h3 class="f3 georgia tracked tc lh-copy ph8 b">Prototype Framework</h3>
+            <h3 class="f3 georgia tracked tc lh-copy ph8 b">Study Background</h3>
             <div class="in-brief-content">
-                <p class="f7 avenir tracked lh-hi "><strong style="color:#75b5b0;">The interface</strong>,
-                    was primarily prototyped, for this time, to help increase people get familiar with unfamiliar foods.
-                    Ingredient Exposure was devised as the user touches each presented
-                    ingredient, and designated sensory stimuli were activated accordingly. In case of audio stimulation,
-                    it was transmitted through embedded speakers (audio-visual and multi-sensorial). To implement
-                    olfactory modalities, fragrance oils from Nature In Flavor co., Ltd. were utilized to match each
-                    ingredient’s smell attributes which were then diffused by planting Arduino humidifier module. 
-                    Tactile stimulations were formulated through modeling clays, resin, and appropriate
-                    ornamental components, each fixed with a tact switch attached to the pertinent ingredient.
+                <p class="f7 avenir tracked lh-hi "><strong style="color:#75b5b0;">Designing an AI Persona</strong>
+                    stemmed from a hypothesis that the degeree of extroversion of a user will contribute to user response to the varied level of extroversion of the AI agent. 
+                    The participants were assessed with NEO-PI-R based BFM personality type test to determine their personality type, and AI agents were assigned accordingly.
+                    We designed the AI persona based on the verbal characteristics of extroverted and introverted people studies and designated the personality traits accordingly.
                 </p>
             </div>
         </aside>
 
-        <div style="margin-top: 0%;" class="section full-height over-hide px-4 px-sm-0">
+        <div style="margin-top:0%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
+        class="links ttu tracked f5 fw1 avenir  tc nb4 b">AI persona Design</div>
 
-            <div class="container">
-                <div style="color:#ccc;font-weight:300; margin-top: 10%;"
-                    class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Prototype </div>
-                <div class="row full-height justify-content-center">
-                    <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
-                        <div class="section mx-auto text-center slider-height-padding">
-                            <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked />
-                            <label for="slide-1"></label>
-                            <input class="checkbox scnd" type="radio" name="slider" id="slider-2" />
-                            <label for="slider-2"></label>
-                            <input class="checkbox thrd" type="radio" value="PLAY" onclick="play()" name="slider"
-                                id="slider-3" />
-                            <label for="slider-3">
-                            </label>
-                            <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
-                            <label for="slider-4"></label>
-                            <ul>
-                                <li style="position:absolute;top:20%; text-indent: 2rem; color: white;">
-                                    <span>audio-visual Interface design</span>
-                                </li>
-                                <li style="text-indent: 2rem;">
-                                    <span>Scent exertion</span>
-                                </li>
-                                <li style="text-indent: 2rem;">
-                                    <span>trial prototype</span>
-                                </li>
-                                <li style="text-indent: 2rem;">
-                                    <span>tactile stimulation</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <iframe style="margin-left: 15%; background-color: #222; border: 1px solid rgba(0, 0, 0, 0.1); align-items: center;" width="400" height="480" src="https://framer.com/embed/Sensory--tnmeOiNGDAtX60GoRSwa/l40_eI0Ez?highlights=0" allowfullscreen></iframe>
-        <p style="margin-left: 60%; margin-top:-27%;" class = "f8 ttu avenir tracked lh-hi b">Audio-visual prototype can be seen from here</p>
-        
+        <table style= "margin-top:0%" class ="links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"  >
+
+            <aside>
+                <thead>
+                  <tr>
+                    <th>Personality <br> Traits</th>
+                    <th>Design Element</th>
+                    <th>Extrovert Bot</th>
+                    <th>Introvert Bot</th>
+                 
+                  </tr>
+                </thead>
+                <tbody style = "color: white;" >
+                  <tr>
+                      <td>Verbosity</td>
+                      <td> Verbose
+                     </td>
+                     <td>High</td>
+                      <td> Low
+                     </td>
+                    </td>
+                    </tr>
+                 
+                    <tr>
+                    <td>Empathy</td>
+                    <td> Active agreement
+                  </td>
+                  <td> High
+                </td>
+                <td> Low
+                </td>
+                </td>
+                  </tr>
+            
+                    <th> Criticism
+                   </th>
+                   <th> Negation
+                  </th>
+                  <th> Low
+                </th>
+                <th> High
+                </th>
+                </th>
+                
+                <tr>
+                    <td>Cautiousness</td>
+                    <td> Filled pause
+                   </td>
+                   <td> Low </td>
+                    <td> High
+                   </td>
+                  </td>
+                  </tr>
+                
+    
+              </tbody>
+            </aside>
+              </table>
+
+
+  
+       
         <div style="margin-top:30%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
-        class="links ttu tracked f5 fw1 avenir  tc nb4 b">Building the olfactory interface was a hardcore journey and finally, <br> the messy prototype was produced. </div>
+        class="links ttu tracked f5 fw1 avenir  tc nb4 b">Extrovert and Introvert Design Example </div>
 
 
-        <div class="row">
-            <div class="column" style="margin-left: 110px;background-image:url('../images/trial1.jpg');background-repeat: no-repeat;
-                background-size: contain;">
-            <h1 style="margin-top:30%; opacity:0.7; margin-right: 05%; font-weight:700;" class="links ttu f4 fw1 avenir tr nb4 b">Dissecting an aroma diffuser</h1>
-            </div>
-            <div class="column" style="margin-left: -30px;background-image:url('../images/trial3.jpg');background-repeat: no-repeat;
-                background-size: contain;">
-                 <h1 style="margin-top:30%; opacity:0.7; margin-right: 05%; font-weight:700;" class="links ttu f4 fw1 avenir tr nb4 b">Agonizing the Servo motors </h1>
+     
+        <img style="position: absolute; left: 50%; transform: translate(-55%, 0); width: 60vw; background:white;margin: 30px;border-radius:20px;" src="../images/aibot.png">
 
-            </div>
-            <div class="column" style="margin-left: -30px;margin-right: 20px;background-image:url('../images/trial2.gif');background-repeat: no-repeat;
-                background-size: contain;">
-                 <h1 style="margin-top:30%; opacity:0.7; margin-right: 05%; font-weight:700;" class="links ttu f4 fw1 avenir  tr  nb4 b">Using ultrasonic sensor</h1>
+        <div> 
+       <div class="links  tracked f7 fw1 avenir tc nb4 i" style = "margin-top:40%;" > Left) Extrovert conversation example Right) Introvert conversation example </di>
 
-            </div>
-        </div>
+       </div>
+
+       <div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
+       class="links ttu tracked f5 fw1 avenir tc nb4 b">Experiment Design </div>
+
+       <div>
+       <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > Participants were first assessed with the NEO-PI-R based BFM (Big Five Model) Personality type test on how extroverted they are.
+    They were then randomly assigned to one of the two AI chatbots and to one of the two discussion topics. 
+    Each session took 20 minutes, conducted in a usability evaluation room where the experimenter observed the participants from only one side.
+    The experiment was conducted with a Wizard of Oz method; participants communicated via texting with the AI agent without knowing that a human “wizard” was performing the AI role behind the scenes.
+    To minimize the variance among the wizards, only one wizard researcher performed the role of the AI agent in this study.
+ </div>
+
+       </div>
+
+       <div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
+       class="links ttu tracked f5 fw1 avenir tc nb4 b">Findings </div>
+
+       <div>
+       <div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
+        1. Validation of Experimental Settings
+ </div>
+
+ <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
+    We recruited students aged 20 to 30, regardless of gender, from one university and conducted brainstorming experiments with 20 students. After the experiment, 15 out of 20 participants (75%) said they thought the brainstorming process was with real AI agents.
+</div>
+
+<div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
+   2. When brainstorming with AI agents, introverts are less concerned about their ideas judged
+</div>
+
+<div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
+    Interestingly, contrary to conventional human–human brainstorming, the introverted participants were less likely to show concern about what the coworker (i.e., the AI chatbots) thought about their ideas or how to persuade them.
+</div>
+
+<div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
+    3. Extroverts prefer humans to chatbot collaborators in brainstorming
+ </div>
+ 
+ <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
+    When the extraverts self-evaluated the performance of the brainstorming session, we found no significant difference between the two personalities of chatbots, contrary to the results of the introverts.
+ During the interview, they revealed that they preferred human-human collaboration.
+</div>
 
 
-        <img style="margin-left: 10%; margin-top:13%;"src = "../images/press.gif">        <p style="margin-left: 70%; margin-top:-17%;" class = "f8 ttu avenir tracked lh-hi b">hooking up the <br> arduino humidifier module</p>
+<div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
+       class="links ttu tracked f5 fw1 avenir tc nb4 b">Validation Study </div>
+
+       <div>
+       <div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
+        Based on the findings from the first study, we designed the follow-up study to extend this area of investigation by a quantitative approach with a larger number of participants.
+       </div>
+
+       <div class="links tracked f6  avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
+       We designed the experiment where participants watched two brainstorming examples videos with the two AI personas and answered the questionnaire.
+       The videos showed a sample dialogue from a human–AI collaboration process, and they were created based on the actual conversation data from the preliminary experiment.
+       The questionnaire consisted of 24 personality test questions and 18 experimental questions on a five-point Likert scale (1: strongly disagree, 2: disagree, 3: neither agree nor disagree, 4: agree, 5: d), distributed after each collaboration video. The first question group consisted of a NEO-PI-R type personality test to determine whether the participants’ personality type was extroverted or introverted based on the Big Five personality traits. The second section confirmed the character of the AI chatbot, which participants confirmed through the video, thereby accepting the bot as designed in the experiment. Finally, after collecting basic data from the experiment through the above two groups, we observed how participants perceived brainstorming using the AI chatbot in earnest at the end of the questionnaire.
+    </div>
 
 
+    <div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
+       class="links ttu tracked f5 fw1 avenir tc nb4 b">Results </div>
 
-        <h2 style="margin-top:27%; color:#e040fb;filter:blur(1px)" class="f2 ttu avenir tracked tc lh-copy ph6 b">
-            Self-ording kiosk machine had multi-sensorial interface implemented at an expo.
-        </h2>
+    <div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
+        1. Validation of Persona Design
+ </div>
 
-        <h2 style="margin-top:10%; color:#e040fb;filter:blur(1px)" class="f2 ttu avenir tracked tc lh-copy ph6 b">
-            92 participants tried the machine out of which 43 were food neophobic!
-        </h2>
+ <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
+    The results show that the precondition of the hypotheses was satisfied: through the videos, the participants perceived the two personas in the way the researchers had designed.
+</div>
 
-        
-<img style= "margin-top: 0%; position: absolute; left: 50%; transform:translate(-50%,40%); width: 40vw; margin-bottom: 10%;"
-src="../images/multi.png"></img>
+<div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
+   2. The difference between extrovert and introvert in AI brainstorming
+</div>
 
-        <img style="width:70%; margin-top:60%; margin-left: 15%; margin-bottom: 20%;opacity:0.7;"src = "../images/QA.png">        <p style="margin-left: 15%; margin-top:-60%;" class = "f8 ttu avenir tracked lh-hi b">Baseline and endline Food Familiarity pre and post experiment:  <br> highly significant difference found in food familarity among the multi-sensorial interface group</p>
+<div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
+    Analogous to the preliminary results, introverts wanting liberation from coworkers’ evaluations and burdensome or unnecessary interactions during collaborations, introverts in the following experiment also preferred AI chatbots to humans and deemed it more efficient for the following reasons:<br><br>
+  <a style = "font-style: italic;"> “I don’t know yet, but I thought it would be efficient because I hope that unnecessary energy between people, such as negative words and actions, will not appear. I think it will be more helpful in that sense.” <br>
+    <br>“I am having a hard time conversing with a person, as I am a little concerned about what that person thinks of me, so I think using an AI chatbot will allow me to exchange opinions comfortably.” <br>
+   <br> “I think each party has its own strengths and weaknesses. If you work with an AI, you don’t have to worry about your feelings, and it would be convenient to just talk about your ideas directly. But are they more creative than humans? The question still remains.”
+</a>
+</div>
+ 
+ <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
+    <br>On the other hand, in the case of extroverted participants, they preferred humans over AI chatbots because of the technical limitations of AI.<br>
+    <br><a style = "font-style: italic;"> “AI has a learned aspect, so it sees a specific case and applies it to the next. It would be a good choice if only I was trying to come up with an idea suitable for a certain project, but I like and value creative ideas and friendly conversations with people. I will use AI for my projects, but I don’t think it fits my personality very well.”</a><br>
+        <br>
+</div>
 
-        <img style="width:70%; margin-top:50%; margin-left: 15%; margin-bottom: 20%;opacity:0.7;" src = "../images/chart.png">        <p style="margin-left: 15%; margin-top:-67%;" class = "f8 ttu avenir tracked lh-hi b">Willingness to try, satisfaction level and familiarity Mean± SE: <br> significance found in multi-sensorial group
-        </p>
-
-        <img style="width:70%; margin-top:55%; margin-left: 15%; margin-bottom: 20%;opacity:0.7;" src = "../images/QA results.png">        <p style="margin-left: 15%; margin-top:-50%;" class = "f8 ttu avenir tracked lh-hi b">Qualitative Interface Analysis
-        </p>
-
-
-
-
+</div>
    
 
-        <h2 style="margin-top: 40%; color:#e040fb;filter:blur(0px)" class="f3 ttu avenir tracked tc lh-copy ph7 b ">
-            Results indicated that <br><small class = "fw1" style="color:#ccc; font-size: 0.8em;" > the idea of receiving all non-taste sensory information prior to tasting the food item is phenomenal. This drives me to conduct further research on whether this framework would work with other unfamiliar items (or with familar items) in subsequent multisensory environments. It also gives guidance to future food research in HCI to consider the affective behaviors when interacting with multisensorial interfaces.</small>
+        <h2 style="margin-top: 10%; color:#e040fb;filter:blur(0px)" class="f3  avenir tracked tc lh-copy ph7 b ">
+            We could identify the following: <br>
             <br>
             <br>
-            • <br><br>
-            • <br><br>
-            • <br><br><br>
-            You can read more from the paper: "Multi-sensorial interface increases food familarity" below. </h2>
+            <div class="links tracked f6 fw1 avenir tj nb4 lh-copy b" style = "margin-bottom: 10%; color:white" > 
+            • Use of AI chatbot to overcome the existing limitations of brainstorming<br>
+            • Need for segmented research depending on the purpose of AI collaboration<br>
+            • Limitations and future research direction<br>
+            </div>
+            Please read more from the paper: "Brainstorming with an AI chatbot: does its personality matter among extraverted and
+            introverted coworkers?" below. </h2>
 
-           <a href='../images/IJD_Multi.pdf' target="_blank"><div style="border: 2px solid #000;
+           <a href='../images/Brainstorming with an AI chatbot.pdf' target="_blank"><div style="border: 2px solid #000;
             color: rgb(241, 51, 226);
             background-color:none;
             border-radius: 8px;
@@ -804,44 +914,13 @@ src="../images/multi.png"></img>
                 </div> </a>  
                 
 
-       
-
-
-            <div style = "margin-top: 20%;" class="container">
-                <div style="color:#ccc;font-weight:300; margin-top: 5%; margin-bottom: -10%;"
-                    class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Discussion</div>
-                <div style="line-height: 2; color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%; line-height: 2;"
-                    class="links tracked f6 avenir pa5 tj nb4"><b style="font-weight: 700;">EFFICACY OF SENSORY EXPOSURE.</b>
-                    <br> 
-                    Non-tasting element exposure has been an emerging theory to be effective for food neophobia for years, but it was yet to be experimented. Especially since mere sensory exposure without taste stimuli meant that people cannot have mouth contact with food, there existed suspicion to how effective it will be. However, this study had shown that multi-sensorial exposure through vision, sound, smell, and touch can elicit higher willingness to try and considerably improved food familiarity at a certain novel item.
-                </div>
-                <div style="line-height: 2; color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%; line-height: 2;"
-                    class="links tracked f6 avenir pa5 tj nb4"><b style="font-weight: 700;">EDUCATIONAL ASPECTS OF MULTISENSORIAL ITNERFACE.</b>
-                    <br>
-                    After the construction of the sensory framework, a professional’s consultation was received through an online call. A nutrition and education professional assessed the workshop and theme as rational and informative education-wise. She had commented that exposing foods through a multisensory interface can simultaneously be an education on technology uses on younger audiences, and not just a food education. 
-                </div>
-                <div style="line-height: 2; color:#ccc;font-weight:300; margin-top: 10%; margin-bottom: -10%; line-height: 2;"
-                    class="links tracked f6 avenir pa5 tj nb4"><b style="font-weight: 700;">FURTHER USAGES.</b>
-                    <br> 
-                    Most participants established that a multi-sensorial experience gives an opportunity for an objective decision making, better understanding on the novel food and drastically improved familiarity. Along with government regulations, sensory stimulation and manipulation could be used to restrict unhealthy foods and evoke curiosity on healthy foods, and to help the sensorially impaired via non-tasting elements.
-                </div>
-            </div>
-    
-
-<img style="margin-left: 15%; margin-top:14%; margin-bottom:19%; background-color: #222; border: 1px solid rgba(0, 0, 0, 0.1); align-items: center;" width="500" height="400" src="../images/hamyang.jpg" ></i>
-<p style="margin-left: 65%; margin-top:-40%; margin-bottom: 15%;" class = "f7 ttu avenir tracked ph4 lh-hi b">this is me awkwardly pointing at nothing after 2 weeks of experiment; the scenery at the expo certainly paid off :)</p>
-</div>
 
 
 
 
-
-<h2 style= "color:#e040fb;filter:blur(1px);margin-top:20%;" class="f2 ttu avenir tracked tc lh-copy ph7 b">
-  ↓ You can see the construction background and justification <br>from part one 
-</h2>
 
    
-<div style = "margin-top: 0%;">
+<div style = "margin-top: 20%;">
    
   <div style="border: 1px solid #000;
 
@@ -852,7 +931,7 @@ src="../images/multi.png"></img>
   display: inline-block;
   width: 20vw;
   margin: 10%;
-  left: 50vw;
+  left: 47vw;
   bottom: 40%;
 
   align-items: center;
@@ -860,8 +939,8 @@ src="../images/multi.png"></img>
   justify-content: center;
   cursor: pointer;
   line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
-      onclick="location.href='../crafts/AI-persona.html'"> Next Project → <br>
-      <p class="f8 tts avenir"> AI Persona </p>
+      onclick="location.href='../psycho/taste.html'"> Next Project → <br>
+      <p class="f8 tts avenir"> Tastes is in the Brain </p>
   </div>
 
   <div style="border: 1px solid #222;
@@ -874,14 +953,14 @@ src="../images/multi.png"></img>
   display: inline-block;
   width: 20vw;
   margin: 10%;
-  right: 30vw;
+  right: 37vw;
   align-items: center;
   position: relative;
   justify-content: center;
   cursor: pointer;
   line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button"
-      onclick="location.href='../crafts/multi-interface.html'">← Previous Project <br>
-      <p class="f8 tts avenir">Multi-sensorial Interface Pt.1 </p>
+      onclick="location.href='../crafts/multi-interface-part-2.html'">← Previous Project <br>
+      <p class="f8 tts avenir">Multi-sensorial Interface Pt.2 </p>
   </div>
 
 
