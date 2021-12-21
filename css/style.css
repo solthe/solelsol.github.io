@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"); /* Import our variable font Fraunces */
 
 * {
   margin: 0;
@@ -8,31 +9,65 @@
 }
 
 body {
-  background: rgb(25, 28, 37);
+  background: #222;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   color: white;
 }
+.body {
+  color: white;
+  font-family: /*"Playfair Display SC", serif;*/ Roboto, sans-serif;
+}
+
+.sheet {
+  font-family: Fraunces, Serif;
+  font-size: 5.5em;
+  position: relative;
+  right: 28vw;
+  bottom: 25vh;
+  line-height: 59px;
+  white-space: nowrap;
+}
+
+.sheet a {
+  font-family: Fraunces, Serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 14px;
+}
+
+.line {
+  height: 0.1em;
+  width: 800px;
+  left: 26vw;
+  bottom: 17vh;
+  z-index: -900;
+  background-color: orange;
+  position: absolute;
+}
 
 button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  position: fixed;
+  top: 40px;
+  left: 40px;
   border: none;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: orange;
-  filter: blur(3px);
-  color: black;
+  background-color: aqua;
+  filter: blur(0px);
+  border: solid 2px white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-
   cursor: pointer;
-  box-shadow: inset 0px 0px 40px 8px orange;
+  box-shadow: inset 0px 0px 40px 8px white;
+}
+
+button:hover {
+  background-color: white;
 }
 
 b {
@@ -100,19 +135,37 @@ svg {
   width: 70px;
   height: 70px;
   fill: white;
+  transform: translate(98%, 35%);
+}
+.mini {
+  z-index: 0;
+  background-color: #222;
+  border: solid 1px white;
+  width: 90px;
+  height: 400px;
+  position: relative;
+  right: 70%;
+  transform: translate(-40%, 7%);
+  padding: 30px;
+}
+
+.minishell {
+  z-index: -1;
+  border: solid 1px aqua;
+  width: 90px;
+  height: 400px;
+  position: relative;
+  right: 79%;
+  transform: translate(-40%, 10%);
+  padding: 30px;
 }
 
 svg.hand {
   position: fixed;
-  right: 56%;
-  top: -40%;
-  border-radius: 50%;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  right: 60%;
+  top: -34%;
   box-shadow: 20 0 0 0 #fff, 20 0 0 0 #fff;
   cursor: pointer;
-  width: 42%;
-  height: 42%;
 }
 
 svg.handl {
@@ -156,9 +209,6 @@ svg.ear {
   position: fixed;
   right: 60%;
   top: 71%;
-  border-radius: 50%;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
   cursor: pointer;
 }
@@ -175,7 +225,7 @@ svg.earl {
 svg.mouth {
   position: fixed;
   right: 60%;
-  top: 110%;
+  top: 107%;
 }
 svg.mouthl {
   position: fixed;
@@ -195,7 +245,7 @@ svg.mouthl {
   position: absolute;
   position: fixed;
   top: 20.5vh;
-  left: 67.5vw;
+  left: 60vw;
   font-size: 20px;
   z-index: 300;
   right: 0;
@@ -258,7 +308,7 @@ svg.mouthl {
   position: absolute;
   position: fixed;
   top: 18.5vh;
-  left: 67.5vw;
+  left: 60vw;
   font-size: 20px;
   z-index: 300;
 
@@ -318,7 +368,7 @@ svg.mouthl {
   position: absolute;
   position: fixed;
   top: 18.5vh;
-  left: 67.5vw;
+  left: 60vw;
   font-size: 20px;
   font-weight: 700;
   z-index: 300;
@@ -379,7 +429,7 @@ svg.mouthl {
   position: absolute;
   position: fixed;
   top: 18.5vh;
-  left: 67.5vw;
+  left: 60vw;
   font-size: 20px;
   font-weight: 700;
   z-index: 300;
@@ -440,7 +490,7 @@ svg.mouthl {
   position: absolute;
   position: fixed;
   top: 18.5vh;
-  left: 67.5vw;
+  left: 60vw;
   font-size: 20px;
   font-weight: 700;
   z-index: 300;
@@ -898,7 +948,7 @@ svg.mouthl {
   display: block;
   color: white;
   top: 50vh;
-  left: 20vw;
+  left: 10vw;
   transform: translate(-50%, -50%);
   width: 200px;
   height: 200px;
@@ -907,27 +957,25 @@ svg.mouthl {
   /*box-shadow: inset 0 0 20px rgba(0, 0, 0, 1), 0 0 50px rgb(255, 217, 0);*/
 }
 
-.sun:hover {
-}
-
 .circle {
   transform-style: preserve-3d;
   animation: animateText 10s linear infinite;
+  margin-right: 0vw;
 }
 
 .circle span {
   position: absolute;
-  bottom: 20vh;
+  bottom: 22vh;
   left: 0;
   background: white;
-  color: black;
-  font-size: 3em;
+  color: white;
+  font-size: 2.4em;
   transform-origin: center;
   transform-style: preserve-3d;
-  padding: 8px 11px;
+  padding: 10px 11px;
   transform: rotateY(calc(var(--i) * calc(360deg / 25))) translateZ(150px);
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .circle span::before {
@@ -937,7 +985,7 @@ svg.mouthl {
   left: 0;
   width: 100%;
   height: 100%;
-  background: aqua;
+  background: black;
   transform: translateZ(-5px);
   z-index: -1;
 }
@@ -946,6 +994,7 @@ svg.mouthl {
   transform-style: preserve-3d;
   animation: animateText 8s linear infinite;
   z-index: -1;
+  margin-right: 30vw;
 }
 
 .circleTwo span {
@@ -956,14 +1005,14 @@ svg.mouthl {
   left: 0;
   background: white;
   z-index: -1;
-  color: black;
+  color: white;
   font-size: 1em;
   transform-origin: center;
   transform-style: preserve-3d;
   padding: 75px 11px;
   transform: rotateY(calc(var(--i) * calc(360deg / 36))) translateZ(150px);
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .circleTwo span::before {
@@ -973,7 +1022,7 @@ svg.mouthl {
   left: 0;
   width: 100%;
   height: 100%;
-  background: aqua;
+  background: black;
   transform: translateZ(-5px);
   z-index: -1;
 }
@@ -985,84 +1034,6 @@ svg.mouthl {
   100% {
     transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
       translateY(-30px);
-  }
-}
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
-#cursorBlob {
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(
-    120deg,
-    #ff1744,
-    #e040fb,
-    #2979ff,
-    #ff7b00,
-    #76ff03
-  );
-  filter: blur(5px);
-  background-size: 1600% 1600%;
-  position: absolute;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  z-index: 1;
-  transition: 0.15s linear;
-  border-radius: 50%;
-  animation: blobBackground 15s ease infinite;
-}
-#cursorBlob:before {
-  position: absolute;
-  content: "";
-  border: 1px solid white;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 50%;
-  animation: animate 1s linear infinite;
-}
-#cursorBlob:after {
-  position: absolute;
-  content: "";
-  border: 2px solid white;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 50%;
-  animation: animate 2s 1s linear infinite;
-}
-@keyframes animate {
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-@keyframes blobRadius {
-  0%,
-  100% {
-    border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
-  }
-  20% {
-    border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
-  }
-  40% {
-    border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
-  }
-  60% {
-    border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
-  }
-  80% {
-    border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
-  }
-}
-@keyframes blobBackground {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
   }
 }
 
@@ -1132,11 +1103,14 @@ svg.mouthl {
 .stuff_list {
   list-style-type: none;
   position: fixed;
+  transform: translate(0%, 30%);
   left: 23%;
   bottom: 35%;
   line-height: 3;
 }
-
+.stuff_list::after {
+  border-style: none none double;
+}
 .stuff_list a {
   text-decoration: none;
   font-size: 15px;
@@ -1157,9 +1131,9 @@ svg.mouthl {
   position: relative;
 }
 
-.stuff_list li:hover {
-  filter: blur(1px);
-  transform: translateX(20px);
+.stuff_list a:hover {
+  color: aqua;
+  font-size: 16px;
 }
 
 .stuff_list li::before {
@@ -1185,19 +1159,20 @@ svg.mouthl {
   z-index: -200;
 }
 .about {
-  left: 0.2%;
-  top: 42%;
-  width: 80px;
+  right: 20px;
+  transform: translate(-48%, 0%);
+  top: 8%;
+  width: 96px;
   height: 50px;
   display: flex;
   z-index: 100;
   font-size: 10px;
-  font-family: Arial, Helvetica, sans-serif;
   align-items: center;
   justify-content: center;
   border: solid 1px white;
-  border-radius: 8px;
+  border-radius: 0px;
   color: rgb(255, 255, 255);
+  background: #222;
   content: "ABOUT";
   text-decoration: none;
   cursor: pointer;
@@ -1205,11 +1180,24 @@ svg.mouthl {
   font-family: monospace;
   position: fixed;
 }
+.abouty {
+  right: 27px;
+  transform: translate(-48%, 0%);
+  top: 9.3%;
+  width: 96px;
+  height: 50px;
+  display: flex;
+  z-index: -1;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px aqua;
+  position: fixed;
+}
 
 .about:hover {
-  transform: scale(1.1);
-  filter: blur(1px);
-  box-shadow: 3px 6px 8px rgb(0, 0, 0);
+  background: black;
+  box-shadow: px px px rgb(0, 0, 0);
 }
 
 .popover .close::after {
