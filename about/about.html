@@ -2,722 +2,102 @@
 <html>
 
 <head>
-    <div id="cursorBlob" style="top: 8px; left:-18px"></div>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8SZ4QGKVG"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About</title>
-    <script src="https://unpkg.com/scrollreveal"></script>
-
+    <link rel="stylesheet" href="../css/goat.css">
     <style>
-        footer {}
-
+    
         body {
-            overflow-x: hidden;
-            background: rgb(254, 255, 233);
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: rgb(0, 0, 0);
+            background: rgb(208, 244, 244);
         }
-
-        .article-red {
-            color: #75b5b0;
-        }
-
-        .bg-article-red {
-            background-color: #ff4a46;
-        }
-
-        .container {
-            padding-right: 120px;
-            padding-left: 120px;
-        }
-
-        .con {
-            width: 100vw;
-            height: 80vh;
-            align-items: center;
-            background-color: #920420;
-            padding: 0;
-            font-size: 2em;
-            vertical-align: bottom;
-            writing-mode: vertical-rl;
-            align-items: flex-end;
-
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: white;
-
-        }
-
-        .f8 {
-            font-size: 0.65rem;
-        }
-
-        .lh-hi {
-            line-height: 2em;
-        }
-
-        button {
-            position: absolute;
-            top: 35px;
-            left: 35px;
-            border: none;
-            border-radius: 50%;
-            width: 70px;
-            height: 70px;
-            background-color: orange;
-            filter: blur(3px);
-            color: black;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            z-index: 100;
-            cursor: pointer;
-            box-shadow: inset 0px 0px 40px 8px orange;
-        }
-
-        svg.earReal {
-            position: absolute;
-            display: inline-block;
-            color: white;
-            top: 20vh;
-            left: 40vw;
-            transform: translate(-50%, -50%);
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-
-            border-radius: 50%;
-            filter: drop-shadow(0px 1px 3px aquamarine);
-            fill: white;
-            box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
-            cursor: pointer;
-        }
-
-        @import url("https://fonts.googleapis.com/css?family=Montserrat:900");
-
-        #cursorBlob {
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(120deg,
-                    #ff1744,
-                    #e040fb,
-                    #2979ff,
-                    #ff7b00,
-                    #76ff03);
-            filter: blur(5px);
-            background-size: 1600% 1600%;
-            position: absolute;
-            mix-blend-mode: difference;
-            pointer-events: none;
-            z-index: 1;
-            transition: 0.15s linear;
-            border-radius: 50%;
-            animation: blobBackground 15s ease infinite;
-        }
-
-        #cursorBlob:before {
-            position: absolute;
-            content: "";
-            border: 1px solid white;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            border-radius: 50%;
-            animation: animate 1s linear infinite;
-        }
-
-        #cursorBlob:after {
-            position: absolute;
-            content: "";
-            border: 2px solid white;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            border-radius: 50%;
-            animation: animate 2s 1s linear infinite;
-        }
-
-        @keyframes animate {
-            100% {
-                transform: scale(1.5);
-                opacity: 0;
-            }
-        }
-
-        @keyframes blobRadius {
-
-            0%,
-            100% {
-                border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
-            }
-
-            20% {
-                border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
-            }
-
-            40% {
-                border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
-            }
-
-            60% {
-                border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
-            }
-
-            80% {
-                border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
-            }
-        }
-
-        @keyframes blobBackground {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            background: #212121;
-        }
-
-        .nav {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav__link {
-            color: #fff;
-            list-style: none;
-            cursor: pointer;
-            font-size: 10vw;
-            font-family: "Montserrat", sans-serif;
-            transition: 1s ease-in;
-        }
-
-        .nav:not(:last-child) {
-            margin-bottom: 50px;
-        }
-
-        .nav:hover {
-            transform: translateX(25px);
-        }
-
-        @media (min-width: 500px) {
-            .grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-                grid-gap: 0.75rem;
-                /*row length vertical */
-                grid-auto-rows: 92px;
-                max-width: 900px;
-                margin: 80px auto;
-                border-top: 1px solid #222;
-            }
-
-            .folio-1 {
-                grid-column-start: 1;
-                grid-column-end: 2;
-                border-right: 1px solid #222;
-            }
-
-            .folio-2 {
-                grid-column-start: 4;
-                grid-column-end: 2;
-                grid-row-start: 1;
-
-                border-right: 1px solid #222;
-            }
-
-            .folio-3 {
-                grid-column-start: 7;
-                grid-column-end: 4;
-
-                border-right: 1px solid #222;
-            }
-
-            .folio-4 {
-                grid-column: span 3;
-            }
-
-            .folio-5 {
-                grid-column-start: 12;
-                grid-column-end: 7;
-                grid-row-start: 1;
-            }
-
-            .folio-6 {
-                grid-column-start: 13;
-                grid-column-end: 7;
-                grid-row-start: 3;
-            }
-
-
-            a {
-                cursor: pointer;
-            }
-
-            a:hover {
-                text-decoration: none;
-            }
-
-            .section {
-                position: relative;
-                width: 100%;
-                display: block;
-            }
-
-            .full-height {
-                min-height: 100vh;
-            }
-
-            .over-hide {
-                overflow: hidden;
-            }
-
-            .padding-tb {
-                padding: 100px 0;
-            }
-
-            [type="radio"]:checked,
-            [type="radio"]:not(:checked) {
-                opacity: 0;
-                position: fixed;
-                width: 0;
-            }
-
-            .checkbox:checked+label,
-            .checkbox:not(:checked)+label {
-                display: inline-block;
-                background-color: #222;
-                opacity: 0.8;
-                padding: 10px 10px;
-                font-family: sans-serif, Arial;
-                font-size: 16px;
-                border-radius: 50%;
-                cursor: pointer;
-                margin: 15px;
-                left: 45vw;
-                bottom: 35vh;
-                position: relative;
-                filter: blur(1.5px);
-            }
-
-            .checkbox:checked+label {
-                transform: scale(1.3);
-                background-color: rgb(217, 151, 45);
-            }
-
-            .slider-height-padding {
-                padding-top: 420px;
-            }
-
-            ul {
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                width: 500px;
-                z-index: -1;
-                padding: 0;
-                margin: 0;
-                list-style: none;
-            }
-
-            ul li {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-
-                display: block;
-                z-index: 100;
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                height: 500px;
-                border: none;
-                background-size: cover;
-                background-position: center;
-                background-image: url("../images/Asset\ 10.png");
-                border-radius: 50%;
-                box-sizing: border-box;
-                font-family: "Poppins", sans-serif;
-                font-weight: 900;
-                font-size: 16px;
-                letter-spacing: 2px;
-                line-height: 2.7;
-                color: #ffffff;
-                writing-mode: vertical-rl;
-                opacity: 0;
-                pointer-events: none;
-                box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
-                -webkit-transition: all 0.5s ease;
-                transition: all 0.5s ease;
-            }
-
-            ul li span {
-                mix-blend-mode: difference;
-            }
-
-            ul li:nth-child(2) {
-                background-image: url("../images/Asset\ 11.png");
-            }
-
-            ul li:nth-child(3) {
-                background-image: url("../images/Asset\ 8.png");
-            }
-
-            ul li:nth-child(4) {
-                background-image: url("../images/Asset\ 7.png");
-            }
-
-            .checkbox.frst:checked~ul li:nth-child(1) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            .checkbox.scnd:checked~ul li:nth-child(2) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            .checkbox.thrd:checked~ul li:nth-child(3) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            .checkbox.foth:checked~ul li:nth-child(4) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            @media (max-width: 767px) {
-                .slider-height-padding {
-                    padding-top: 340px;
-                }
-
-                ul li {
-                    height: 300px;
-                    font-size: 13px;
-                    letter-spacing: 1px;
-                }
-            }
-
-            @media (max-width: 575px) {
-                .slider-height-padding {
-                    padding-top: 240px;
-                }
-
-                ul li {
-                    height: 200px;
-                }
-            }
-        }
-
-
-
-        .in-brief-content {
-            columns: 2;
-            column-gap: 40px;
-            line-height: 1.5;
-            grid-auto-rows: auto;
-            padding: 30px;
-            text-align: justify;
-        }
-
-        .tree {
-            display: flex;
-            flex-direction: row;
-            padding: 5%;
-            justify-content: center;
-        }
-
-        .hi {
-            border: 1px solid rgb(255, 226, 226);
-            color: #ccc;
-            border-radius: 8px;
-            padding: 8px 20px;
-            display: flex;
-            margin: 20px;
-            align-items: center;
-            position: relative;
-            justify-content: center;
-            line-height: 1.2;
-        }
-
-        .p,
-        .np {
-            display: flex;
-            align-content: center;
-        }
-
-        .first,
-        .second,
-        .third {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hi:before {
-            content: "";
-            width: 40px;
-            height: 1px;
-            background-color: rgb(255, 229, 229);
-            position: absolute;
-            left: -41px;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            box-sizing: border-box;
-        }
-
-        .first>.p>.hi:before {
-            display: none;
-        }
-
-        .hi {
-            min-width: 200px;
-            max-width: 200px;
-        }
-
-        .hi:hover {
-            background: #222;
-        }
-
-        .hi:hover+.second .hi {
-            background: #222;
-        }
-
-        .hi:hover+.third .hi {
-            background: #222;
-        }
-
-        #another_button {
-            background-color: none;
-        }
-
-        #another_button:hover {
-            transform: scale(105%);
-            color: #222;
-            filter: blur(1px);
-        }
-        .about {
-  left: 0.2%;
-  top: 42%;
-  width: 80px;
-  height: 50px;
-  display: flex;
-  z-index: 100;
-  font-size: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(254, 255, 233);
-  border: solid 2px black;
-  border-radius: 15%;
-  color: #222;
-  content: "HOME";
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1.3em;
-  font-family: monospace;
-  position: fixed;
-}
-
-.about:hover {
-  transform: scale(1.1);
-  filter: blur(1px);
-  box-shadow: 3px 6px 8px rgb(254, 255, 233);
-}
-
-#Blob {
-  transition: opacity 1s ease-in-out;
-  opacity: 1;
-  width: 130px;
-  height: 130px;
-  position: absolute;
-  top: 30.5vh;
-  left: 25.5vw;
-  font-size: 20px;
-
-  right: 0;
-
-  transform: translateZ(-5px);
-  background: linear-gradient(
-    120deg,
-    #ff1744,
-    #e040fb,
-    #2979ff,
-    #ff7b00,
-    #76ff03
-  );
-  background-size: 90% 90%;
-  background-repeat: no-repeat;
-  background-color: rgb(255, 255, 255);
-  mix-blend-mode:normal;
-  background-image: url(../images/sol.png);
-  pointer-events: none;
-  z-index: 1;
-  transition: 0.15s linear;
-  border-radius: 50%;
-  animation: blobBackground 15s ease infinite;
-}
-#Blob:before {
-  position: absolute;
-  content: "";
-  border: 1px solid blue;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 50%;
-  animation: animate 2s linear infinite;
-}
-#Blob:after {
-  position: absolute;
-  content: "";
-  border: 2px solid blue;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 50%;
-  animation: animate 2s 1s linear infinite;
-}
-.dot {
-    width: 10px;
-    height: 10px;
-    fill:blue;
-    background-color:blue;
-    position: relative;
-    left: -17%;
-
-    top: 20px;
-    border-radius: 0;
-}
     </style>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 
-<button class="nav__link" style="z-index:3; position: fixed;" onclick="location.href='../index.html'">
-</button>
-
-
-
-<a href="../index.html" class="about">HOME</a>
-<div style= "opacity:1" id="Blob"><b class="links tracked f5 avenir pt2 b tc nb4"> 
-</div>
-
-
-
 <body>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.8.1/tachyons.min.css'>
-
-    
+    <button style="z-index:1; position: fixed;" onclick="location.href='../index.html'"></button>
+    <a style="font-family: Roboto, sans-serif; font-size: 0.9em;" href="../about/about.html" class="about">ABOUT</a>
+    <div class="abouty"></div>
 
 
-    <h2 style="color:     blue;
-        ;filter:blur(1px);margin-top:-10%;margin-bottom:-10%;" class="f2 ttu avenir tracked tc lh-copy pa7 b">
-       About me </h2>
+    <header class="header">
+        <h1 class="header-title masthead"style = "margin-top:0em;">About Me</h1>
+    </header>
 
-       <img style = "transform:translate(85%, 80%); width: 20vw;" src = "../images/yo.png">
+    <main class="main">
+        <article class="entry entry-lede" >
+            <img class="entry-img" style="width:640px; height:370px; margin-top:10em;" src="../images/ME.jpg" />
+            <div class="entry-content">
+                <h1 class="entry-headline big-headline">So Nice to Meet you!
+                </h1>
+                <time class="entry-date meta">December, 2021</time>
+                <span class="entry-byline meta"></span>
+                <p class="entry-summary" style = "margin-right: 6em;">
+                    I am Sol from Seoul. I major in information and interaction design, focusing on
+                    affective HCI, novel interfaces and enactable systems.
+                    <br><br>
 
-       <div style="margin-top:-10%;margin-left:25%;" class = "links tracked tj f6 fw4 avenir ph7 lh-copy nb4"> 
+                    However, I also have experience managing a food truck, being a salesperson in Mexico, and
+                    co-founding a skincare brand along the journey. This explains my being in school for 6 years,
+                    everyone now kind of wishes me to leave.
+                    <br><br>
+                    As you may have noticed in my homepage and thought what in the world is this? I like to describe my
+                    skillsets as multi-sensorially functioning, as if each of my sensory organ is a representative for
+                    my diverse interests that are united under the principle of human-centered design.
+                    <br><br>
+                    I am especially interested in enacting multi-sensorial integration via careful and ethical design
+                    research, prototyping wearables or interfaces that can provide immersive and sensorially diverse
+                    experience. I also love doing projects with data, coding and analyzing with python, drawing with
+                    JavaScript and HTML, and building unconventional prototypes. I am also currently
+                    interested in sentiment analysis to appeal to human emotions when desigining such interfaces and not
+                    detach from everyday life actions. Some of my publications exemplify the fields I am
+                    interested in: </p>
+            </div>
 
-<b style = "color:blue;font-size: 1.1em; " > So nice to meet you! I am Sol from Seoul. </b> 
-I major in information and interaction design, focusing on affective HCI, novel interfaces and enactable systems. <br><br>
-However, I also have experience managing a food truck, being a salesperson in Mexico, and co-founding a skincare brand along the journey. This explains my being in school for 6 years, everyone now kind of wishes me to leave.
-<br><br>
+    </main>
 
-As you may have noticed in my homepage and thought what in the world is this? I like to describe my skillsets as multi-sensorially functioning, as if each of my sensory organ is a representative for my diverse interests that are united under the principle of human-centered design. <br><br>
+    <main class="main" style = "margin-bottom:0">
+        <article class="entry entry-lede" style="margin-bottom:6em;margin-top:-5em;">
 
+            <div class="entry-content">
+               
 
+                <ul style = "margin-right: 5em;">
+                    <li>Choi, E., Kang, Y. <b> The Effect of Multi-Sensorial Interface on Food Familiarity and Willingness to Try.</b> In International Journal of Design (under review). <a href ="../images/IJD_Multi.pdf" target="_blank" > [pdf]</a>
+                  </li><br>
+                    <li>Kwon, S., Choi, E., Kim, M., Hwang, S., Kim, D., & Kang, Y. (2021, August). <b> What Happens to My Instagram Account After I Die? Re-imagining Social Media as a Commemorative Space for Remembrance and Recovery. </b>
+                        In IFIP Conference on Human-Computer Interaction (pp. 449-467). Springer, Cham. <a href ="../images/What Happens.pdf" target="_blank" > [pdf]</a>
+                    </li><br>
+                    <li>Kim, J., Choi, E., Yoon, S., Lee, Y., & Kim, D. (Accepted, to appear). <b> Behind Chicken Ratings: An Exploratory Analysis of Yogiyo Reviews Through Text Mining. </b>In Journal of the Korea Contents Association. <a href ="../images/Exploratory Analysis of Yogiyo Reviews Through Text Mining.pdf" target="_blank" > [pdf]</a>
+                    </li> <br>
+                    <li> Lee, G., Kim, S., Choi, E., & Kang, Y. <b> Brainstorming with an AI chatbot: does its personality matter among extraverted and introverted coworkers?</b> In International Journal of Human-Computer Interaction (under reivew). <a href ="../images/Brainstorming with an AI chatbot.pdf" target="_blank" > [pdf] </a>
+                    </li>
+                </ul>
+                <br><br>If interested, please find below my résumé: <br><br><br><br>
+                <a href='../images/Resume_.pdf' target="_blank"
+                    style="margin-bottom: 6em; text-decoration: none;text-align: center;color:#222; font-weight: 500; ">
+                    <div class="damn"
+                        style="background-color:azure; cursor: pointer; margin-left: 10em; border: solid 1px #222; width: 150px; height: 30px; padding: 20px; ">
+                        <small> Download Resume</small> <br>
 
-I am especially interested in enacting multi-sensorial integration via careful and ethical design research, prototyping wearables or interfaces that can provide immersive and sensorially diverse experience. 
-
-I also love doing projects with data, coding and analyzing with python, drawing with JavaScript and HTML (novice at it), and building prototypes with arduino. I am also currently interested in sentiment analysis to appeal to human emotions when desigining such interfaces and not 
-detach from everyday life actions.
-
-<a href='../images/Resume.pdf' target = "_blank"> <div style="border: 2px solid #000;
-color: blue;
-background-color:none;
-border-radius: 8px;
-padding: 20px 20px;
-height: 60px;
-left: 42.6%;
-margin-top: 6%;
-
-border-color: blue;
-
-display: inline-block;
-width: 200px;
-align-items: center;
-position: absolute;
-justify-content: center;
-cursor: pointer;
-line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
-        > Download CV 
-    </div></a>
-    
-
-Some of my publications exemplify the fields I am interested in: <br><br><br>
-
-<div style="margin-top:20%;margin-left:10%;" class = "links tracked  tj pa4 f6 fw4 avenir  lh-copy nb4"> <div class = "dot"></div>
- Choi, E., Kang, Y. (Submitted). <a href = '../images/IJD_Multi.pdf' target="_blank" style = "cursor:pointer;" >  <b style ="text-decoration: underline;color:blue;">The Effect of Multi-sensorial Interface on Food Familiarity and Willingness to Try. </b></a>  In Interanational Journal of Design.</div>
-
-<div style="margin-top:-10%;margin-left:10%;" class = "links tracked  tj pa4 f6 fw4 avenir lh-copy nb4">  <div class = "dot"></div>
-Kwon, S., Choi, E., Kim, M., Hwang, S., Kim, D., & Kang, Y. (2021, August). <a href = '../images/What Happens.pdf' target="_blank" style = "cursor:pointer;" >  <b style ="text-decoration: underline;color:blue;"> What Happens to My Instagram Account After I Die? Re-imagining Social Media as a Commemorative Space for Remembrance and Recovery.</b></a> In IFIP Conference on Human-Computer Interaction (pp. 449-467). Springer, Cham.</div>
-
-<div style="margin-top:-10%;margin-left:10%;" class = "links tracked  tj pa4 f6 fw4 avenir  lh-copy nb4">  <div class = "dot"></div>
-Kim, J., Choi, E., Yoon, S., Lee, Y., & Kim, D. (Accepted, to appear). <a href = '../images/Exploratory Analysis of Yogiyo Reviews Through Text Mining.pdf' target="_blank" style = "cursor:pointer;" >  <b style ="text-decoration: underline;color:blue;"> Behind Chicken Ratings: An Exploratory Analysis of Yogiyo Reviews Through Text Mining. </b></a>In Journal of the Korea Contents Association.</div>
-
-<div style="margin-top:-10%;margin-left:10%;" class = "links tracked  tj pa4 f6 fw4 avenir  lh-copy nb4">  <div class = "dot"></div>
-Lee, G., Kim, S., Choi, E., & Kang, Y. (submitted)<a href = '../images/Brainstorming with an AI chatbot.pdf' target="_blank" style = "cursor:pointer;" >  <b style ="text-decoration: underline;color:blue;">Brainstorming with an AI chatbot: does its personality matter among extraverted and introverted coworkers?</b></a>  In International Journal of Human-Computer Interaction.</div>
-
-
-
-
-
-           </div>
-
-    <div class="f7 avenir tc" style = "font-weight: 400; align-items:center; margin:100px;color:black;border-top: 1px solid black;" > <br><br><br> © 2021 Eunsol Choi. All Rights Reserved.  Built with HTML/JS/JQUERY/🌞 </div>
-
-
-    <script src="../blob.js"></script>
-    <script src="../scrollTrigger.js"></script>
-    <script>
-        ScrollReveal().reveal(document.querySelectorAll('div', 'h2', 'table'), { delay: 500 });
-    </script>
-
+                    </div>
+                </a>
+        </article>
 
 </body>
 
-
+<script>
+    ScrollReveal().reveal(document.querySelector('header'), { delay: 500 });
+    ScrollReveal().reveal(document.querySelector('article'), { delay: 500 });
+    ScrollReveal().reveal(document.querySelector('section'), { delay: 500 });
+    ScrollReveal().reveal(document.querySelector('div'), { delay: 500 });
+    ScrollReveal().reveal(document.querySelector('main'), { delay: 500 });
+</script>
 
 </html>
