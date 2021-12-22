@@ -387,7 +387,7 @@ ul {
   justify-content: center;
   border: solid 1.7px var(--text);
   border-radius: 0px;
-  color: #222;
+  color: rgb(71, 70, 70);
   background: #ccc;
   box-shadow: inset 0px 0px 40px 8px white;
   text-decoration: none;
@@ -437,7 +437,7 @@ ul {
   justify-content: center;
   border: solid 1.7px var(--text);
   border-radius: 0px;
-  color: #222;
+  color: rgb(21, 21, 21);
   background: aqua;
   box-shadow: inset 0px 0px 40px 8px white;
   text-decoration: none;
@@ -448,7 +448,7 @@ ul {
   position: relative;
 }
 .prev:hover {
-  background-color: #222;
+  background-color: #fff;
   box-shadow: none;
 }
 .prevy {
@@ -462,4 +462,34 @@ ul {
   align-items: center;
   justify-content: center;
   border: solid 2px aqua;
+}
+
+/* Default Table Style */
+table {
+  border: 0px solid #222;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+table thead th,
+table tfoot th {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.75em;
+  text-align: center;
+  color: #222;
+  width: 10vw;
+}
+
+table caption {
+  padding: 0.5em;
+  text-align: center;
+}
+
+table th,
+table td {
+  padding: 0.5em;
+  border: 1px solid #222;
+  text-align: center;
+  line-height: 20px;
+  color: #222;
 }

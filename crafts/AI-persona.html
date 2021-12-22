@@ -2,993 +2,488 @@
 <html>
 
 <head>
-    <div id="cursorBlob" style="top: 8px; left:-18px"></div>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Persona</title>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    
-    <style>
-
-        footer {
-
-        }
-       body {
-  overflow-x: hidden;
-  background: rgb(25, 28, 37);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  color: white;
-}
-table {
-            margin: 0 auto;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            text-align: center;
-        }
-
-        /* Default Table Style */
-        table {
-            color: #ccc;
-
-            border: 1px solid #ccc;
-
-            font-size: 12pt;
-            text-align: center;
-            width: 60vw;
-        }
-
-        table thead th,
-        table tfoot th {
-            background: rgba(0, 0, 0, 0.1);
-            padding: 0.5em;
-            text-align: center;
-            color: #ccc;
-            font-weight: 500;
-            width: 10vw;
-        }
-
-        table caption {
-            padding: 0.5em;
-            text-align: center;
-        }
-
-        table th,
-        table td {
-            padding: 0.5em;
-            border: 1px solid white;
-            text-align: center;
-            line-height: 20px;
-            color: white;
-        }
-
-        table:hover {
-            background: rgb(20, 19, 19);
-            transform: 0.5 ease-in-out;
-        }
-
-        table tfoot th:hover {
-            background: #222;
-        }
-
-.article-red {
-  color: #75b5b0;
-}
-
-.bg-article-red {
-  background-color: #ff4a46;
-}
-
-.container {
-  padding-right: 100px;
-  padding-left: 100px;
-}
-
-.f8 {
-  font-size: 0.65rem;
-}
-.lh-hi {
-  line-height: 2em;
-}
-
-button {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  background-color: orange;
-  filter: blur(3px);
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  z-index: 100;
-  cursor: pointer;
-  box-shadow: inset 0px 0px 40px 8px orange;
-}
-
-svg.earReal {
-  position: absolute;
-  display: inline-block;
-  color: white;
-  top: 20vh;
-  left: 40vw;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-
-  border-radius: 50%;
-  filter: drop-shadow(0px 1px 3px aquamarine);
-  fill: white;
-  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
-  cursor: pointer;
-}
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
-#cursorBlob {
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(
-    120deg,
-    #ff1744,
-    #e040fb,
-    #2979ff,
-    #ff7b00,
-    #76ff03
-  );
-  filter: blur(5px);
-  background-size: 1600% 1600%;
-  position: absolute;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  z-index: 1;
-  transition: 0.15s linear;
-  border-radius: 50%;
-  animation: blobBackground 15s ease infinite;
-}
-#cursorBlob:before {
-  position: absolute;
-  content: "";
-  border: 1px solid white;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 50%;
-  animation: animate 1s linear infinite;
-}
-#cursorBlob:after {
-  position: absolute;
-  content: "";
-  border: 2px solid white;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 50%;
-  animation: animate 2s 1s linear infinite;
-}
-@keyframes animate {
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-@keyframes blobRadius {
-  0%,
-  100% {
-    border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
-  }
-  20% {
-    border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
-  }
-  40% {
-    border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
-  }
-  60% {
-    border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
-  }
-  80% {
-    border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
-  }
-}
-@keyframes blobBackground {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background: #212121;
-}
-.nav {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
-.nav__link {
-  color: #fff;
-  list-style: none;
-  cursor: pointer;
-  font-size: 10vw;
-  font-family: "Montserrat", sans-serif;
-  transition: 1s ease-in;
-}
-
-.nav:not(:last-child) {
-  margin-bottom: 50px;
-}
-
-.nav:hover {
-  transform: translateX(25px);
-}
-
-@media (min-width: 500px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 0.75rem;
-    /*row length vertical */
-    grid-auto-rows: 92px;
-    max-width: 900px;
-    margin: 80px auto;
-    border-top: 1px solid rgb(255, 255, 255);
-  }
-
-  .folio-1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    border-right: 1px solid rgb(255, 255, 255);
-  }
-
-  .folio-2 {
-    grid-column-start: 4;
-    grid-column-end: 2;
-    grid-row-start: 1;
-
-    border-right: 1px solid rgb(255, 255, 255);
-  }
-
-  .folio-3 {
-    grid-column-start: 7;
-    grid-column-end: 4;
-
-    border-right: 1px solid rgb(255, 255, 255);
-  }
-
-  .folio-4 {
-    grid-column: span 3;
-  }
-  .folio-5 {
-    grid-column-start: 12;
-    grid-column-end: 7;
-    grid-row-start: 1;
-  }
-  .folio-6 {
-    grid-column-start: 13;
-    grid-column-end: 7;
-    grid-row-start: 3;
-  }
-
-  
-
-  a {
-    cursor: pointer;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-
-  .section {
-    position: relative;
-    width: 100%;
-    display: block;
-  }
-  .full-height {
-    min-height: 100vh;
-  }
-  .over-hide {
-    overflow: hidden;
-  }
-  .padding-tb {
-    padding: 100px 0;
-  }
-  [type="radio"]:checked,
-  [type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-  }
-  .checkbox:checked + label,
-  .checkbox:not(:checked) + label {
-    position: relative;
-
-    width: 100%;
-    left: 25vw;
-    cursor: pointer;
-    text-align: center;
-    margin-right: 20px;
-    margin-left: 6px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-    background-image: url("../images/eye.svg");
-    background-color: #75b5b0;
-    box-shadow: 0 3px 10px 0 #75b5b0;
-
-    animation: border-transform 6s linear infinite alternate forwards;
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    animation-play-state: paused;
-  }
-  .checkbox.scnd + label {
-    background-image: url("../images/nose.svg");
-  }
-  .checkbox.thrd + label {
-    background-image: url("../images/ear.svg");
-  }
-
-  .checkbox.foth + label {
-    background-image: url("../images/hand.svg");
-  }
-
-  .checkbox:checked + label {
-    transform: scale(1.3);
-    background-color: rgb(217, 151, 45);
-    -webkit-animation-play-state: running;
-    -moz-animation-play-state: running;
-    animation-play-state: running;
-  }
-  @keyframes border-transform {
-    0%,
-    100% {
-      border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-    }
-    14% {
-      border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
-    }
-    28% {
-      border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
-    }
-    42% {
-      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
-    }
-    56% {
-      border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
-    }
-    70% {
-      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
-    }
-    84% {
-      border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
-    }
-  }
-
-  .slider-height-padding {
-    padding-top: 460px;
-  }
-
-  ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  ul li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: block;
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: 400px;
-    border: none;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../images/visual.png");
-    border-radius: 50%;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 2.7;
-    color: #ffffff;
-    writing-mode: vertical-rl;
-    opacity: 0;
-    pointer-events: none;
-    box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  ul li span {
-    mix-blend-mode: difference;
-  }
-  ul li:nth-child(2) {
-    background-image: url("../images/me.png");
-  }
-  ul li:nth-child(3) {
-    background-image: url("../images/this.gif");
-  }
-  ul li:nth-child(4) {
-    background-image: url("../images/touch.png");
-  }
-
-  .checkbox.frst:checked ~ ul li:nth-child(1) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-  .checkbox.scnd:checked ~ ul li:nth-child(2) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-  .checkbox.thrd:checked ~ ul li:nth-child(3) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-  .checkbox.foth:checked ~ ul li:nth-child(4) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-
-  @media (max-width: 767px) {
-    .slider-height-padding {
-      padding-top: 340px;
-    }
-    ul li {
-      height: 300px;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-  }
-
-  @media (max-width: 575px) {
-    .slider-height-padding {
-      padding-top: 240px;
-    }
-
-    ul li {
-      height: 200px;
-    }
-  }
-}
-
-.in-brief {
-  text-align: center;
-  margin: 0 5rem 5rem 5rem;
-}
-.in-brief h3 {
-  text-align: center;
-  border-left: 1px solid rgb(255, 255, 255);
-  border-right: 1px solid rgb(255, 255, 255);
-  display: inline-block;
-  padding: 0 30px;
-  color: rgb(255, 255, 255);
-  letter-spacing: 0.2rem;
-  font-size: 80%;
-  margin: 0;
-  position: relative;
-  top: 0px;
-  height: 30px;
-}
-.in-brief-content {
-  columns: 3;
-  column-gap: 30px;
-  grid-auto-rows: auto;
-  font-size: 0.8rem;
-  text-align: left;
-  border: 1px solid #ccc;
-  padding: 60px;
-}
-
-.tree {
-  display: flex;
-  flex-direction: row;
-  padding: 5%;
-  justify-content: center;
-}
-.hi {
-  border: 1px solid rgb(255, 226, 226);
-  color: #ccc;
-  border-radius: 8px;
-  padding: 8px 20px;
-  display: flex;
-  margin: 20px;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-  line-height: 1.2;
-}
-.p,
-.np {
-  display: flex;
-  align-content: center;
-}
-.first,
-.second,
-.third {
-  display: flex;
-  flex-direction: column;
-}
-.hi:before {
-  content: "";
-  width: 40px;
-  height: 1px;
-  background-color: rgb(255, 229, 229);
-  position: absolute;
-  left: -41px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  box-sizing: border-box;
-}
-.first > .p > .hi:before {
-  display: none;
-}
-.hi {
-  min-width: 200px;
-  max-width: 200px;
-}
-.hi:hover {
-  background: #222;
-}
-.hi:hover + .second .hi {
-  background: #222;
-}
-.hi:hover + .third .hi {
-  background: #222;
-}
-
-#another_button {
-  background-color: none;
-}
-
-#another_button:hover {
-  transform: scale(105%);
-  color: #222;
-  filter: blur(1px);
-}
-
-
-
-        .column {
-            float: left;
-            width: 30.33%;
-            height: 400px;
-            padding: 5%;
-
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        caption {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .about {
-  left: 0.2%;
-  top: 42%;
-  width: 80px;
-  height: 50px;
-  display: flex;
-  z-index: 100;
-  font-size: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
-  justify-content: center;
-  border: solid 1px white;
-  border-radius: 15%;
-  color: rgb(255, 255, 255);
-  content: "ABOUT";
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1.3em;
-  font-family: monospace;
-  position: fixed;
-}
-
-.about:hover {
-  transform: scale(1.1);
-  filter: blur(1px);
-  box-shadow: 3px 6px 8px rgb(0, 0, 0);
-}
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8SZ4QGKVG"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Persona</title>
+  <link rel="stylesheet" href="../css/goat.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
-<button class="nav__link" style="z-index:3; position: fixed;" onclick="location.href='../index.html'">
-</button>
-
-<svg class="nav__link" onclick="location.href='../index.html#hand'"
-    style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:white;filter: drop-shadow(0px 3px 6px #e040fb);z-index:1; position: fixed;display: inline-block;padding-top:23vh;padding-left:2vw"
+<body>
+  <button style="z-index:1; position: fixed;" onclick="location.href='../index.html'"></button>
+  <a style="font-family: Roboto, sans-serif; font-size: 0.9em;" href="../about/about.html" class="about">ABOUT</a>
+  <div class="abouty"></div>
+  <svg class="nav__link" onclick="location.href='../index.html#hand'"
+    style=" mix-blend-mode: normal; filter:none;cursor:pointer;align-items: center;fill:aqua; width: 70px; left:15px; top: 10px; filter: drop-shadow(0px 0px 2px black);z-index:1; position: fixed;display: inline-block;padding-top:23vh;padding-left:2vw"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
     viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve">
     <g>
-        <path
-            d="M80.484,48.521c-1.281-1.131-2.956-1.755-4.715-1.755c-2.183,0-4.227,0.967-5.595,2.639l-6.933,8.236V23.748   c0-3.733-3.038-6.771-6.772-6.771c-1.563,0-3.003,0.531-4.15,1.424v-6.629C52.319,8.037,49.281,5,45.547,5   c-3.733,0-6.771,3.037-6.771,6.772v2.286c-1.147-0.893-2.589-1.425-4.151-1.425c-3.734,0-6.771,3.038-6.771,6.771v4.498   c-1.155-0.913-2.603-1.465-4.15-1.465c-3.734,0-6.772,3.037-6.772,6.771v41.58c0,14.48,8.856,24.21,22.039,24.21   c6.268,0,12.802-0.885,18.133-7.295L81.371,58.78C83.953,55.669,83.541,51.054,80.484,48.521z M79.358,57.102L55.09,86.025   c-4.384,5.273-9.615,6.354-16.12,6.354c-11.795,0-19.418-8.475-19.418-21.589V29.21c0-2.288,1.862-4.15,4.151-4.15   c2.25,0,4.15,1.9,4.15,4.15v19.674c0,0.723,0.587,1.31,1.311,1.31s1.311-0.587,1.311-1.31V19.405c0-2.326,1.823-4.149,4.15-4.149   s4.151,1.823,4.151,4.149v27.306c0,0.724,0.586,1.312,1.31,1.312c0.725,0,1.311-0.588,1.311-1.312V11.772   c0-2.328,1.824-4.151,4.15-4.151c2.328,0,4.151,1.823,4.151,4.151v36.057c0,0.723,0.587,1.31,1.311,1.31   c0.723,0,1.311-0.587,1.311-1.31V23.748c0-2.287,1.861-4.149,4.15-4.149s4.15,1.862,4.15,4.149v37.485   c0,0.55,0.344,1.043,0.862,1.23c0.519,0.19,1.096,0.034,1.451-0.387l9.258-10.998c0.88-1.075,2.184-1.691,3.578-1.691   c1.12,0,2.178,0.39,3.011,1.124C80.755,52.149,81.012,55.106,79.358,57.102z" />
+      <path
+        d="M80.484,48.521c-1.281-1.131-2.956-1.755-4.715-1.755c-2.183,0-4.227,0.967-5.595,2.639l-6.933,8.236V23.748   c0-3.733-3.038-6.771-6.772-6.771c-1.563,0-3.003,0.531-4.15,1.424v-6.629C52.319,8.037,49.281,5,45.547,5   c-3.733,0-6.771,3.037-6.771,6.772v2.286c-1.147-0.893-2.589-1.425-4.151-1.425c-3.734,0-6.771,3.038-6.771,6.771v4.498   c-1.155-0.913-2.603-1.465-4.15-1.465c-3.734,0-6.772,3.037-6.772,6.771v41.58c0,14.48,8.856,24.21,22.039,24.21   c6.268,0,12.802-0.885,18.133-7.295L81.371,58.78C83.953,55.669,83.541,51.054,80.484,48.521z M79.358,57.102L55.09,86.025   c-4.384,5.273-9.615,6.354-16.12,6.354c-11.795,0-19.418-8.475-19.418-21.589V29.21c0-2.288,1.862-4.15,4.151-4.15   c2.25,0,4.15,1.9,4.15,4.15v19.674c0,0.723,0.587,1.31,1.311,1.31s1.311-0.587,1.311-1.31V19.405c0-2.326,1.823-4.149,4.15-4.149   s4.151,1.823,4.151,4.149v27.306c0,0.724,0.586,1.312,1.31,1.312c0.725,0,1.311-0.588,1.311-1.312V11.772   c0-2.328,1.824-4.151,4.15-4.151c2.328,0,4.151,1.823,4.151,4.151v36.057c0,0.723,0.587,1.31,1.311,1.31   c0.723,0,1.311-0.587,1.311-1.31V23.748c0-2.287,1.861-4.149,4.15-4.149s4.15,1.862,4.15,4.149v37.485   c0,0.55,0.344,1.043,0.862,1.23c0.519,0.19,1.096,0.034,1.451-0.387l9.258-10.998c0.88-1.075,2.184-1.691,3.578-1.691   c1.12,0,2.178,0.39,3.011,1.124C80.755,52.149,81.012,55.106,79.358,57.102z" />
     </g>
-</svg>
-<a href="../about/about.html" class="about">ABOUT</a>
+  </svg>
 
-<body>
+  <header class="header">
+    <h1 class="header-title masthead">Designing AI Persona</h1>
+  </header>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.8.1/tachyons.min.css'>
+  <main class="main">
+    <article class="entry entry-lede" style="margin-bottom: 5em;">
+      <img class="entry-img" style="width:600px; height:430px;" src="../images/robot.png" />
+      <div class="entry-content">
+        <h1 class="entry-headline big-headline">Brainstorming with AI: Does its personality matter?
+        </h1>
+        <time class="entry-date meta">April, 2021 - September, 2021</time>
+        <span class="entry-byline meta">Submitted to International Journal of Human-Computer Interaction</span>
+        <p class="entry-summary">Groupwork has different productivity according to the personality combination. The goal
+          of the study is to see if same applies to the collaboration between humans and artificial intelligence (AI)
+          and if the extent varies according to
+          the extroversion level of the user.
+        </p>
+      </div>
+    </article>
+    <article class="entry">
+      <h1 class="entry-headline primary-headline"><br><br> <br> Human-AI Brainstorming</h1>
+      <time class="entry-date meta">Area of Focus</time>
+      <span class="entry-byline meta">Determining design factors of an AI agent</span>
+      <p class="entry-summary">
+        Brainstorming and cooperative idea generation have been a vital solution technique for many years.
+        A proven theory is that the group members' personlity type combination tremendously affects the work outcome and
+        efficiency.
+        An exploratory study examining whether the same applies to the human-AI collaboration is in grave need.
+      </p>
+      <img class="entry-img" src="../images/brainstorm.png">
+    </article>
+    <article class="entry">
+      <h1 class="entry-headline primary-headline"><br><br> <br>Extroverted and introverted AI chatbots</h1>
+      <time class="entry-date meta">Exploratory study</time>
+      <span class="entry-byline meta">Experiment and analysis</span>
+      <p class="entry-summary">
+        Human collaboration factors were applied to designing the two AI chatbots, the extroverted and introverted
+        chatbots.
+        After we designed the experiment using the Wizard of Oz methodology, we observed the interactive differences of
+        the collaboration among extroverted and introverted collaborators.
+
+      </p><br>
+      <img class="entry-img" src="../images/chat.png">
+    </article>
+
+    <section class="trending">
+      <article class="trending-entry">
+        <time class="trending-entry-headline">Information</time>
+        <p class="trending-entry-headline primary-headline">Designing AI personas and observe the interactions between
+          extroverted and introverted users</p>
+      </article>
+      <article class="trending-entry">
+        <time class="trending-entry-headline">Methods</time>
+        <p class="trending-entry-headline primary-headline"> Persona design, controlled experimet, wizard of Oz,
+          qualitative analysis, statistical analysis</p>
+
+      </article>
+      <article class="trending-entry">
+        <time class="trending-entry-headline">My role</time>
+        <p class="trending-entry-headline primary-headline">Questionnaire design, documentation</p>
+      </article>
+      <article class="trending-entry">
+        <time class="trending-entry-headline">Team members</time>
+        <p class="trending-entry-headline primary-headline">Geonhee lee, Songyi Kim, Eunsol Choi, Younah Kang</p>
+      </article>
+    </section>
+  </main>
+  <main class="main">
+    <article class="entry entry-lede" style="margin-bottom:6em;">
+      <div class="left-text" style="font-style:italic;text-align:center;font-size:1.1rem;">
+        “I think each party has its own strengths and weaknesses. If you work with an AI, you don’t have to worry about
+        your feelings, and it would be convenient to just talk about your ideas directly. But are they more creative
+        than humans? The question still remains.”</div>
+      <div class="entry-content">
+        <h1 class="entry-headline big-headline">Observing whether creative work processes can extend into human–AI
+          collaboration.
+        </h1>
+        <time class="entry-date meta">Significance</time>
+        <span class="entry-byline meta">Understanding human-AI collaboration</span>
+        <p class="entry-summary">
+          In this study, we investigate the brainstorming process of the human–AI agent (chatbot) and how the
+          personality traits of the human participants influence their experience of the brainstorming process with the
+          AI agent. We also observe whether existing factors from the human–human collaboration are equally important in
+          the process. </p>
+      </div>
+    </article>
 
 
-    <div class="container">
+    <article class="entry" style="grid-column-start:16;">
+      <img class="entry-img" src="../images/persona.png" />
+      <h1 class="entry-headline primary-headline"><br>Persona Design</h1>
+      <time class="entry-date meta">AI Chatbot Design</time>
+      <span class="entry-byline meta"></span>
+      <p class="entry-summary">As the speaking styles of the conversational AI agents can reveal their personality
+        traits, many studies have used verbal characteristics to bestow different personalities on IVAs. We also
+        designed a conversational AI persona of a chatbot to show the following characteristics in the
+        brainstorming process.
+      <table style="margin-top:2em;">
+        <thead>
+          <tr>
+            <th>Personality <br> Traits</th>
+            <th>Design Element</th>
+            <th>Extrovert Bot</th>
+            <th>Introvert Bot</th>
 
-        <div class="links ttu tracked f6 avenir pt5 b tc nb4">
-            <a style="color: #e040fb; text-align:center;" target="_blank">Publications ·</a> <a
-                style="color: #e040fb;text-align:center " target="_blank">Prototypes</a>
-        </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Verbosity</td>
+            <td> Verbose
+            </td>
+            <td>High</td>
+            <td> Low
+            </td>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Empathy</td>
+            <td> Active agreement
+            </td>
+            <td> High
+            </td>
+            <td> Low
+            </td>
+            </td>
+          </tr>
+
+          <td> Criticism
+          </td>
+          <td> Negation
+          </td>
+          <td> Low
+          </td>
+          <td> High
+          </td>
+          </td>
+          <tr>
+            <td>Cautiousness</td>
+            <td> Filled pause
+            </td>
+            <td> Low </td>
+            <td> High
+            </td>
+            </td>
+          </tr>
 
 
-        <h2 style="padding-top:70px;" class="f3 georgia tracked tc lh-copy ph8 b">
-            Designing AI Personas<br><small>2021.04 - 2021.09</small>
-        </h2>
+        </tbody>
+      </table>
+      </p>
+    </article>
 
+    <section class="entry" style="grid-row-start:2;
+        grid-column-start: 1;
+        grid-column-end: span 15;background:var(--background);">
+      <article class="trending-entry">
+        <time class="entry-date meta" style="margin-left: 13em;top: -4em;">Work Flow</time>
+        <div class="tree" style="margin-left: 8em;">
+          <div class="first">
+            <div class="p">
+              <div class="hi" style="font-weight:700;line-height:1.5;"> AI chatbot Design</div>
+              <div class="second">
+                <div class="p">
 
+                  <div class="third">
+                    <div class="hi">Brainstorming influencing personality traits
+                    </div>
+                    <div class="hi">Personality trait designation to extroverted and introverted chatbots</div>
+                  </div>
+                  <div class="third">
 
-        <div class="grid" style = "margin-top: 4%;">
-            <div class="folio-1 f4 tr pt3 pr3" style="height: 150px;margin-right: 30%;">
-                <li class="article-red fa fa-compass" aria-hidden="true"></li>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="folio-2 pt3" style=" margin-right: 10%; padding-right:10%;  margin-left: 0%;height: 150px;">
-                <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Designating personas in human-AI collaboration.
-                </p>
+
+            <div class="first">
+              <div class="p">
+                <div class="hi" style="font-weight:700;line-height:1.5;">Experiments </div>
+
+                <div class="second">
+
+
+                  <div class="p">
+                    <div class="hi" style="font-weight:500;">Preliminary experiment
+                    </div>
+
+                    <div class="third">
+                      <div class="hi">Participants go through NEO-BFM test to assess their extroversion
+                      </div>
+                      <div class="hi">Wizard of Oz experiment and validation </div>
+                    </div>
+                  </div>
+
+
+                  <div class="p">
+                    <div class="hi" style="font-weight:500;">Subsequent experiment
+                    </div>
+
+                    <div class="third">
+                      <div class="hi">Participants watch videos on the chatbot collaboration
+                      </div>
+                      <div class="hi">Assess the perceived efficiency and perceptions</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="folio-3 pt3" style="height: 150px; margin-left: 5%; padding-right: 10%;  ">
-                <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red "> Geonhee Lee: Research Lead, Persona Design <br> 
-                    Songyi Kim: Statistical Analysis, Experiment Design <br> Eunsol Choi: Literature Reivew, Documentation <br></p>
-            </div>
-            <div class="folio-4 pt3" style = "margin-left: 10%;margin-right: 0%;">
-                <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Groupwork havs different productivity according to the personality combination. The goal is to see if same applies to human-Ai collaboration.</p>
-            </div>
-        </div>
-        <img style="position: absolute; left: 50%; transform: translate(-55%, 0); width: 60vw; background:white;margin: 30px;border-radius:20px;" src="../images/robot.png">
 
+    </section>
 
-        <h2 style="color:#e040fb;filter:blur(1px);margin-top:60%;" class="f2 ttu avenir tracked tc lh-copy ph7 b">
-            Process Overivew</h2>
+  </main>
 
-        <h2 style="margin-top: -5%; margin-bottom: 10%; font-weight: 300;  margin-right: 10%; margin-left: 10%;padding:60px; color: white;"
-            class="f3 ttu tj avenir tracked ph7 lh-hi">
-            1. Brainstorming Literature Review → 2. Experiment Design → 3. AI Persona Design → 4. Wizard of Oz Experiment→ 5. Evaluation
-        </h2>
+  <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -2em;">
+    <article class="entry entry-lede">
+      <div class="entry-content" style="margin-left:-15em;">
+        <h1 class="entry-headline big-headline" style="font-size:2.5em;">We first designed the two personas of the AI agent (chatbot), focusing on the characteristics of extraversion.
+        </h1>
+        <time class="entry-date meta"></time>
+        <span class="entry-byline meta"></span>
+        <p class="entry-summary"> The preliminary study’s aims included: (1) exploring how the extraversion personality trait influences the brainstorming process with the AI agent, 
+          and (2) observing how participants with different levels of extraversion experience the brainstorming sessions with two different personas of the AI agent.</p>
+      </div>
+    </article>
+    <article class="entry">
+      <img class="entry-img" width="200" height="400" style="border: solid 1px black" src="../images/di.png" />
+      <h1 class="entry-headline primary-headline">Extroverted bot</h1>
+      <time class="entry-date meta">Persona Design</time>
+      <span class="entry-byline meta">Divergent personality</span>
+      <p class="entry-summary">
+       An extroverted attitude that leads to active communication with coworkers. 
+        AI agents with this personality show many propositions in utterance (verbosity) and begin the utterance with a confirmation of the propositions (explicit consent).
+      </p>
+    </article>
+    <article class="entry">
+      <img class="entry-img" width="200" height="400" style="border: solid 1px black" src="../images/co.png" />
+      <h1 class="entry-headline primary-headline">Introverted bot</h1>
+      <time class="entry-date meta">Persona Design</time>
+      <span class="entry-byline meta">Convergent personality</span>
+      <p class="entry-summary">
+       An introverted attitude provides criticism and enables a constructive conversation.
+      The introverted AI agent negates a verb by replacing its modifier with (negation) and inserting syntactic elements expressing hesitancy (filled pauses).
+      </p>
+    </article>
 
-
-        <h2 style="color:#e040fb;filter:blur(1px);margin-top:10%;" class="f2 ttu avenir tracked tc lh-copy ph6 b">
-            Team member personality is important in groupworks. How about AI personality? What traits do we expect from AI agents? </h2>
-
-
-        <aside style="margin-top: 20%" class="in-brief">
-            <h3 class="f3 georgia tracked tc lh-copy ph8 b">Study Background</h3>
-            <div class="in-brief-content">
-                <p class="f7 avenir tracked lh-hi "><strong style="color:#75b5b0;">Designing an AI Persona</strong>
-                    stemmed from a hypothesis that the degeree of extroversion of a user will contribute to user response to the varied level of extroversion of the AI agent. 
-                    The participants were assessed with NEO-PI-R based BFM personality type test to determine their personality type, and AI agents were assigned accordingly.
-                    We designed the AI persona based on the verbal characteristics of extroverted and introverted people studies and designated the personality traits accordingly.
-                </p>
-            </div>
-        </aside>
-
-        <div style="margin-top:0%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
-        class="links ttu tracked f5 fw1 avenir  tc nb4 b">AI persona Design</div>
-
-        <table style= "margin-top:0%" class ="links tracked tc f5 fw1 avenir ph7 lh-copy tc nb4"  >
-
-            <aside>
-                <thead>
-                  <tr>
-                    <th>Personality <br> Traits</th>
-                    <th>Design Element</th>
-                    <th>Extrovert Bot</th>
-                    <th>Introvert Bot</th>
-                 
-                  </tr>
-                </thead>
-                <tbody style = "color: white;" >
-                  <tr>
-                      <td>Verbosity</td>
-                      <td> Verbose
-                     </td>
-                     <td>High</td>
-                      <td> Low
-                     </td>
-                    </td>
-                    </tr>
-                 
-                    <tr>
-                    <td>Empathy</td>
-                    <td> Active agreement
-                  </td>
-                  <td> High
-                </td>
-                <td> Low
-                </td>
-                </td>
-                  </tr>
-            
-                    <th> Criticism
-                   </th>
-                   <th> Negation
-                  </th>
-                  <th> Low
-                </th>
-                <th> High
-                </th>
-                </th>
-                
-                <tr>
-                    <td>Cautiousness</td>
-                    <td> Filled pause
-                   </td>
-                   <td> Low </td>
-                    <td> High
-                   </td>
-                  </td>
-                  </tr>
-                
-    
-              </tbody>
-            </aside>
-              </table>
-
+  </main>
+ 
 
   
-       
-        <div style="margin-top:30%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
-        class="links ttu tracked f5 fw1 avenir  tc nb4 b">Extrovert and Introvert Design Example </div>
+  <main class="main">
+    <article class="entry entry-lede" style="margin-bottom:6em;">
+      <div class="entry-content" style="margin-left: -15em;">
+        <h1 class="entry-headline big-headline">Preliminary Experiment
+        </h1>
+        <time class="entry-date meta"></time>
+        <span class="entry-byline meta">Design validation and observation</span>
+        <p class="entry-summary">
+          The experiment in the preliminary study followed a Wizard of Oz method; a human “wizard” performed the role “chatbot” instead of using the actual chatbots.
+          Therefore, participants brainstormed through chat messenger while both parties were in separate rooms. Furthermore, the participants communicated via texting with the AI agent without knowing that a human “wizard” was performing the AI role behind the scenes.
+          A few days before the experiment, the experimenter sent the participants a web address for the NEO-PI-R-based BFM personality type test to determine their personality type, especially their extroverted personality.
+          We recruited students aged 20 to 30, regardless of gender, from one university and conducted brainstorming experiments with 20 students.
+        </p>
+        </div>
+    </article>
 
+ 
+    <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Introvert impressions</h1>
+      <time class="entry-date meta">Finding 1</time>
+      <span class="entry-summary">
+        As a result of the Big Five personality type test conducted before the experiment, 10 out of 20 participants showed a relatively introverted personality.
+        The introverted participants were less likely to show concern about what the coworker (i.e., the AI chatbots) thought about their ideas or how to persuade them.
 
+      </span>
+      <p class="entry-byline meta">
+        “Obviously, if artificial intelligence pointed out my ideas to me, I would be less hurt and concerned than talking to people. 
+        AI agents are much better and more efficient collaborators than humans in this respect. " (p. 9)
+      </p>
+
+    </article>
+    <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Extrovert impressions</h1>
+      <time class="entry-date meta">Finding 2</time>
+      <span class="entry-summary">Of the 20 participants, 10 showed a relatively extroverted personality type.
+        Extroverts thought that between the two personas of the AI chatbot, there was no difference in the coworking environment, their preference, or the perceived efficiency.
+        While they agreed that AI agents helped brainstorm, they thought that the AI chatbots lacked criticism, essential in generating ideas.
+      </span>
+      <p class="entry-byline meta">
+        “Compared to people, I definitely didn’t feel distant, but at the same time, I didn’t joke around or try to be a friend like in real conversations with people.”
+        (p.1)
+      </p>
+
+    </article>
+
+  </main>
+  <main class="main">
+    <article class="entry entry-lede" style="margin-bottom:6em;">
+    
+    </article>
+
+ 
+    <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Validation of settings</h1>
+      <time class="entry-date meta">Finding 3</time>
+      <span class="entry-summary">After the experiment, 15 out of 20 participants (75%) said they thought the brainstorming process was with real AI agents. They did not realize a human wizard was behind them until the experimenter revealed the experimental method.
+      In addition, almost everyone seemed to have accepted the two AI personas, Di-bot and Co-bot, as they designed in the study.</span>
+      <p class="entry-byline meta">
+        “Di-bot seemed cheerful and talkative. You know, there is always one on the team who
+         talks a lot and lifts the mood. However, as this AI is designed for collaborative ideation, it not only talked a lot but also suggested lots of ideas. I hope to get one soon." (p.8).
+      </p>
+
+    </article>
+    <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Summary</h1>
+      <time class="entry-date meta">Finding 4</time>
+      <span class="entry-summary">First, we observed that people with introverted personalities interact more freely and without a burden in brainstorming with the AI chatbots, unlike conventional brainstorming with humans.
+        Second, we observed that the extroverted participants showed some differences in their experiences from the introverted people.
+        Extroverts felt that interaction with the AI chatbot was not satisfying enough because they thought the most important aspect of brainstorming was interacting with other humans.
+      </span>
      
-        <img style="position: absolute; left: 50%; transform: translate(-55%, 0); width: 60vw; background:white;margin: 30px;border-radius:20px;" src="../images/aibot.png">
+    </article>
 
-        <div> 
-       <div class="links  tracked f7 fw1 avenir tc nb4 i" style = "margin-top:40%;" > Left) Extrovert conversation example Right) Introvert conversation example </di>
-
-       </div>
-
-       <div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
-       class="links ttu tracked f5 fw1 avenir tc nb4 b">Experiment Design </div>
-
-       <div>
-       <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > Participants were first assessed with the NEO-PI-R based BFM (Big Five Model) Personality type test on how extroverted they are.
-    They were then randomly assigned to one of the two AI chatbots and to one of the two discussion topics. 
-    Each session took 20 minutes, conducted in a usability evaluation room where the experimenter observed the participants from only one side.
-    The experiment was conducted with a Wizard of Oz method; participants communicated via texting with the AI agent without knowing that a human “wizard” was performing the AI role behind the scenes.
-    To minimize the variance among the wizards, only one wizard researcher performed the role of the AI agent in this study.
- </div>
-
-       </div>
-
-       <div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
-       class="links ttu tracked f5 fw1 avenir tc nb4 b">Findings </div>
-
-       <div>
-       <div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
-        1. Validation of Experimental Settings
- </div>
-
- <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
-    We recruited students aged 20 to 30, regardless of gender, from one university and conducted brainstorming experiments with 20 students. After the experiment, 15 out of 20 participants (75%) said they thought the brainstorming process was with real AI agents.
-</div>
-
-<div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
-   2. When brainstorming with AI agents, introverts are less concerned about their ideas judged
-</div>
-
-<div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
-    Interestingly, contrary to conventional human–human brainstorming, the introverted participants were less likely to show concern about what the coworker (i.e., the AI chatbots) thought about their ideas or how to persuade them.
-</div>
-
-<div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
-    3. Extroverts prefer humans to chatbot collaborators in brainstorming
- </div>
- 
- <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
-    When the extraverts self-evaluated the performance of the brainstorming session, we found no significant difference between the two personalities of chatbots, contrary to the results of the introverts.
- During the interview, they revealed that they preferred human-human collaboration.
-</div>
+  </main>
 
 
-<div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
-       class="links ttu tracked f5 fw1 avenir tc nb4 b">Validation Study </div>
+  <main class="main">
 
-       <div>
-       <div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
-        Based on the findings from the first study, we designed the follow-up study to extend this area of investigation by a quantitative approach with a larger number of participants.
-       </div>
+    <article class="entry entry-lede" style="margin-bottom:5em;background: var(--background)">
+      <div class="entry-content" style="margin-left: -15em;">
+        <h1 class="entry-headline big-headline">Subsequent Experiment
+        </h1>
+        <time class="entry-date meta"></time>
+        <span class="entry-byline meta" style="font-size:0.8em">Based on the findings from the first study, we designed the follow-up study to extend this area of investigation by a quantitative approach with a larger number of participants. </span>
+        <p class="entry-summary">
+          <br> We designed the experiment where participants watched two brainstorming examples videos with the two AI personas and answered the questionnaire.
+          The videos showed a sample dialogue from a human–AI collaboration process, and they were created based on the actual conversation data from the preliminary experiment. 
+          Then, we asked each participant to answer the questions after watching two consecutive videos that showed an example of the collaborative ideation process with the two AI personas.
+          <br> <br> The questionnaire consisted of 24 personality test questions and 18 experimental questions on a five-point Likert scale (1: strongly disagree, 2: disagree, 3: neither agree nor disagree, 4: agree, 5: disagree), distributed after each collaboration video.</p>
+      </div>
+    </article>
 
-       <div class="links tracked f6  avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
-       We designed the experiment where participants watched two brainstorming examples videos with the two AI personas and answered the questionnaire.
-       The videos showed a sample dialogue from a human–AI collaboration process, and they were created based on the actual conversation data from the preliminary experiment.
-       The questionnaire consisted of 24 personality test questions and 18 experimental questions on a five-point Likert scale (1: strongly disagree, 2: disagree, 3: neither agree nor disagree, 4: agree, 5: d), distributed after each collaboration video. The first question group consisted of a NEO-PI-R type personality test to determine whether the participants’ personality type was extroverted or introverted based on the Big Five personality traits. The second section confirmed the character of the AI chatbot, which participants confirmed through the video, thereby accepting the bot as designed in the experiment. Finally, after collecting basic data from the experiment through the above two groups, we observed how participants perceived brainstorming using the AI chatbot in earnest at the end of the questionnaire.
-    </div>
+    <article class="entry">
+      <img class="entry-img"
+        style="grid-column-end: 20;width:900px; height: 360px;"
+        src="../images/AI Q.png" />
+    </article>
+  </main>
+  <main class="main" style="z-index:-2;margin-top: -2em;">
+    <article class="entry entry-lede">
 
-
-    <div style="margin-top:5%; line-height: 2; color:#ccc;font-weight:300; padding: 80px;"
-       class="links ttu tracked f5 fw1 avenir tc nb4 b">Results </div>
-
-    <div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
-        1. Validation of Persona Design
- </div>
-
- <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
-    The results show that the precondition of the hypotheses was satisfied: through the videos, the participants perceived the two personas in the way the researchers had designed.
-</div>
-
-<div class="links tracked f5  avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
-   2. The difference between extrovert and introvert in AI brainstorming
-</div>
-
-<div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy " style = "margin-top:5%;" > 
-    Analogous to the preliminary results, introverts wanting liberation from coworkers’ evaluations and burdensome or unnecessary interactions during collaborations, introverts in the following experiment also preferred AI chatbots to humans and deemed it more efficient for the following reasons:<br><br>
-  <a style = "font-style: italic;"> “I don’t know yet, but I thought it would be efficient because I hope that unnecessary energy between people, such as negative words and actions, will not appear. I think it will be more helpful in that sense.” <br>
-    <br>“I am having a hard time conversing with a person, as I am a little concerned about what that person thinks of me, so I think using an AI chatbot will allow me to exchange opinions comfortably.” <br>
-   <br> “I think each party has its own strengths and weaknesses. If you work with an AI, you don’t have to worry about your feelings, and it would be convenient to just talk about your ideas directly. But are they more creative than humans? The question still remains.”
-</a>
-</div>
- 
- <div class="links tracked f6 fw1 avenir tj nb4 ph6 lh-copy b" style = "margin-top:5%;" > 
-    <br>On the other hand, in the case of extroverted participants, they preferred humans over AI chatbots because of the technical limitations of AI.<br>
-    <br><a style = "font-style: italic;"> “AI has a learned aspect, so it sees a specific case and applies it to the next. It would be a good choice if only I was trying to come up with an idea suitable for a certain project, but I like and value creative ideas and friendly conversations with people. I will use AI for my projects, but I don’t think it fits my personality very well.”</a><br>
-        <br>
-</div>
-
-</div>
-   
-
-        <h2 style="margin-top: 10%; color:#e040fb;filter:blur(0px)" class="f3  avenir tracked tc lh-copy ph7 b ">
-            We could identify the following: <br>
-            <br>
-            <br>
-            <div class="links tracked f6 fw1 avenir tj nb4 lh-copy b" style = "margin-bottom: 10%; color:white" > 
-            • Use of AI chatbot to overcome the existing limitations of brainstorming<br>
-            • Need for segmented research depending on the purpose of AI collaboration<br>
-            • Limitations and future research direction<br>
-            </div>
-            Please read more from the paper: "Brainstorming with an AI chatbot: does its personality matter among extraverted and
-            introverted coworkers?" below. </h2>
-
-           <a href='../images/Brainstorming with an AI chatbot.pdf' target="_blank"><div style="border: 2px solid #000;
-            color: rgb(241, 51, 226);
-            background-color:none;
-            border-radius: 8px;
-            padding: 20px 20px;
-            height: 60px;
-            left: 42.6%;
-            margin-top: 5%;
-            border-color: #ccc;
-
-            display: inline-block;
-            width: 200px;
-            align-items: center;
-            position: absolute;
-            justify-content: center;
-            cursor: pointer;
-            line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"> Download PDF
-                </div> </a>  
-                
-
-
-
-
-
-
-   
-<div style = "margin-top: 20%;">
-   
-  <div style="border: 1px solid #000;
-
-  color: rgb(34, 34, 34);
-  background-color: #ccc;
-  border-radius: 8px;
-  padding: 20px 20px;
-  display: inline-block;
-  width: 20vw;
-  margin: 10%;
-  left: 47vw;
-  bottom: 40%;
-
-  align-items: center;
-  position: relative;
-  justify-content: center;
-  cursor: pointer;
-  line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
-      onclick="location.href='../psycho/taste.html'"> Next Project → <br>
-      <p class="f8 tts avenir"> Tastes is in the Brain </p>
-  </div>
-
-  <div style="border: 1px solid #222;
-  bottom: 40%;
-  background-color: rgb(236, 55, 236);
-  
-  color: #222;
-  border-radius: 8px;
-  padding: 20px 20px;
-  display: inline-block;
-  width: 20vw;
-  margin: 10%;
-  right: 37vw;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-  cursor: pointer;
-  line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button"
-      onclick="location.href='../crafts/multi-interface-part-2.html'">← Previous Project <br>
-      <p class="f8 tts avenir">Multi-sensorial Interface Pt.2 </p>
-  </div>
-
-
-<div class="f7 avenir tc" style = "align-items:center; margin:100px;color:white;border-top: 1px solid white;" > <br><br><br> © 2021 Eunsol Choi. All Rights Reserved.  Built with HTML/JS/JQUERY/🌞 </div>
-</div>
-
-
-    <script src="../blob.js"></script>
-    <script src="../scrollTrigger.js"></script>
-    <script>
-        ScrollReveal().reveal(document.querySelectorAll('div', 'h2', 'table'), { delay: 500 });
-    </script>
-    <script>
-        function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-        if (document.getElementsByClassName("slider").addEventListener("click", () => {
-            audio.pause();
-        }));
-
-    }
-</script>
-
+    </article>
+    <article class="entry" style="border: solid 1px black;background-color: white; margin:30px;padding:20px;">
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Congruency</h1>
+      <time class="entry-date meta">Result 1</time>
+      <span class="entry-summary">We checked whether they recognized the AI personas as we intended through the answers to the first five questions (Q25 to Q28)
+        Next, we performed a paired t-test to check the difference in the five questions (Q25 to Q28) using a total of 44 answer sheets.
+        From the results, we found a significant difference in Q26, Q27, and Q28 with a significance level of 0.05.
+      </span>
     
-    <audio id="audio" src=".../images/this.mp3"></audio>
+
+    </article>
+    <article class="entry" style="border: solid 1px black;background-color: white; margin:30px;padding:20px;">
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Introvert preference</h1>
+      <time class="entry-date meta">Result 2</time>
+      <span class="entry-summary">Analogous to the preliminary results, introverts wanting liberation from coworkers’ evaluations and burdensome or unnecessary interactions during collaborations, introverts in the following experiment also preferred AI chatbots to humans and deemed it more efficient.
+      </span>
+      <p class="entry-byline meta">
+        “I don’t know yet, but I thought it would be efficient because I hope that unnecessary energy between people, such as negative words and actions, will not appear. I think it will be more helpful in that sense.”
+      </p>
+
+    </article>
+  </main>
+  <main class="main" style="z-index:-2;margin-top: -4em;">
+    <article class="entry entry-lede">
+
+    </article>
+    <article class="entry" style="border: solid 1px black;background-color: white; margin:30px;padding:20px;">
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Extrovert preference</h1>
+      <time class="entry-date meta">Result 3</time>
+      <span class="entry-summary"> Extroverts preferred humans over AI chatbots because of the technical limitations of AI and because they prefer close interactions with other people during the brainstorming process.
+
+      </span>
+      <p class="entry-byline meta">
+        “AI has a learned aspect, so it sees a specific case and applies it to the next. It would be a good choice if only I was trying to come up with an idea suitable for a certain project, but I like and value creative ideas and friendly conversations with people. I will use AI for my projects, but I don’t think it fits my personality very well.”
+      </p>
+
+    </article>
+    <article class="entry" style="border: solid 1px black;background-color: white; margin:30px;padding:20px;">
+
+      <h1 class="entry-headline primary-headline" style="font-size:2em;">Summry</h1>
+      <time class="entry-date meta">Result 4</time>
+      <span class="entry-summary">The study observed the characteristics of introverts and extroverts during the brainstorming process using the AI chatbot through the previous two experiments.
+   
+        This study shed light on the possibility of utilizing AI chatbots to overcome the limitations of conventional human–human brainstorming, especially among introverts.
+        </span>
+      <p class="entry-byline meta">
+       
+      </p>
+    </article>
+  </main>
+
+  <main class="main">
+    <article class="entry entry-lede" style="margin-bottom:6em;margin-top:5em;">
+      <img class="entry-img" style="width:600px; height:500px;" src="../images/persona.png" />
+
+      <div class="entry-content">
+        <h1 class="entry-headline big-headline">Discussions
+        </h1>
+
+        <ul>
+          <li><b> AI chatbots could overcome the existing limitations of brainstorming.
+            </b> <br> <small>In this study, participants showed they thought they had the following advantages in the brainstorming process through chatbots. First, it was easy to check the previous conversation history. Second, it was easy to grasp the entire conversation flow regardless of the speed of the conversation. Third, it was easy to organize their thoughts and continue the conversation before chatting. </small> </li>
+          <li><b>Need for segmented research depending on the purpose of AI collaboration.
+            </b> <br> <small>  Given that some participants responded positively to the sympathetic attitude of the AI agent, determining which characteristics are best suited to such a purpose needs further research.</small></li>
+          <li><b> Limitations and future research direction.
+            </b> <br> <small> 
+             Wizard of Oz experiments are less likely to be distorted, but there still exist limitations.
+             Designing an AI agent capable of an actual collaboration process suited for particular conversations for the brainstorming process is immediately feasible by employing different scenarios.</small></li>
+        
+        </ul>
+        <br> Please find the full paper below: <br><br><br>
+        <a href='../images/Brainstorming with an AI chatbot.pdf' target="_blank"
+          style="margin-bottom: 6em; text-decoration: none;text-align: center;color:#222; font-weight: 500; ">
+          <div class="damn"
+            style="background-color:azure; cursor: pointer; margin-left: 10em; border: solid 1px #222; width: 150px; height: 30px; padding: 20px; ">
+            <small> Download PDF</small> <br>
+
+          </div>
+        </a>
+    </article>
+
+
+
+    <article class="damn">
+    </article>
+    <a style="font-size: 0.9em;" href="../crafts/multisensory.html" class="nev">⇽Previous Project<br> Multisensory Interface </a>
+    <div class="nevy"></div>
+
+
+    <article class="next">
+
+    </article>
+
+    <a style="font-size: 0.9em;" href="../psycho/taste.html" class="prev">Next Project⇾ <br> Flavor Perceptions </a>
+    <div class="prevy"></div>
+  </main>
+
 
 </body>
 
-
+<script>
+  ScrollReveal().reveal(document.querySelectorAll('header'), { delay: 500 });
+  ScrollReveal().reveal(document.querySelectorAll('article'), { delay: 500 });
+  ScrollReveal().reveal(document.querySelectorAll('section'), { delay: 500 });
+  ScrollReveal().reveal(document.querySelectorAll('div'), { delay: 500 });
+  ScrollReveal().reveal(document.querySelectorAll('main'), { delay: 500 });
+</script>
 
 </html>

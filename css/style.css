@@ -1196,7 +1196,8 @@ svg.mouthl {
 }
 
 .about:hover {
-  background: black;
+  background: rgb(255, 255, 255);
+  color: #222;
   box-shadow: px px px rgb(0, 0, 0);
 }
 
