@@ -125,7 +125,7 @@ img {
 .masthead {
   color: var(--primary);
   mix-blend-mode: multiply;
-  z-index: 100;
+  z-index: 900;
   text-align: center;
   font-size: 5em;
   font-weight: 500;
@@ -388,7 +388,7 @@ ul {
   border: solid 1.7px var(--text);
   border-radius: 0px;
   color: rgb(71, 70, 70);
-  background: #ccc;
+  background: rgb(230, 230, 230);
   box-shadow: inset 0px 0px 40px 8px white;
   text-decoration: none;
 

@@ -28,6 +28,7 @@ body {
   bottom: 25vh;
   line-height: 59px;
   white-space: nowrap;
+  z-index: -9;
 }
 
 .sheet a {
@@ -136,10 +137,11 @@ svg {
   height: 70px;
   fill: white;
   transform: translate(98%, 35%);
+  z-index: 900;
 }
 .mini {
   z-index: 0;
-  background-color: #222;
+
   border: solid 1px white;
   width: 90px;
   height: 400px;
@@ -1072,7 +1074,6 @@ svg.mouthl {
 .popover {
   display: none;
   box-shadow: 0px 6px 8px rgba(19, 19, 19, 0.7);
-  z-index: -200;
 }
 
 .popover:target {
@@ -1199,32 +1200,6 @@ svg.mouthl {
   background: rgb(255, 255, 255);
   color: #222;
   box-shadow: px px px rgb(0, 0, 0);
-}
-
-.popover .close::after {
-  left: -0.12%;
-  bottom: 50%;
-  width: 74px;
-  height: 40px;
-  position: absolute;
-  display: flex;
-  z-index: 100;
-  font-size: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
-  justify-content: center;
-  background-color: orange;
-  box-shadow: 3px 4px 6px rgb(0, 0, 0);
-
-  color: #222;
-  content: "BACK";
-  cursor: pointer;
-  opacity: 0.4;
-  animation: 1s fadeIn ease forwards 1s;
-  font-family: monospace;
-  font-size: 1.1em;
-  z-index: -200;
-  display: none;
 }
 
 @keyframes grow {
