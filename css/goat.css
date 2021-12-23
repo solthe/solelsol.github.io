@@ -416,7 +416,7 @@ ul {
 }
 
 .next {
-  grid-column-start: 21;
+  grid-column-start: 18;
   width: 400px;
   height: 90px;
   cursor: pointer;
@@ -428,7 +428,7 @@ ul {
 
 .prev {
   right: 20px;
-  transform: translate(-48%, 0%);
+  transform: translate(-18%, 0%);
   bottom: 8%;
   width: 400px;
   height: 80px;
@@ -454,7 +454,7 @@ ul {
 }
 .prevy {
   right: 1px;
-  transform: translate(-70%, 8%);
+  transform: translate(-40%, 8%);
   bottom: 7%;
   width: 400px;
   height: 80px;
