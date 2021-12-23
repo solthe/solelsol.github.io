@@ -2,24 +2,22 @@
 <html>
 
 <head>
-    <div id="cursorBlob" style="top: 8px; left:-18px"></div>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8SZ4QGKVG"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bus Stop</title>
-    <link rel="stylesheet" href="../css/trial3.css">
+    <link rel="stylesheet" href="../css/goat.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-
-
 </head>
 
-<button class="nav__link" style="z-index:3; position: fixed;" onclick="location.href='../index.html'">
-</button>
-
-<svg class="nav__link" onclick="location.href='../index.html#ear'"
-    style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:white;filter: drop-shadow(0px 1px 3px #ff7b00);z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
+<body>
+    <button style="z-index:1; position: fixed;" onclick="location.href='../index.html'"></button>
+    <a style="font-family: Roboto, sans-serif; font-size: 0.9em;" href="../about/about.html" class="about">ABOUT</a>
+    <div class="abouty"></div>
+    <svg class="nav__link" onclick="location.href='../index.html#ear'"
+    style="mix-blend-mode: normal; filter:none;cursor:pointer;align-items: center;fill:aqua; width: 70px; left:15px; top: 10px; filter: drop-shadow(0px 0px 1px rgb(55, 54, 54));z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
     viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve">
     <g>
@@ -29,269 +27,651 @@
             d="M27.79,74.057c1.067,0.764,2.088,1.07,3.051,1.069c2.478,0,4.577-2.027,6.11-3.509c1.561-1.509,3.175-3.068,5.05-3.416   c8.032-1.492,13.19-6.093,15.332-13.675c1.369-4.848,0.833-9.001-1.592-12.344c-4.51-6.213-14.272-7.46-18.797-7.699   c-1.565-4.041-1.911-8.325-0.09-12.101c1.643-3.406,3.988-5.645,6.783-6.473c3.042-0.902,6.625-0.179,10.359,2.087   c11.086,6.727,12.118,26.603,7.958,37.33c-2.372,6.116-3.903,9.219-8.611,13.254c-1.049,0.898-1.17,2.478-0.271,3.525   c0.495,0.577,1.195,0.873,1.899,0.873c0.576,0,1.154-0.198,1.626-0.602c5.739-4.92,7.614-9.041,10.02-15.242   c4.789-12.351,3.975-34.917-10.026-43.413c-4.972-3.017-9.941-3.92-14.374-2.607c-4.183,1.239-7.595,4.384-9.867,9.095   c-4.492,9.313,0.493,20.477,7.426,27.41c0.977,0.976,2.559,0.976,3.536,0c0.976-0.976,0.976-2.559,0-3.536   c-1.29-1.29-2.496-2.753-3.562-4.317c3.907,0.523,9.417,1.868,11.944,5.351c1.501,2.069,1.771,4.702,0.826,8.048   c-1.603,5.677-5.343,8.987-11.432,10.118c-3.354,0.622-5.715,2.903-7.612,4.736c-0.789,0.763-2.11,2.039-2.569,2.087   c0-0.001-0.068-0.018-0.208-0.118c-0.832-0.595-1.048-0.954,0.35-3.976c0.72-1.557,1.465-3.166,1.186-4.864   c-0.898-5.473-0.042-6.766,0.242-7.031c0.21-0.196,0.776-0.21,1.515-0.04c1.189,0.277,1.626,0.957,1.783,1.479   c0.161,0.535,0.032,0.957-0.05,1.046c-1.042,0.903-1.156,2.48-0.254,3.524c0.902,1.046,2.482,1.16,3.526,0.257   c1.563-1.351,2.214-3.68,1.657-5.935c-0.648-2.628-2.716-4.587-5.53-5.242c-3.126-0.726-5.022,0.284-6.064,1.26   c-2.8,2.623-2.411,7.519-1.765,11.421c-0.009,0.352-0.475,1.358-0.784,2.024C25.39,66.338,23.304,70.848,27.79,74.057z" />
     </g>
 </svg>
-<a href="../about/about.html" class="about">ABOUT</a>
 
 
-<body>
+    <header class="header">
+        <h1 class="header-title masthead" style ="color:cornflowerblue;font-size:4.1em">Bus Stop: A Case Study</h1>
+    </header>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.8.1/tachyons.min.css'>
-
-
-    <div class="container">
-
-        <div class="links ttu tracked f6 avenir pt5 b tc nb4">
-            <a style="color: #ff7b00; text-align:center;" target="_blank">UX RESEARCH ·</a> <a
-                style="color: #ff7b00;text-align:center " target="_blank">design</a>
-        </div>
-
-
-        <h2 style="padding-top:70px;" class="f3 georgia tracked tc lh-copy ph8 b">
-            At the Bus Stop: A Random Field Study<br><small>2020.11.15</small>
-        </h2>
-        <div class="grid">
-            <div class="folio-1 f4 tr pt3 pr3">
-                <li class="article-red fa fa-compass" aria-hidden="true"></li>
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom: 5em;">
+            <img class="entry-img" style="width:600px; height:400px; " src="../images/bus gif.gif" />
+            <div class="entry-content">
+                <h1 class="entry-headline big-headline" style = "font-weight:300; font-size:2.5em;">Re-imagining social media as a commemorative space for remembrance and recovery
+                </h1>
+                <time class="entry-date meta">October, 2020 - February, 2021</time>
+                <span class="entry-byline meta">Presented at INTERACT (International Conference on Human-Computer Interaction) 2021</span>
+                <p class="entry-summary">
+                    Our society avoids the topic of death.
+                    There are countless loved ones passing away and we do not make full advantage of digital technology due to the restrained notion. 
+                    Commemoration service for social media and a collective mourning system are in grave need.</p>
             </div>
-            <div class="folio-2 pt3">
-                <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
-                <p class="f8 ttu avenir tracked lh-hi b article-red">field study<br> UX research<br>Time taken: 90 mins
+        </article>
+        <article class="entry">
+            <img class="entry-img"style ="background:#222;" src="../images/insta.png" />
+            <h1 class="entry-headline primary-headline">Digital Traces</h1>
+            <time class="entry-date meta">Area of Focus</time>
+            <span class="entry-byline meta">Digital volition and social media</span>
+            <p class="entry-summary">
+                We thought about what is the one place we leave a lot of traces consciously or unconsciously on daily basis. Digital presence is deeply stemmed in our life through our social media accounts. But there was a fatal problem that there was no way in reality that people can manage their own accounts after death according to their own will and autonomy in these platforms.
+
+            </p>
+        </article>
+        <article class="entry">
+            <img class="entry-img" src="../images/mourn.png" />
+            <h1 class="entry-headline primary-headline">Value Sensitive Design</h1>
+            <time class="entry-date meta">Design Solution</time>
+            <span class="entry-byline meta">User research and design</span>
+            <p class="entry-summary">
+                In order to reconcile social media and after death situation with the use of technological interaction. That is, to consider the digital volition, or the general volition of each stakeholder involved in the process, and as a whole it is both resulted as and embraced by a thanatosensitive design to bring the concept of mortality into our daily activity.
+
+            </p>
+        </article>
+
+        <section class="trending">
+            <article class="trending-entry">
+                <time class="trending-entry-headline">Information</time>
+                <p class="trending-entry-headline primary-headline">A commemorative space for social media</p>
+            </article>
+            <article class="trending-entry">
+                <time class="trending-entry-headline">Methods</time>
+                <p class="trending-entry-headline primary-headline"> In-depth interview, observation, thematic analysis,
+                    value sensitive design, user testing
+                </p>
+
+            </article>
+            <article class="trending-entry">
+                <time class="trending-entry-headline">My role</time>
+                <p class="trending-entry-headline primary-headline">User research, UI Design, User Teseting, Qualitative Data Analysis</p>
+            </article>
+            <article class="trending-entry">
+                <time class="trending-entry-headline">Team members</time>
+                <p class="trending-entry-headline primary-headline">Soonho Kwon, Minseok Kim, Sunah Hwang, Dongwoo Kim, Younah Kang</p>
+            </article>
+        </section>
+    </main>
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+            <div class="left-text" style="font-style:italic;text-align:center;font-size:1.5rem;">
+                What happens to my social media account afetr I die? How can I manage it when I'm not there anymore?
+            </div>
+            <div class="entry-content">
+                <h1 class="entry-headline big-headline">Observation on processing deaths and mourning behaviors online.
+                </h1>
+                <time class="entry-date meta">Significance</time>
+                <span class="entry-byline meta">Social media and death </span>
+                <p class="entry-summary">
+                    What will happen after I die? We’d probably wonder what’ll happen to my family, friends, my dog or cat that’s left behind.. but hardly about our Instagram account or other social media, maybe because it’s deemed less important, or is something that’s valued less than physical connections. Our identity on social media after demise, is something that’s been explored for many years, and digital traces and presence is one example.
                 </p>
             </div>
-            <div class="folio-3 pt3">
-                <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
-                <p class="f8 ttu avenir tracked lh-hi b article-red ">· AEIOU framework<br> · open-ended
-                    interview<br>· Field UX Research</p>
-            </div>
-            <div class="folio-4 pt3">
-                <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Revisiting usual places can provide entirely new
-                    perspectives.<br><b>UX research on a bus stop.</b></p>
-            </div>
+        </article>
+</main>
+<main class = "main">
+<article class = "entry entry-lede">
+
+    <div class="entry-content">
+        <h1 class="entry-headline big-headline">Thanatosensitivity
+        </h1>
+        <time class="entry-date meta">Preceding Studies</time>
+        <span class="entry-byline meta">Digital tombstones and memorials </span>
+        <p class="entry-summary">
+            There has been recent studies on 'thanatosensitivity' that creates and uses technologies that allow us to comprehend, reflect, and discuss the mortality. </p>
+    </div>
+</article>
+<article class="entry">
+    <img class = "entry-img"src = "../images/tomb.png">
+    <h1 class="entry-headline primary-headline"><br>iTernal Tombstone</h1>
+    <time class="entry-date meta"></time>
+    <span class="entry-byline meta"></span>
+    <ul>
+        <li> Remote commemoration </li>
+    <li>Preservation </li>
+</ul>
+    <p class="entry-summary">
+   </p>
+</article>
+<article class="entry">
+    <img class = "entry-img"src = "../images/tombstone.png">
+    <h1 class="entry-headline primary-headline"><br>I-CAN corp., Häkkilä, et al. Interactive Gravestone</h1>
+    <time class="entry-date meta"></time>
+    <span class="entry-byline meta"></span>
+    <ul>
+        <li> Digital memorial </li>
+    <li>Virtual tombtones</li>
+</ul>
+    <p class="entry-summary">
+          </p>
+</article>
+</main>
+<main class="main">
+    <article class="entry entry-lede" style="margin-bottom:6em;">
+   
+    </article>
+
+    <article class="entry">
+        <h1 class="entry-headline primary-headline"><br>Digital Traces</h1>
+        <time class="entry-date meta">Research Area</time>
+        <span class="entry-byline meta"></span>
+        <p class="entry-summary">
+            In an attempt to examine ways to successfully manage the digital traces as well as to provide an online commemoration opportunity, we aimed to sensitively design the commemoration system that considers every stakeholders’ volition, and that can be implemented into everyday life technology.
+<br><br>
+            Digital presence is deeply stemmed in our life through our social media accounts. But there was a fatal problem that there was no way in reality that people can manage their own accounts after death according to their own will and autonomy in these platforms.
+        </p>
+    </article>
+    <article class="entry">
+        <h1 class="entry-headline primary-headline"><br>Key Problems</h1>
+        <time class="entry-date meta">Research Area</time>
+        <span class="entry-byline meta"></span>
+        <ul>
+            <li> Privacy issues </li>
+        <li>Absence of a manager </li>
+    </ul>
+        <p class="entry-summary">
+            Privacy is easily violated, without the owner and unstructured security system and it is aggravated from not having a person to literally manage the account.
+            In order to reconcile social media and after death situation with the use of technological interaction. That is, to consider the digital volition, or the general volition of EACH stakeholder involved in the process, and as a whole it is both resulted as and embraced by a thanatosensitive design to bring the concept of mortality into our daily activity.
+        </p>
+    </article>
+</main>
+
+<main class="main">
+    <article class="entry entry-lede" style="margin-bottom:6em;">
+        <div class="entry-content">
+            <h1 class="entry-headline big-headline" style = "font-size: 3em">To  Extract <b>Values</b> According to<b>
+                Human Volition</b> and Design
+                Commemorative Space in Instagram
+                Dedicated to <b>Remember
+                and Recover</b>
+            </h1>
+            <time class="entry-date meta">Research Goal</time>
+            <span class="entry-byline meta"> </span>
+            <p class="entry-summary"></p>
         </div>
+    </article>
+        <article class="entry" style="grid-column-start:16;padding: 4em;">
+            <h1 class="entry-headline primary-headline" style = "margin-top:4em;"><br>Research Goals</h1>
+            <time class="entry-date meta">Research Goals</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+            <ul>
+                <li><b>RQ 1 </b> <br>Investigate user perception on commemoration </li>
+                <li><b>RQ 2</b> <br> Discuss how social media is, and can be utilized as a
+                    commemoration tool </li>
+                <li><b> RQ 3 </b> <br> Design social media system for death preparation and
+                    commemoration</li>
+                <li> <b> RG 4 </b><br> Evaluate the newly proposed system </li>
+            </ul>
 
-        <img style="position: absolute; left: 50%; transform: translate(-55%, 0); width: 60vw;  margin: 30px;border-radius:20px;" src="../images/stopdetails.png">
+            </p>
+        </article>
 
-
-        <h2 style="color:orange;filter:blur(1px);margin-top:50%;" class="f2 ttu avenir tracked tc lh-copy ph7 b">
-            Out at the bus stop, i started to observe the area and "tested usability" out of nowhere.
-        </h2>
-
-
-
-        <aside style = " margin-top: 20%;" class="in-brief">
-            <h3 class="f3 georgia tracked tc lh-copy ph8 b">In Brief</h3>
-            <div class="in-brief-content">
-                <p class="f8 ttu avenir tracked lh-hi "><strong style="color:#75b5b0;">Observation. <br> </strong>
-                    Stayed at a bus stop for 1.5 hours; observed the behaviors of people, actions they take,
-                    interactions they perform and their surroundings.
-                    <br> <br><br><br><br><br><br><strong
-                        style="color:#75b5b0;grid-column-start:5;">Problems.</strong> <br>Surprisingly, a huge inherent
-                    problem exsited in such a daily used place; people didn't know when to hop on the bus and drivers
-                    didn't know whom to pick up.
-                    <br> <br><br> <br><br><br><br><strong style="color:#75b5b0;">Insights. </strong><br> • Waiting time
-                    is essentially endless <br>• They Rarely Use their Phones- Heavy Dependency on the monitor<br>•
-                    Driver Also Needs Cue<br>• Stepping Forward is a universal language <br>• Arriving time is really
-                    the only needed information.<br>• Bus monitor has to be the solution.
-                </p>
-            </div>
-        </aside>
-
-        <div  class="section full-height over-hide px-4 px-sm-0">
-            <div class="container">
-                <div class="row full-height justify-content-center">
-                    <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
-                        <div class="section mx-auto text-center slider-height-padding">
-                            <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked />
-                            <label for="slide-1"></label>
-                            <input class="checkbox scnd" type="radio" value="PLAY" onclick="play()"  name="slider" id="slider-2" />
-                            <label for="slider-2"></label>
-                            <input class="checkbox thrd" type="radio" name="slider"
-                                id="slider-3" />
-                            <label for="slider-3">
-                            </label>
-                            <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
-                            <label for="slider-4"></label>
-                            <ul>
-                                <li style="position:absolute;top:20%; text-indent: 2rem;">
-                                    <span>SITE OBSERVATION</span>
-                                </li>
-                                <li style="text-indent: 2rem;">
-                                    <span>SITE ANALYSIS</span>
-                                </li>
-                                <li style="text-indent: 2rem;">
-                                    <span>DOCUMENTATION AND INTERVIEW</span>
-                                </li>
-                                <li style="text-indent: 2rem;">
-                                    <span>EXPLORING SOLUTION</span>
-                                </li>
-                            </ul>
+        <section class="entry" style="grid-row-start:2;
+        grid-column-start: 1;
+        grid-column-end: span 15;background:var(--background);">
+            <article class="trending-entry">
+                <time class="entry-date meta" style="margin-left: 13em;top: -4em;">Research Structure</time>
+                <div class="tree" style="margin-left: 8em;">
+                        <div class="first">
+                            <div class="p">
+                                <div class="hi"style="font-weight:700; line-height: 2;">Exploratory Research</div>
+                                <div class="second">
+                                    <div class="p"><div class="hi"style="font-weight:500;">In-depth Interview</div>
+                                        <div class="third"><div class="hi">Transcript Coding</div><div class="hi">Affinity diagraming</div></div>
+                                    </div>
+                                    <div class="p"><div class="hi"style="font-weight:500;">Design Requirements</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="p">
+                            <div class="hi"style="font-weight:700;">Prototyping and UT</div>
+                            <div class="second">
+                                <div class="p"><div class="hi"style="font-weight:500;">UI Design according to Design Requirements</div>
+                                    <div class="third"><div class="hi">Pilot UT</div></div>
+                                </div>
+                                <div class="p"><div class="hi"style="font-weight:500;">User Testing</div>
+                                    <div class="third"><div class="hi">Evaluation</div><div class="hi">Final Design Solution</div></div>
+                                </div>
                         </div>
                     </div>
+                    </div>
+                    
                 </div>
-            </div>
-        </div>
+        </section>
 
-
-        <h2 style="padding-top:30px;" class="f5 ttu tc avenir tracked lh-hi b article-red">
-            Using AEIOU Framework
-        </h2>
-        <div class="grid">
-            <div class="folio-1 f4 tr pt3 pr3" style=" height: 300px;">
-                <li class="article-red fa fa-compass" aria-hidden="true"></li>
+    </main>
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:0em;">
+            <div class="left-text" style="font-style:italic;text-align:center;font-size:1.5rem;">
+                “One can no more look steadily at death than at the sun.”<br>
+               <small> - Herman Feifel, thantologist</small>
             </div>
-            <div class="folio-2 pt3" style="height: 300px;border-right: 1px solid rgb(255, 255, 255);">
-                <p class="f8 ttu avenir tracked lh-hi b">Activity.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Waiting for the bus, Checking the schedule, Catching
-                    the bus, Taking the bus, Pulling over at the right stop, Getting off the bus
+            <div class="entry-content">
+                <h1 class="entry-headline big-headline">Exploratory Study
+                </h1>
+                <time class="entry-date meta">Significance</time>
+                <span class="entry-byline meta">Social media and death </span>
+                <p class="entry-summary">
+                    With our in-depth interviews, we first approached the users’ thoughts on death, in online situation. Death, involves not only the phase where we’re no longer here, but also the stages right before. However, that is often overlooked and not carefully or intensely touched upon. It’s a subject that is difficult to address, to point at, and is often avoided to talk about. Likewise, it is something that involves so many stakeholders, that in one research it is unfathomable to understand everyone’s needs. However, it was necessary and promising enough to analyze three main stakeholders, who perform separate tasks in very distinct places.
                 </p>
             </div>
-            <div class="folio-3 pt3" style=" height: 300px; margin-right: 10%; border-right: 1px solid rgb(255, 255, 255);
-                ">
-                <p class="f8 ttu avenir tracked lh-hi b">Environment.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red ">Outside, Later afternoon, Chilly weather, Abundant
-                    sunlight, Windy, Concrete Road, Spacy space, Roof
+        </article>
+</main>
+<main class = "main">
+    <article class = "entry entry-lede">
+    
+        <div class="entry-content">
+            <h1 class="entry-headline big-headline">Stakeholders
+            </h1>
+           
+            <p class="entry-summary">
+                Three Distinct interviews sessions conducted as exploratory research to identify research questions. Study
+                targets three types of stakeholders: To-be-deceased, the bereaved, and legacy contact. Interview and
+                observation participants selected via purposive sampling through requirement survey.
+<ul>
+    <li> <b>Before Death:</b> how do users want their Instagram be or be managed, after their death?</li>
+        <li><b>After Death: </b>how have users commemorated the loss of their close ones or processed their deaths?</li>
+            <li><b>Legacy Contact:</b> how was it like to manage the post-mortality of their closed ones?</li>
+
+</ul>
+</p>
+ </div>
+    </article>
+    <article class="entry">
+        <div class="entry-content"  style= "margin-top:-1em;">
+            <h1 class="entry-headline big-headline">After Intensive Interviews,
+            </h1>
+            <time class="entry-date meta">Exploratory Study</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+            we conducted five hours of affinity diagraming. We extracted five themes and three insights as the key implications for our design solution. 
+        </p>
+       
+    </article>
+    <article class="entry">
+        <img class = "entry-img"src = "../images/affinity.png">
+       
+    </article>
+    </main>
+
+    <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -2em;">
+        <article class="entry entry-lede">
+            <div class="entry-content" style="margin-left:-15em;">
+                <h1 class="entry-headline big-headline">Thematic Analysis
+                </h1>
+                <time class="entry-date meta"></time>
+                <span class="entry-byline meta"></span>
+                <p class="entry-summary"> 
+
                 </p>
             </div>
-            <div class="folio-3 pt3"
-                style=" grid-row-start: 3;height: 0px; margin-right:10%; border-right: 1px solid rgb(255, 255, 255);">
-                <p class="f8 ttu avenir tracked lh-hi b">objects.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Bus Monitor, Time schedule (paper), Advertisement
-                    <br>poster, Bench, Card
-                </p>
+        </article>
+        <article class="entry">
+           
+            <h1 class="entry-headline primary-headline">Processing Death</h1>
+            <time class="entry-date meta">Theme 1</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                Processing death begins from the moment the person receives the obituary. He or she goes through following emotional stages: a denial, fear, followed by sorrow, then regret.
+
+            </p>
+        </article>
+        <article class="entry">
+            <h1 class="entry-headline primary-headline">Purposes and Practices of Commemoration</h1>
+            <time class="entry-date meta">Theme 2</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                Essence of purposes and practices of commemoration in fact was both to memorialize the deceased, but also for the sake of the bereaved.
+            </p>
+        </article>
+
+    </main>
+    <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -2em;">
+        <article class="entry entry-lede">
+           
+        </article>
+        <article class="entry">
+           
+            <h1 class="entry-headline primary-headline">Commemorative Communities</h1>
+            <time class="entry-date meta">Theme 3</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                It is born with the common purpose to honor the loved ones, and renew the connections with them, and reaffirm the relationship within the community.
+
+            </p>
+        </article>
+        <article class="entry">
+            <h1 class="entry-headline primary-headline">Online Commemoration: Pros and Cons</h1>
+            <time class="entry-date meta">Theme 4</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                Some said online platforms certainly lower that barrier and increase accessibility to commemorate and share experiences between the bereaved. Yet, some were doubtful about the sincerity of online commemoration.
+
+            </p>
+        </article>
+
+    </main>
+    <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -3em;">
+        <article class="entry entry-lede">
+           
+        </article>
+        <article class="entry">
+           
+            <h1 class="entry-headline primary-headline">Using Social Media After Death</h1>
+            <time class="entry-date meta">Theme 5</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                Possibility and potential that social media can entail as an expression tool after someone’s death.
+            </p>
+        </article>
+        <article class="entry">
+            
+        </article>
+
+    </main>
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+            <div class="entry-content" style="margin-left: -15em;">
+                <h1 class="entry-headline big-headline">Insights
+                </h1>
+                <time class="entry-date meta"></time>
+                <span class="entry-byline meta"></span>
+                <p class="entry-summary"></p>
             </div>
-            <div class="folio-5 pt3">
-                <p class="f8 ttu avenir tracked lh-hi b">interactions.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">People looking at the bus monitor, <br>Talking while
-                    waiting, Sitting down at the bench, <br> Standing up while waiting, Stepping forward <br>as the bus
-                    comes, Taking out the cards, Waving <br> for the bus to notice, Bus driver checking who is <br>
-                    riding, Bus driver pulling off, People hopping <br>
-                    off from bus, People riding on the bus.</p>
+        </article>
+
+
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">Role of Writing and Community in Recovery</h1>
+            
+            <p class = "entry-summary">
+
+         Two motives of commemoration: Remembrance and Recovery.<br>
+      Sharing emotional recoverty: Community
+            </p>
+            <time class="entry-byline meta">
+                “I liked it when someone posted a picture that I have never seen of him (...) it felt really good. It was like seeing a side of him I never knew.” (B3)
+                    “If someone is facing the same experience as I am, if that person reads what I wrote, that person might find his own way of going through with it.” (B5)
+            </time>
+
+        </article> 
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">Aperiodic Space Detached From Daily Activities</h1>
+            
+            <p class = "entry-summary">
+
+                We defined that an aperiodic space is a space separate from daily lives, yet not so faroff that the bereaved finds if difficult to return back to daily life. We suggest that this space could be provided within social media and the profile page of the dead.
+            </p>
+            <time class="entry-byline meta">
+                      </time>
+        </article>
+
+    </main>
+        <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+         
+        </article>
+
+
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">Malleable Nature of Account After Death</h1>
+            
+            <p class = "entry-summary">Social media accounts are representation of oneʼs identity in digital space.
+                When the owner passes away, it transforms into a space that shares the news, memorialize and is visited by the bereaved. Dissemination, preservation and community.
+                
+     </p>
+            <time class="entry-byline meta">
+                
+“ I think the essence of commemoration will always be the same (...) we may only feel strange and unfamiliar since itʼs so new, but the act itself may not be so different in essence ” (B5)    </time>
+
+        </article> 
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+           
+        </article>
+
+    </main>
+
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+          <div class="entry-content" style="margin-left: -15em;">
+            <h1 class="entry-headline big-headline">Design Requirements
+            </h1>
+            <time class="entry-date meta"></time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                <ul> 
+
+              <li style = "font-size: 1.3em;"><b>A system</b> to to set up commemorative space before death.
+                </li>
+                Identified Values: Privacy, Volition
+                <li style = "font-size: 1.3em;"><b>A manager</b> to run the commemorative space.
+
+                </li>
+                Identified Values: Protection, Volition, Security
+                <li style = "font-size: 1.3em;"><b>A space</b> to recover and perpetuate the memory.
+
+                </li>
+                Identified Values: Recovery, Remembrance, Privacy, Sincerity
+            </ul>
+            </p>
             </div>
-            <div class="folio-6 pt3">
-                <p class="f8 ttu avenir tracked lh-hi b">users.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">Passengers (to hop on), Bus driver, <br>passengers
-                    (to hop off) </p>
-            </div>
-        </div>
+        </article>
+    
+     
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+          <h1 class="entry-headline primary-headline" style="font-size:2em;">Design<br> Solution </h1>
+    
+          <time class="entry-date meta">-</time>
+          <span class="entry-summary">
+            Re-imagining Commemorative Space
+          </span>
+          <p class="entry-byline meta">
+              <ul>
+            <li style = "list-style: none;">  1. Setting up the Commemoration Account : <b> All Users</b></li> 
 
-        <h2 style="margin-top: 10%; padding:60px;" class="f3 ttu tc avenir tracked lh-hi b article-red">
-            1. Approach → 2. Check the Monitor → 3. Choose to Stand or Sit → 4. Bus Approaches → 5. Step Forward → 6.
-            Take Out Card → 7. Hop On
-        </h2>
+            <li style = "list-style: none;">   2. Management Account for Account Manager : <b>Legacy Contact</b></li> 
+            
+            <li style = "list-style: none;">   3. Encountering the Commemoration Acount : <b>The Bereaved - followers</b></li> 
+        </ul>
+            
+            
+          </p>
+    
+        </article>
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+          <h1 class="entry-headline primary-headline" style="font-size:2em;">To-be-dead  </h1>
+          <img class="entry-img" style="border: solid 1px black;"  src="../images/tobedead/Asset 21@4x.png" />
+    
+          <time class="entry-date meta">User Group 1</time>
+          <span class="entry-summary">Setting up the Commemoration Account  </span>
+          <p class="entry-byline meta">
+           
+          </p>
+    
+        </article>
+    
+      </main>
 
-        <h2 style="margin-bottom: -10%;" class="f8 ttu tl avenir tracked lh-hi b ph6 pa0 article-red">
-            Notes on the behavioral pattern: waiting, getting stopped by, hopping on.
-        </h2>
-        <img style="position: absolute; width: 40%; margin-top: 10%; margin-left: 10%; " src="../images/note1.png">
-
-        <img style="position: absolute; width: 40%; margin-top: 30%; margin-left: 10%; " src="../images/note2.png">
-        <h2 style="margin-bottom: -60%; margin-top:70%; padding-left: 12%;" class="f8 ttu tl avenir  b article-red">
-            Current method of digitally finding out the bus schedule, with weak visual cues.
-        </h2>
-
-        <img style="position: absolute; width: 60%; margin-top: 60%; margin-left: 10%; " src="../images/web_bus.png">
-
-
-
-
-        <h2 style="margin-top: 110%;" class="f5 ttu tc avenir tracked lh-hi b article-red">
-            PROCESS OVERVIEW
-        </h2>
-        <img style="position: absolute;width:65%;left:23%" src="../images/process_bus.png">
-
-
-        <h2 style="margin-top: 30%;" class="f5 ttu tc avenir tracked lh-hi b article-red">
-            POTENTIAL goal
-        </h2>
-        <img style="opacity: 1; position: absolute; width:50vw; margin-top: 5%; margin-left: 15%;"
-            src="../images/goal.png">
-
-        <h2 style="margin-top: 35%;" class="f5 ttu tc avenir tracked lh-hi b article-red">
-            A (very breif) idea
-        </h2>
-        <img style="opacity: 1; position: absolute; width:70vw; margin-top: 5%; margin-left: 12%;"
-            src="../images/ideation.png">
-        <img style="opacity: 0.08; position: absolute; width:40vw; padding:20%; margin-top: 0%;" src="../images/bus.png">
-
-
-
-
-
-    </div>
-
-    <div style = "margin-top: 30%;">
+      <main class = "main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
    
-        <div style="border: 1px solid #000;
-  
-        color: #222;
-        background-color: #ccc;
-        border-radius: 8px;
-        padding: 20px 20px;
-        display: inline-block;
-        width: 20vw;
-        margin: 10%;
-        left: 50vw;
-        bottom: 40%;
+          </article>
 
-        align-items: center;
-        position: relative;
-        justify-content: center;
-        cursor: pointer;
-        line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
-            onclick="location.href='../startup/makeupfood.html'"> Next Project → <br>
-            <p class="f8 tts avenir"> Makeupfood </p>
-        </div>
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">Legacy Contact</h1>
+            <img class="entry-img" style="border: solid 1px black;"  src="../images/legacy/Asset 19@4x.png" />
+      
+            <time class="entry-date meta">User Group 2</time>
+            <span class="entry-summary">Management Account for Account Manager </span>
+            <p class="entry-byline meta">
+             
+            </p>
+      
+    
+        </article>
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;"> Bereaved</h1>
+            <img class="entry-img" style="border: solid 1px black;"  src="../images/bereave/Asset 13@4x.png" />
+      
+            <time class="entry-date meta">User Group 3</time>
+            <span class="entry-summary">Encountering the Commemoration Acount </span>
+            <p class="entry-byline meta">
+             
+            </p>
+      
+    
+        </article>
+    
+      </main>
 
-        <div style="border: 1px solid #ccc;
-        bottom: 40%;
+      </main>
+
+
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:0em;">
+            <img class="entry-img" style="width:900px; height:410px; margin-left:21em; margin-top: 2em; background:white;" src="../images/interact_ppt.png" />
+            <article class="entry entry-lede" style="margin-bottom:0em;">
+                <div class="entry-content" style="margin-left: -22em;">
+                  <h1 class="entry-headline big-headline">User Testing
+                  </h1>
+                  <time class="entry-date meta"></time>
+                  <span class="entry-byline meta"></span>
+                  <p class="entry-summary">The prototype is largely divided into three distinct sections each focusing on :
+                   <ul> 
+                   
+                    A. All Instagram Users<br> 
+                    B. Account Manager<br>
+                    C. Commemoration Account Followers<br>
+                    * A. Setting up the Commemoration Account<br>
+                    * B. Managing the account as an Account Manager<br>
+                    * C. Commemorating with the Commemoration Account<br>
+                    → Six Participants
+                </ul>
+                  </p>
+                  </div>
+              </article>
+              
+          
+    </main>
+    <main class = "main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+   
+          </article>
+
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">A. Setting up commemoration account</h1>
+      
+            <time class="entry-date meta"></time>
+            <span class="entry-summary">→ Rare opportunity to delve into the thought of dying<br>
+                → Tedious customization process deemed necessary </span>
+            <p class="entry-byline meta">
+             
+            </p>
+      
+    
+        </article>
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;"> B. Managing the account as an Account Manager
+            </h1>
+      
+            <time class="entry-date meta">-</time>
+            <span class="entry-summary">→ Its role vital to handle emergencies <br>
+                → Connecting the deceased with the bereaved </span>
+            <p class="entry-byline meta">
+           </p>
+    
+        </article>
+    
+      </main>
+      <main class = "main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+   
+          </article>
+
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">C. Commemorating with the Commemoration Account
+            </h1>
+      
+            <time class="entry-date meta">-</time>
+            <span class="entry-summary">→ Community and space to relieve fear and sorrow<br>
+                → Thoughtful UI design involving each stakeholderʼs values </span>
+            <p class="entry-byline meta">
+             
+            </p>
+      
+    
+        </article>
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;"> Evaluation Summary
+            </h1>
+      
+            <time class="entry-date meta"></time>
+            <span class="entry-summary"> </span>
+            <p class="entry-byline meta">
+               <ul> 
+                   
+                <li> Chance to contemplate death</li>
+                <li>Importance of volition before death</li>
+                <li>Significance of space for sharing</li>
+            </ul>
+            </p>
+    
+        </article>
+    
+      </main>
+   
         
+   
+
+      <main class = "main"> 
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+          <div class="entry-content" style="margin-left: -15em;">
+            <h1 class="entry-headline big-headline">Publication
+            </h1>
+            <time class="entry-date meta"></time>
+      
+            Followning project was then published at Interact 2021. Bari, Italy.
+
+
+
+
+
+            I had the honor to be the oral presenter at the virutal conference. Full paper can be found here: https://link.springer.com/chapter/10.1007/978-3-030-85616-8_26
+            or please find the paper here:
+            <a href='../images/What Happens.pdf' target="_blank" style = "margin-bottom: 4em; margin-top:2em;margin-left:-10em; text-decoration: none;text-align: center;color:#222; font-weight: 500; "> <div class="damn" style = "background-color:azure; cursor: pointer; margin-left: 10em; border: solid 1px #222; width: 150px; height: 30px; padding: 20px; " >
+                <small> Download PDF</small> <br> 
+         
+            </div></a> 
+            
+      
+           
+              <video class = "entry-img" width = 100% controls>
+                  <source src ="../images/presentation.mov" style = "margin-bottom: 10em;" type = "video/mp4">
+         
+         
+                </article>
+      
+
+
         
-        color: #ccc;
-        border-radius: 8px;
-        padding: 20px 20px;
-        display: inline-block;
-        width: 20vw;
-        margin: 10%;
-        right: 30vw;
-        align-items: center;
-        position: relative;
-        justify-content: center;
-        cursor: pointer;
-        line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button"
-            onclick="location.href='../UX/mortality.html'">← Previous Project <br>
-            <p class="f8 tts avenir">Mortality on Social Media </p>
-        </div>
+        <article class="damn">
+        </article>
+        <a style="font-size: 0.9em;" href="../visual/nlp-chicken.html" class="nev">⇽Previous Project<br> NLP Delivery Reviews </a>
+        <div class="nevy"></div>
 
 
-<div class="f7 avenir tc" style = "align-items:center; margin:100px;color:white;border-top: 1px solid white;" > <br><br><br> © 2021 Eunsol Choi. All Rights Reserved.  Built with HTML/JS/JQUERY/🌞 </div>
-</div>
+        <article class="next" >
+        </article>
 
-    <script src="../blob.js"></script>
-    <script src="../scrollTrigger.js"></script>
-    <script>
-        ScrollReveal().reveal(document.querySelectorAll('div'), { delay: 1000 });
-    </script>
+        <a style="font-size: 0.9em;" href="../UX/bus-stop.html" class="prev">Next Project⇾ <br> At the Bus Stop  </a>
+        <div class="prevy"></div>
+    </main>
 
-    <script>
-        one = document.getElementByClassName("section full-height over-hide px-4 px-sm-0");
-        two = one.getElementByClassName("container");
-        three = two.getElementByClassName("row full-height justify-content-center");
-        four = three.getElementByClassName("col-lg-10 col-xl-8 align-self-center padding-tb");
-        five = four.getElementByClassName("section mx-auto text-center slider-height-padding");
-        function play() {
-            var audio = document.getElementById("audio");
-            audio.play();
-            if (document.getElementsByClassName("slider").addEventListener("click", () => {
-                audio.pause();
-            }));
-
-        }
-    </script>
-    <audio id="audio" src="../images/bus_stop.mp3"></audio>
 
 </body>
 
-
+<script>
+    ScrollReveal().reveal(document.querySelectorAll('header'), { delay: 500 });
+    ScrollReveal().reveal(document.querySelectorAll('section'), { delay: 300 });
+    ScrollReveal().reveal(document.querySelectorAll('div'), { delay: 300 });
+</script>
 
 </html>
