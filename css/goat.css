@@ -494,3 +494,7 @@ table td {
   line-height: 20px;
   color: #222;
 }
+
+b {
+  cursor: pointer;
+}
