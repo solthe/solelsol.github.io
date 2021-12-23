@@ -2,375 +2,408 @@
 <html>
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8SZ4QGKVG"></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apt Price</title>
-  <link rel="stylesheet" href="../css/goat.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8SZ4QGKVG"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apt Price</title>
+    <link rel="stylesheet" href="../css/goat.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        html {
+            --background: rgb(238, 237, 229);
+        }
+    </style>
 </head>
 
 <body>
-  <button style="z-index:1; position: fixed;" onclick="location.href='../index.html'"></button>
-  <a style="font-family: Roboto, sans-serif; font-size: 0.9em;" href="../about/about.html" class="about">ABOUT</a>
-  <div class="abouty"></div>
-  <svg class="nav__link" onclick="location.href='../index.html#eye'"
-  style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:aqua; width: 70px; left:15px; top: 10px; filter: drop-shadow(0px 0px 1px rgb(55, 54, 54));z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
-  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px"
-  viewBox="0 0 100 125">
-  <g transform="translate(0,-952.36218)">
-      <path
-          style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:1;fill-opacity:1;stroke:none;stroke-width:3.99999951999999980;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-          d="M 50 28 C 31.68178 28 15.541228 36.23916 6.375 48.8125 A 2.0001998 2.0001998 0 0 0 6.375 51.15625 C 15.541229 63.72965 31.681781 72 50 72 C 64.659029 72 77.899366 66.70705 87.3125 58.15625 A 2.0022385 2.0022385 0 1 0 84.625 55.1875 C 78.840462 60.442085 71.420366 64.424082 63.03125 66.46875 C 67.885085 62.614379 71 56.656117 71 50 C 71 43.37571 67.907847 37.449618 63.09375 33.59375 C 74.573246 36.400046 84.255018 42.761485 90.375 51.15625 A 2.0034614 2.0034614 0 0 0 93.625 48.8125 C 84.458772 36.23916 68.31822 28 50 28 z M 50 33 C 59.412533 33 67 40.58745 67 50 C 67 59.4125 59.412533 67 50 67 C 40.587466 67 33 59.4125 33 50 C 33 40.58745 40.587466 33 50 33 z M 36.875 33.625 C 32.080737 37.481513 29 43.391627 29 50 C 29 56.6402 32.103546 62.582357 36.9375 66.4375 C 26.015787 63.755508 16.748638 57.803896 10.59375 50 C 16.734683 42.204354 25.980782 36.312323 36.875 33.625 z M 50 41 C 45.053126 41 41 45.05311 41 50 C 41 54.9469 45.053126 59 50 59 C 54.946873 59 59 54.9469 59 50 C 59 45.05311 54.946873 41 50 41 z M 50 45 C 52.785113 45 55 47.21487 55 50 C 55 52.7851 52.785113 55 50 55 C 47.214886 55 45 52.7851 45 50 C 45 47.21487 47.214886 45 50 45 z "
-          transform="translate(0,952.36218)" />
-  </g>
-</svg>
+    <button style="z-index:1; position: fixed;" onclick="location.href='../index.html'"></button>
+    <a style="font-family: Roboto, sans-serif; font-size: 0.9em;" href="../about/about.html" class="about">ABOUT</a>
+    <div class="abouty"></div>
+    <svg class="nav__link" onclick="location.href='../index.html#eye'"
+        style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:aqua; width: 70px; left:15px; top: 10px; filter: drop-shadow(0px 0px 1px rgb(55, 54, 54));z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px"
+        viewBox="0 0 100 125">
+        <g transform="translate(0,-952.36218)">
+            <path
+                style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:1;fill-opacity:1;stroke:none;stroke-width:3.99999951999999980;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+                d="M 50 28 C 31.68178 28 15.541228 36.23916 6.375 48.8125 A 2.0001998 2.0001998 0 0 0 6.375 51.15625 C 15.541229 63.72965 31.681781 72 50 72 C 64.659029 72 77.899366 66.70705 87.3125 58.15625 A 2.0022385 2.0022385 0 1 0 84.625 55.1875 C 78.840462 60.442085 71.420366 64.424082 63.03125 66.46875 C 67.885085 62.614379 71 56.656117 71 50 C 71 43.37571 67.907847 37.449618 63.09375 33.59375 C 74.573246 36.400046 84.255018 42.761485 90.375 51.15625 A 2.0034614 2.0034614 0 0 0 93.625 48.8125 C 84.458772 36.23916 68.31822 28 50 28 z M 50 33 C 59.412533 33 67 40.58745 67 50 C 67 59.4125 59.412533 67 50 67 C 40.587466 67 33 59.4125 33 50 C 33 40.58745 40.587466 33 50 33 z M 36.875 33.625 C 32.080737 37.481513 29 43.391627 29 50 C 29 56.6402 32.103546 62.582357 36.9375 66.4375 C 26.015787 63.755508 16.748638 57.803896 10.59375 50 C 16.734683 42.204354 25.980782 36.312323 36.875 33.625 z M 50 41 C 45.053126 41 41 45.05311 41 50 C 41 54.9469 45.053126 59 50 59 C 54.946873 59 59 54.9469 59 50 C 59 45.05311 54.946873 41 50 41 z M 50 45 C 52.785113 45 55 47.21487 55 50 C 55 52.7851 52.785113 55 50 55 C 47.214886 55 45 52.7851 45 50 C 45 47.21487 47.214886 45 50 45 z "
+                transform="translate(0,952.36218)" />
+        </g>
+    </svg>
 
-  <header class="header">
-    <h1 class="header-title masthead" style=" color: blue;">Beer-food Pairing</h1>
-  </header>
+    <header class="header">
+        <h1 class="header-title masthead" style=" color: blue;">Beer-food Pairing</h1>
+    </header>
 
-  <main class="main">
-    <article class="entry entry-lede" style="margin-bottom: 5em;">
-
-        <figure> 
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom: 5em;">
             <img class="entry-img" style="width:600px; height:400px; margin-top:-1em" src="../images/beerr.png" />
-      <figcaption style = "display:none;font-style: italic; margin-top: -6em; color: #ccc;mix-blend-mode: multiply;">src="nounproject"</figcaption>
-    </figure>
-
-      <div class="entry-content" >
-        <h1 class="entry-headline big-headline">Seoul's apartment price now averages $1 million.
-        </h1>
-        <time class="entry-date meta">January, 2021 - February, 2021</time>
-        <span class="entry-byline meta"> Yonsei Big Data Conference Data Science Project </span>
-        <p class="entry-summary">
-           Soaring house prices in Korea is a fatal problem. Aiming to visualize the data, predict the price rate at a certain time, 
-           we hoped to provide a clue to the clueless yong people who are saving money. 
-        </p>
-      </div>
-    </article>
-    <article class="entry" >
-      <h1 class="entry-headline primary-headline"style = " margin-top:2em;">Price Prediction</h1>
-    
-
-      <time class="entry-date meta">Area of Focus</time>
-      <span class="entry-byline meta"></span>
-
-      <p class="entry-summary">
-   There exists a vast amount of data provided from the ministry of Korea to analyze apartment prices of Korea. Whilst the prices are fluctuating but definitely skyrocketing, it is important to collect the valid data, and enact prediction for us to get the littlest grasp of the future prices. 
-        We aimed to add data visualization for a general explication on the trend, and future predictions.
-      </p>
-      <img class="entry-img" style="" src="../images/house.png"/>
-    </article>
-    <article class="entry" style = " ">
-      <h1 class="entry-headline primary-headline"style = " margin-top:2em;">Website Deployment </h1>
-      <time class="entry-date meta">Solution Design</time>
-      <span class="entry-byline meta"></span>
-      <p class="entry-summary">
-        Numerous machine learning projects end as a project. We devised the algorithm and back-end developed it to a website, deploying the framework Django.
-      </p><br><br>
-      <img class="entry-img" style="margin-top: 0.5em;" src="../images/web.png"/>
-    </article>
-
-    <section class="trending" style = "">
-      <article class="trending-entry">
-        <time class="trending-entry-headline">Information</time>
-        <p class="trending-entry-headline primary-headline">Price prediction project and launching a website </p>
-      </article>
-      <article class="trending-entry">
-        <time class="trending-entry-headline">Methods</time>
-        <p class="trending-entry-headline primary-headline"> 
-           Machine learning modeling, data analysis, back-end, front-end development
-        </p>
-      </article>
-      <article class="trending-entry">
-        <time class="trending-entry-headline">My Role</time>
-        <p class="trending-entry-headline primary-headline"> 
-          Data visualizaiton, data processing, front-end development
-        </p>
-      </article>
-      <time class="trending-entry-headline">Team Members</time>
-      <p class="trending-entry-headline" style = "font-size: 0.8em"> 
-        <a style = "color:#222; font-weight: 700; cursor:pointer;" href = "https://github.com/Joon-Kim-Lang"> Hyungjoon Kim:</a> project lead, machine learning, back-end <br> 
-       
-        <a style="color:#222; font-weight: 700; cursor:pointer" href = "https://github.com/Jeehoon-K">Jihoon Kim: </a> data analysis, data pre-processing
-      </p>
-      <article class="trending-entry">
-        
-      </article>
-    </section>
-  </main>
-  <main class="main">
-    <article class="entry entry-lede" style="margin-bottom:6em;">
-     
-    </article>
 
 
-    <article class="entry" style="grid-column-start:16;">
-        <time class="entry-date meta" style="top: -4em;">Data Collection</time>
-      <img class="entry-img" style = "background: #ccc; width: 100%; opacity: 0.9" src="../images/apt1.png">
-      <time class="entry-date meta"></time>
-      <p class="entry-summary" >
-        The 'provided data' from Dacon Tournament (from 2008 to 2017.11) was collected. Then, we had to further collect the data those from 2017.12 ~ 2012.12 from the Korean National Price Open System, through crawling.
-        The columns used are ‘dong’, ‘jibun’, ‘Apt_name’, ‘use_area(m2)’, ‘transaction_year’, ‘transaction_month’, ‘date(1~10)’, ‘date(11~20)’, ‘date(21~)’, ‘floor’, ‘year_found’. </p>
-  
-    </article>
-
-    <section class="entry" style="grid-row-start:2;
-        grid-column-start: 1;
-        grid-column-end: span 15;background:var(--background);">
-      <article class="trending-entry">
-        <time class="entry-date meta" style="margin-left: 13em;top: -4em;">Work Flow</time>
-        <div class="tree" style ="margin-left: 8em;">
-            <div class="first">
-                <div class="p">
-                    <div class="hi"style="font-weight:700;">Raw Data Aparment Price data from Dacon 2008~2017, remaining four years from Korea Traffic Price Open System)</div>
-                    <div class="second">
-                        <div class="p"><div class="hi"style="font-weight:500;">Data Analysis</div>
-                            <div class="third"><div class="hi">Data Visualization</div><div class="hi">Prediction Modeling</div></div>
-                        </div>
-                        <div class="p"><div class="hi"style="font-weight:500;">Website Framework Construction</div>
-                            <div class="third"><div class="hi">Back-end development</div><div class="hi">Front-end development</div></div>
-                        </div>
-                       
-                </div>
-               
+            <div class="entry-content">
+                <h1 class="entry-headline big-headline">Building a food recommender website
+                </h1>
+                <time class="entry-date meta">February, 2021 - March, 2021</time>
+                <span class="entry-byline meta"> Yonsei Big Data Conference Data Science Project </span>
+                <p class="entry-summary">
+                    All our team members just love drinking beer and as we got tired of choosing the accompanying food,
+                    we wanted to ask the algorithm to do it for us.
+                </p>
             </div>
-        </div>
-    </div>
-    </section>
+        </article>
+        <article class="entry">
+            <img class="entry-img" style="border: solid 1px black; " src="../images/wave.png" />
+            <h1 class="entry-headline primary-headline" style=" margin-top:2em;">Food Recommender System</h1>
 
-  </main>
+            <time class="entry-date meta">Area of Focus</time>
 
-  <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -2em;">
-    <article class="entry entry-lede">
-      <div class="entry-content" style="margin-left:-15em;">
-        <h1 class="entry-headline big-headline" style="font-size:2.5em;">Data Processing
-        </h1>
-        <time class="entry-date meta"></time>
-        <span class="entry-byline meta"></span>
-        <p class="entry-summary"> We then processed the data according to the date (early, middle, late) through one-hot encoding. We replaced the outlier and anomaly to dummy data. Converting the data to Object type, we label encoded the apartment name and dong (town name) and finally checked the irregularity in correlation. Following was the sorted data:
-        </div>
-    </article>
-    <article class="entry entry-lede" style="margin-bottom: 5em;">
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                Collecting beer data and studying the pairing information, we processed our data.
+                Then, we used the enormous recipe data to train and match the food options when the recommended food is
+                inputted.
+                The final results show the five most matching and suitable food items.
+            </p>
 
-        <img class="entry-img" style=" background: white; width: 800px;" src="../images/apt2.png"/>
-      </article>
-      
-  </main>
-  <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -2em;">
-    <article class="entry entry-lede">
-      <div class="entry-content" style="margin-left:-15em;">
-        <h1 class="entry-headline big-headline" style="font-size:2.5em;">Machine Learning
-        </h1>
-        <time class="entry-date meta"></time>
-        <span class="entry-byline meta"></span>
-        <p class="entry-summary">Finding the right model was as follows. Rather than having random extraction as the train data, we manually selected data from fairly even distribution on the year, month and day data, and used the LignGBM model for the algorithmic modeling. Compared to XGBoost, Light GBM was deemed more efficient in terms of memory consumption as well.
+        </article>
+        <article class="entry" style=" ">
+            <img class="entry-img" style="height:100%; border: solid 1px black; " src="../images/beeweb.png" />
+            <h1 class="entry-headline primary-headline" style=" margin-top:2em;">Website Deployment </h1>
 
-        </div>
-    </article>
-    <article class="entry entry-lede" style="margin-bottom: 5em;">
-        <table>
-                  <thead>
-                    <tr>
-                      <th style = "padding-right: 10em; padding-left:10em; ">LighGBM</th>
-                      <th style = "padding-right: 10em; padding-left:10em; ">XGBoost</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td style = "padding-right: 10em; padding-left:10em; ">Histogram-based decision algorithm</td>
-                        <td style = "padding-right: 10em; padding-left:10em; ">Sorted-based decision algorithm
-                       </td>
-                      </tr>
-                    <tr>
-                      <td style = "padding-right: 10em; padding-left:10em; "> => Efficient in memory consumption</td>
-                    
-                    </tr>
-            
-                      <th style = "padding-right: 10em; padding-left:10em; "> => Faster training speed
-                     </th>
-            
-                    </tr>
-            </th>
-                </tbody>
-                </table>
-      </article>
-      
-  </main>
+            <time class="entry-date meta">Solution Design</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                Growing up mostly in Asia, us three were not really aqcuainted with the types of beer that are from
+                elsewhere.
+                Despite the ignorance, we love drinking beer, and decided to create our own food pairing algorithms
+                while learning about some of them.
+                We want to share our experience and provide pairing service to the public by launching a website.
 
-  <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -2em;">
-    <article class="entry entry-lede">
-      <div class="entry-content" style="margin-left:-15em;">
-        <h1 class="entry-headline big-headline" style="font-size:2.5em;">Modeling
-        </h1>
-        <time class="entry-date meta"></time>
-        <span class="entry-byline meta"></span>
-        <p class="entry-summary">
-            Setting the train data at 90% and test data at 10% with total amount of data (985,094), validation scoring was conducted. We analyzed that score metrics of RMSE was 0.09.
-            Based on the python generated models and processed data, we aimed to deploy the Django Framework as the core framework to the prediction website. The website construction plan is as follows:
+            </p><br><br>
 
-
-        </p>
-        </div>
-    </article>
-    <article class="entry entry-lede" style="margin-bottom: 5em;">
-        <div class="tree" style="margin-left:25em">
-            <div class="first">
-                <div class="p">
-                    <div class="hi"style="font-weight:700;">INPUT DATA</div>
-                    <div class="second">
-                        <div class="p"><div class="hi"style="font-weight:500;">Price prediction launched</div><div class="hi">Visualization activated</div>
-                            <div class="third"><div class="hi">main page loaded</div><div class="hi">prediction modeling activated</div><div class="hi">Website responds.</div>
-                            
-                        </div>
-              
-                       
-                </div>
-               
-            </div>
-        </div>
-    </div>
-      </article>
-      
-  </main>
- 
-  <main class="main">
-
-    <article class="entry entry-lede" style="margin-bottom:5em;background: var(--background)">
-      <div class="entry-content" style="margin-left: -15em;">
-        <h1 class="entry-headline big-headline">Deploying Django
-        </h1>
-        <span class="entry-summary">
-            Devised each 'town' to be opened (gu) and correlating street address to match (dong) in views.py. Formulated the data in views.py, with the parameters of the created model.
-            Finally the website input and output service code is requested by post and returned in each command.
-        </span>
-
-
-    </article>
-    
-
-    <article class="entry">
-      <img class="entry-img"
-        style="width:900px; height: 300px; margin-top: 0em;background: var(--background-alt); "
-        src="../images/apt3.png" />
         </article>
 
-    
-        </main>
-
-        <main class="main">
-
-            <article class="entry entry-lede" style="margin-bottom:5em;background: var(--background)">
-              <div class="entry-content" style="margin-left: -15em;">
-               
-             
+        <section class="trending" style="">
+            <article class="trending-entry">
+                <time class="trending-entry-headline">Information</time>
+                <p class="trending-entry-headline primary-headline"> A beer-food pairing website</p>
             </article>
-            
-        
-            <article class="entry">
-              <img class="entry-img"
-                style="width:900px; height: 400px; margin-top: -4em;background: var(--background-alt); "
-                src="../images/apt4.png" />
-                </article>
-        
-            
-                </main>
-                
-                <main class="main">
+            <article class="trending-entry">
+                <time class="trending-entry-headline">Methods</time>
+                <p class="trending-entry-headline primary-headline">
+                    Machine learning modeling, back-end, front-end, data analytics
+                </p>
+            </article>
+            <article class="trending-entry">
+                <time class="trending-entry-headline">My Role</time>
+                <p class="trending-entry-headline primary-headline">
+                    ML modeling, back-end, front-end, project lead
+                </p>
+            </article>
+            <time class="trending-entry-headline">Team Members</time>
+            <p class="trending-entry-headline" style="font-size: 0.8em">
+                <a style="color:#222; font-weight: 700; cursor:pointer;" href="https://github.com/Joon-Kim-Lang"> Yujin
+                    Ki:</a> ML modeling, data processing <br>
 
-                    <article class="entry entry-lede" style="margin-bottom:5em;background: var(--background)">
-                        <div class="entry-content" style="margin-left: -15em;">
-                         
-                          <span class="entry-summary">
-                              The predicted price, according to the input 'town', 'street', and 'apartment' will be visualized along with the final price, and the nearby parks and facilities on a map.
-          
-                          </span>
-                      </article>
-                
-                    <article class="entry">
-                      <img class="entry-img"
-                        style="width:900px; height: 250px; margin-top: 0em;background: var(--background-alt); "
-                        src="../images/apt5.png" />
-                        </article>
-                
-                    
-                        </main>
- 
-
-  
-  <main class="main">
-    
-    <article class="entry entry-lede" style="margin-bottom:6em;">
-      <div class="entry-content" style="margin-left: -15em;">
-        <h1 class="entry-headline big-headline">Data Visualization
-        </h1>
-        <time class="entry-date meta"></time>
-        <span class="entry-byline meta">Trend Analytics</span>
-        <p class="entry-summary">
-            Alongside the prediction, general data representation on seoul's fluctuating prices according to the selected variables are showcased in the website. Responsive visualization is conducted upon the users' requests.  </p>
-        </div>
-    </article>
-
-    <article class="entry">
-          <img class="entry-img"
-        style="width:900px; height: 350px;background: var(--background-alt); transform: scale(1)"
-        src="../images/apt-visual1.gif" /><br><br>
-
-       
-        <img class="entry-img"
-        style="width:900px; height: 350px;background: #222;"
-        src="../images/apt-visual2.gif" />
-
-    </article>
-  </main>
-
-  <main class="main">
-
-    <article class="entry entry-lede" style="margin-bottom:6em;">
-        <div class="entry-content" style="margin-left: -15em;">
-          <h1 class="entry-headline big-headline">Demonstration
-          </h1>
-          <time class="entry-date meta"></time>
-
-          <p class="entry-summary">
-            The <a style="color:#222; font-weight: 700;" href = "http://eunsolchoi.pythonanywhere.com/"> live-functioning website </a>is deployed with pythonanywhere.com considering our model heavily relies on the python framework.
-            <br> 
-             Nonetheless, since the embedded data is enormous and the LightGBM model takes time to produce the result, the website may load for a while, so if in hurry, here is the video of the final output.
+                <a style="color:#222; font-weight: 700; cursor:pointer" href="https://github.com/Jeehoon-K">Soobin Kim:
+                </a> data processing, front-end
             </p>
-            <br><br>
+            <article class="trending-entry">
 
-        <video class = "entry-img" width = 100% controls>
-            <source src ="../images/apt.mp4" type = "video/mp4">
-    </article>
+            </article>
+        </section>
+    </main>
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
 
-    
-    <article class="damn">
-    </article>
+        </article>
+
+        <article class="entry" style="grid-column-start:16;">
+            <img class="entry-img" style="height: 600px; width: 400px;" src="../images/lager.jpeg" />
+            <figurecaption style="font-size: 0.8em;"> https://www.homestratosphere.com/types-of-beer/
+            </figurecaption>
+            <h1 class="entry-headline primary-headline" style="margin-top: 0em;"></h1>
+            <time class="entry-date meta">Beer Types</time>
+            <span class="entry-byline meta"></span>
+            <p class="entry-summary">
+                'Blonde Ale','Hefeweizen','Witbier','Classic Pilsner',
+                'British Style Beer','American Wheat Ale','India Pale Ale','Double/ Imperial IPA',
+                'Oktoberfest','Pale Ale','Red/ Amber Ale','Barley Wine','Brown Ale','Old/ Strong Ale',
+                'Abbey Dubbel','Dark Lager','Porter','Sweet/ Oatmeal Stout','Imperial Stout'
+            </p>
+
+        </article>
+        <section class="entry" style="grid-row-start:2;
+        grid-column-start: 1;
+        grid-column-end: span 15;background:var(--background);">
+            <article class="trending-entry">
+                <time class="entry-date meta" style="margin-left: 13em;top: -4em;">Work Flow</time>
+                <div class="tree" style="margin-left: 8em;">
+
+                    <div class="first">
+                        <div class="p">
+                            <div class="hi" style="font-weight:700;line-height:1.5;">Data Generation </div>
+                            <div class="second">
+                                <div class="p">
+                                    <div class="hi" style="font-weight:500;">Basic Beer Information (craftbeer.com)
+                                    </div>
+                                    <div class="third">
+                                        <div class="hi">Beer Pairing Information (Food Blogs, Brewers Association)
+                                        </div>
+                                        <div class="hi">Manual classification</div>
+                                    </div>
+                                </div>
+                                <div class="p">
+                                    <div class="hi" style="font-weight:500;">Pairing System</div>
+                                    <div class="third">
+                                        <div class="hi">Calculating the co-occurrence between ingredients (Kaggle,
+                                            What's Cooking?) </div>
+                                        <div class="hi">Recommender</div>
+                                    </div>
+                                </div>
+                                <div class="p">
+                                    <div class="hi" style="font-weight:500;">Website Construction</div>
+                                    <div class="third">
+                                        <div class="hi">Django Server Deploy </div>
+                                        <div class="hi">Node.js Server Deploy</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+
+        </article>
+
+
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">Data Type</h1>
+            <time class="entry-date meta">-</time>
+            <p class="entry-summary">
+            <ul>
+                <li style="list-style-type: none;"> 1. Basic Beer Information
+                <li style="list-style-type: none;">2. Food Pairing Instructions</li>
+                <li style="list-style-type: none;"> 3. 60,000 Recipe Data</li>
+
+            </ul>
+
+            </p>
+
+        </article>
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">1. Basic Beer Information</h1>
+            <time class="entry-date meta">Data type 1</time>
+            <span class="entry-summary">Text crawled from Craftbeer.com
+
+                Data in the form of:
+                <ul>
+                    <li> Beer Name </li>
+                    <li> Original Gravity (OG) </li>
+                    <li> Final Gravity (OG) </li>
+                    <li> Alcohol By Volume (ABV) </li>
+                    <li> International Bitterness Units (IBUs) </li>
+                    <li> Bitterness Ratio (BU:GU) </li>
+                    <li> Volumes of CO2 (v/v) </li>
+                    <li> Apparent Attenuation (AA) </li>
+                </ul>
+            </span>
+
+        </article>
+
+    </main>
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+
+        </article>
+
+
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">2. Food Pairing Instructions</h1>
+            <time class="entry-date meta">Data type 2</time>
+            <span class="entry-summary">
+                Understand basic guidelines to match the food and beer; commonly paired tastes and types of food
+                provided. Collected from Brewers Association, Shari's Berries, Hangout Restaurant
+                <br><br>
+                Completed data are:
+                <ul>
+                    <li>19 kinds of beer </li>
+                    <li>84 ingredient lists </li>
+                    <li>44 desserts </li>
+                    <li>19 spices </li>
+                    <li>21 whole foods </li>
+                </ul>
+            </span>
+            <img class="entry-img" style="display:none;" src="../images/pairing.jpeg" />
+
+        </article>
+        <article class="entry" style="border: solid 1px black;background-color: white; margin-top: -4em;padding:20px;">
+            <h1 class="entry-headline primary-headline" style="font-size:2em;">3. Recipe Data</h1>
+            <time class="entry-date meta">Data type 3</time>
+            <span class="entry-summary">60,000 Recipe Data from Kaggle What's Cooking?
+                <br><br>
+                <ul>
+                    <li> Logical conclusion that machine learning the recipe ingredients per recipe could obtain the
+                        function that recommends well-pairing ingredient from another.</li>
+                    <li> "id", "cuisine", "ingredients" in · Calculate co-occurrence</li>
+                    <li>"id", "cuisine", "ingredients" in .json</li>
+                    <li>Predict and frame the realtionship by checking the level of co-occurrence</li>
+                    <li>Zip the ingredient file sorted by occurrence </li>
+                </ul>
+            </span>
+
+        </article>
+
+    </main>
+
+    <main class="main">
+
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+
+        </article>
+        <section class="entry" style="grid-row-start:2;
+    grid-column-start: 1;
+    grid-column-end: span 15;background:var(--background);">
+            <article class="trending-entry">
+                <time class="entry-date meta" style="margin-left: 13em;top: -4em;">Back-end Development</time>
+                <div class="tree" style="margin-left: 4em; margin-top: 8em;">
+                    <div class="first">
+                        <div class="p">
+                            <div class="hi" style="font-weight:700;">Django server activated</div>
+                            <div class="second">
+                                <div class="p">
+                                    <div class="hi" style="font-weight:500;">Input data (beer selection) </div>
+                                    <div class="hi">Model functions</div>
+                                    <div class="third">
+                                        <div class="hi">Views.py requests data</div>
+                                        <div class="hi">Sends results </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="p">
+                            <div class="hi" style="font-weight:700;max-width: 10px;">Node.js server activated</div>
+                            <div class="second">
+                                <div class="p">
+                                    <div class="hi" style="font-weight:500;">Sends corresponding html/js info</div>
+                                    <div class="hi">Shows cytoscape</div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <article class="entry" style="grid-column-start:16;">
+
+            <h1 class="entry-headline primary-headline" style="margin-top: 0em;">Machine Learning</h1>
+            <time class="entry-date meta">Modeling</time>
+            <span class="entry-byline meta">Work Flow</span>
+            <p class="entry-summary">
+            <ul>
+                <li> Based on the created data, we were able to set a function where we simply print the ingredients in
+                    an ascending order after inputing beer name.</li>
+                <li> Using the co-occurrence data, other recommeended ingredients are simultaneously printed.</li>
+                <li> We then finalized the system by calculaing the PMI and omitted those are very low or is negative
+                    value.<b>  PMI(A,B) = logP(A,B) / (P(A)*P(B)) </b></li>
+                <li> We finally are able to print the ingredients similar to that of the main ingredients (n=84) suited
+                    for each beer.</li>
+            </ul>
+
+            </p>
+            <img class="entry-img" style=" background: white; height: 400px ; width: 450px; margin-top: -2em" src="../images/similar.png" />
+
+        </article>
+
+
+    </main>
+
+    <main class="main" style="background: var(--background-alt); z-index:-2;margin-top: -2em;">
+        <article class="entry entry-lede">
+            <div class="entry-content" style="margin-left:-15em;">
+                <h1 class="entry-headline big-headline" style="font-size:2.5em;">Website
+                </h1>
+                <time class="entry-date meta"></time>
+                <span class="entry-byline meta"></span>
+                <p class="entry-summary"> 
+                    
+                    <ul> 
+
+                    <li> Although deploying both Django and Node.js is practically impossible, we used two seaparate servers for this case and decided to unite to one of them in future projects.</li>
+                    <li> Using cytoscape.js, a mindmap tool based on Node.js, we could visualize the 20 ingredients that best matched the each of the main ingredients paired with the beer, and that prints the results.</li>
+                    <li>The size of the first node is proprotional to the pairing score with the berr, while the second node is proportional to each ingredient's pairing score with the main ingredient.</li>
+                    <li> When the user hovers over the desired ingredient, the UI is set to emphasize its name and color coded the ingredients hierarchically.</li>
+                </ul>
+
+                </div>
+        </article>
+        <article class="entry entry-lede" style="margin-bottom: 5em;">
+            <img class="entry-img" style=" background: white; width: 800px; transform:scale(0.5); margin-top: -10em;margin-bottom: -10em;" src="../images/cyto.png" />
+        </article>
+    </main>
    
-    <a style="font-size: 0.9em;" href="../psycho/sent-anomaly.html" class="nev">⇽Previous Project<br> Sentiment Anomaly </a>
-    <div class="nevy"></div>
+   
 
-    <article class="next" >
-    </article>
+    <main class="main">
 
-    <a style="font-size: 0.9em;" href="../visual/beer-food.html" class="prev">Next Project⇾ <br> Beer-food Pairing  </a>
-    <div class="prevy"></div>
+        <article class="entry entry-lede" style="margin-bottom:6em;">
+            <div class="entry-content" style="margin-left: -15em;">
+                <h1 class="entry-headline big-headline">Future Works
+                </h1>
+                <time class="entry-date meta"></time>
 
-</main>
+                <p class="entry-summary">
+                    <ul>
+                   <li> Adding more beer or types of alcohol</li> 
+                   <li> Recommender system according to the user's preference</li> 
+                   <li> Uniting its backend framework</li> 
+                   <li> Launching the website/app</li> 
+</ul>
+</p>
+                <br><br>
+                <h1 class="entry-headline big-headline">Demonstration
+                </h1>
+                <video class="entry-img" width=100% controls>
+                    <source src="../images/Beer_pairing2.mp4" type="video/mp4">
+        </article>
+
+
+        <article class="damn">
+        </article>
+
+        <a style="font-size: 0.9em;" href="../visual/apt-predict.html" class="nev">⇽Previous Project<br> Apartment Prediction </a>
+        <div class="nevy"></div>
+
+        <article class="next">
+        </article>
+
+        <a style="font-size: 0.9em;" href="../visual/nlp-chicken.html" class="prev">Next Project⇾ <br> NLP Chicken
+        </a>
+        <div class="prevy"></div>
+
+    </main>
 
 </body>
 
 <script>
-  ScrollReveal().reveal(document.querySelectorAll('header'), { delay: 500 });
-  ScrollReveal().reveal(document.querySelectorAll('section'), { delay: 300 });
-  ScrollReveal().reveal(document.querySelectorAll('div'), { delay: 300 });
+    ScrollReveal().reveal(document.querySelectorAll('header'), { delay: 500 });
+    ScrollReveal().reveal(document.querySelectorAll('section'), { delay: 300 });
+    ScrollReveal().reveal(document.querySelectorAll('div'), { delay: 300 });
 </script>
 
 </html>
