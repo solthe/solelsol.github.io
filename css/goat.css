@@ -399,7 +399,7 @@ ul {
   position: relative;
 }
 .nev:hover {
-  background: white;
+  background: #ccc;
   box-shadow: none;
 }
 .nevy {
@@ -449,7 +449,7 @@ ul {
   position: relative;
 }
 .prev:hover {
-  background-color: #fff;
+  background-color: white;
   box-shadow: none;
 }
 .prevy {
