@@ -2,787 +2,232 @@
 <html>
 
 <head>
-    <div id="cursorBlob" style="top: 8px; left:-18px"></div>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8SZ4QGKVG"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Skincare Bar Identity</title>
+    <title>Brand Identity</title>
+    <link rel="stylesheet" href="../css/goat.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <style>
-        footer {}
-
-        body {
-            overflow-x: hidden;
-            background: rgb(254, 255, 233);
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: rgb(0, 0, 0);
-        }
-
-        .article-red {
-            color: #75b5b0;
-        }
-
-        .bg-article-red {
-            background-color: #ff4a46;
-        }
-
-        .container {
-            padding-right: 120px;
-            padding-left: 120px;
-        }
-        .con {
-            width: 100vw;
-            height: 80vh;
-            align-items: center;
-            background-color: #1d2db2;
-            padding: 0;
-            margin: 0;
-        }
-
-        .f8 {
-            font-size: 0.65rem;
-        }
-
-        .lh-hi {
-            line-height: 2em;
-        }
-
-        button {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            background-color: orange;
-            filter: blur(3px);
-            color: black;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            z-index: 100;
-            cursor: pointer;
-            box-shadow: inset 0px 0px 40px 8px orange;
-        }
-
-        svg.earReal {
-            position: absolute;
-            display: inline-block;
-            color: white;
-            top: 20vh;
-            left: 40vw;
-            transform: translate(-50%, -50%);
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-
-            border-radius: 50%;
-            filter: drop-shadow(0px 1px 3px aquamarine);
-            fill: white;
-            box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
-            cursor: pointer;
-        }
-
-        @import url("https://fonts.googleapis.com/css?family=Montserrat:900");
-
-        #cursorBlob {
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(120deg,
-                    #ff1744,
-                    #e040fb,
-                    #2979ff,
-                    #ff7b00,
-                    #76ff03);
-            filter: blur(5px);
-            background-size: 1600% 1600%;
-            position: absolute;
-            mix-blend-mode: difference;
-            pointer-events: none;
-            z-index: 1;
-            transition: 0.15s linear;
-            border-radius: 50%;
-            animation: blobBackground 15s ease infinite;
-        }
-
-        #cursorBlob:before {
-            position: absolute;
-            content: "";
-            border: 1px solid white;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            border-radius: 50%;
-            animation: animate 1s linear infinite;
-        }
-
-        #cursorBlob:after {
-            position: absolute;
-            content: "";
-            border: 2px solid white;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            border-radius: 50%;
-            animation: animate 2s 1s linear infinite;
-        }
-
-        @keyframes animate {
-            100% {
-                transform: scale(1.5);
-                opacity: 0;
-            }
-        }
-
-        @keyframes blobRadius {
-
-            0%,
-            100% {
-                border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
-            }
-
-            20% {
-                border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
-            }
-
-            40% {
-                border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
-            }
-
-            60% {
-                border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
-            }
-
-            80% {
-                border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
-            }
-        }
-
-        @keyframes blobBackground {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            background: #212121;
-        }
-
-        .nav {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav__link {
-            color: #fff;
-            list-style: none;
-            cursor: pointer;
-            font-size: 10vw;
-            font-family: "Montserrat", sans-serif;
-            transition: 1s ease-in;
-        }
-
-        .nav:not(:last-child) {
-            margin-bottom: 50px;
-        }
-
-        .nav:hover {
-            transform: translateX(25px);
-        }
-
-        @media (min-width: 500px) {
-            .grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-                grid-gap: 0.75rem;
-                /*row length vertical */
-                grid-auto-rows: 92px;
-                max-width: 900px;
-                margin: 80px auto;
-                border-top: 1px solid #222;
-            }
-
-            .folio-1 {
-                grid-column-start: 1;
-                grid-column-end: 2;
-                border-right: 1px solid #222;
-            }
-
-            .folio-2 {
-                grid-column-start: 4;
-                grid-column-end: 2;
-                grid-row-start: 1;
-
-                border-right: 1px solid #222;
-            }
-
-            .folio-3 {
-                grid-column-start: 7;
-                grid-column-end: 4;
-
-                border-right: 1px solid #222;
-            }
-
-            .folio-4 {
-                grid-column: span 3;
-            }
-
-            .folio-5 {
-                grid-column-start: 12;
-                grid-column-end: 7;
-                grid-row-start: 1;
-            }
-
-            .folio-6 {
-                grid-column-start: 13;
-                grid-column-end: 7;
-                grid-row-start: 3;
-            }
-
-
-            a {
-                cursor: pointer;
-            }
-
-            a:hover {
-                text-decoration: none;
-            }
-
-            .section {
-                position: relative;
-                width: 100%;
-                display: block;
-            }
-
-            .full-height {
-                min-height: 100vh;
-            }
-
-            .over-hide {
-                overflow: hidden;
-            }
-
-            .padding-tb {
-                padding: 100px 0;
-            }
-
-            [type="radio"]:checked,
-            [type="radio"]:not(:checked) {
-                opacity: 0;
-                position: fixed;
-                width: 0;
-            }
-
-            .checkbox:checked+label,
-            .checkbox:not(:checked)+label {
-                display: inline-block;
-                background-color: #222;
-                opacity: 0.8;
-                padding: 10px 10px;
-                font-family: sans-serif, Arial;
-                font-size: 16px;
-                border-radius: 50%;
-                cursor: pointer;
-                margin: 15px;
-                left: 45vw;
-                bottom: 35vh;
-                position: relative;
-                filter: blur(1.5px);
-            }
-
-            .checkbox:checked+label {
-                transform: scale(1.3);
-                background-color: rgb(217, 151, 45);
-            }
-
-            .slider-height-padding {
-                padding-top: 420px;
-            }
-
-            ul {
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                width: 500px;
-                z-index: -1;
-                padding: 0;
-                margin: 0;
-                list-style: none;
-            }
-
-            ul li {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-
-                display: block;
-                z-index: 100;
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                height: 500px;
-                border: none;
-                background-size: cover;
-                background-position: center;
-                background-image: url("../images/Asset\ 10.png");
-                border-radius: 50%;
-                box-sizing: border-box;
-                font-family: "Poppins", sans-serif;
-                font-weight: 900;
-                font-size: 16px;
-                letter-spacing: 2px;
-                line-height: 2.7;
-                color: #ffffff;
-                writing-mode: vertical-rl;
-                opacity: 0;
-                pointer-events: none;
-                box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.1);
-                -webkit-transition: all 0.5s ease;
-                transition: all 0.5s ease;
-            }
-
-            ul li span {
-                mix-blend-mode: difference;
-            }
-
-            ul li:nth-child(2) {
-                background-image: url("../images/Asset\ 11.png");
-            }
-
-            ul li:nth-child(3) {
-                background-image: url("../images/Asset\ 8.png");
-            }
-
-            ul li:nth-child(4) {
-                background-image: url("../images/Asset\ 7.png");
-            }
-
-            .checkbox.frst:checked~ul li:nth-child(1) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            .checkbox.scnd:checked~ul li:nth-child(2) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            .checkbox.thrd:checked~ul li:nth-child(3) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            .checkbox.foth:checked~ul li:nth-child(4) {
-                opacity: 1;
-                pointer-events: auto;
-                border-radius: 16px;
-            }
-
-            @media (max-width: 767px) {
-                .slider-height-padding {
-                    padding-top: 340px;
-                }
-
-                ul li {
-                    height: 300px;
-                    font-size: 13px;
-                    letter-spacing: 1px;
-                }
-            }
-
-            @media (max-width: 575px) {
-                .slider-height-padding {
-                    padding-top: 240px;
-                }
-
-                ul li {
-                    height: 200px;
-                }
-            }
-        }
-
-
-
-        .in-brief-content {
-            columns: 2;
-            column-gap: 40px;
-            line-height: 1.5;
-            grid-auto-rows: auto;
-            padding: 30px;
-            text-align: justify;
-        }
-
-        .tree {
-            display: flex;
-            flex-direction: row;
-            padding: 5%;
-            justify-content: center;
-        }
-
-        .hi {
-            border: 1px solid rgb(255, 226, 226);
-            color: #ccc;
-            border-radius: 8px;
-            padding: 8px 20px;
-            display: flex;
-            margin: 20px;
-            align-items: center;
-            position: relative;
-            justify-content: center;
-            line-height: 1.2;
-        }
-
-        .p,
-        .np {
-            display: flex;
-            align-content: center;
-        }
-
-        .first,
-        .second,
-        .third {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hi:before {
-            content: "";
-            width: 40px;
-            height: 1px;
-            background-color: rgb(255, 229, 229);
-            position: absolute;
-            left: -41px;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            box-sizing: border-box;
-        }
-
-        .first>.p>.hi:before {
-            display: none;
-        }
-
-        .hi {
-            min-width: 200px;
-            max-width: 200px;
-        }
-
-        .hi:hover {
-            background: #222;
-        }
-
-        .hi:hover+.second .hi {
-            background: #222;
-        }
-
-        .hi:hover+.third .hi {
-            background: #222;
-        }
-
-        #another_button {
-            background-color: none;
-        }
-
-        #another_button:hover {
-            transform: scale(105%);
-            color: #222;
-            filter: blur(1px);
-        }
-
-
-        /* Center tables for demo */
-        table {
-            margin: 0 auto;
-
-            text-align: center;
-        }
-
-        /* Default Table Style */
-        table {
-            color: #ccc;
-
-            border: 1px solid #ccc;
-
-            font-size: 12pt;
-            text-align: center;
-        }
-
-        table thead th,
-        table tfoot th {
-            background: rgba(0, 0, 0, 0.1);
-            padding: 0.5em;
-            text-align: center;
-            color: #ccc;
-            font-weight: 500;
-        }
-
-        table caption {
-            padding: 0.5em;
-            text-align: center;
-        }
-
-        table th,
-        table td {
-            padding: 0.5em;
-            border: 1px solid lightgrey;
-            text-align: center;
-            line-height: 20px;
-            color: #777;
-        }
-
-        table:hover {
-            background: #222;
-            transform: 0.5 ease-in-out;
-        }
-
-        table tfoot th:hover {
-            background: #222;
-        }
-
-
-        .column {
-            float: left;
-            width: 30.33%;
-            height: 600px;
-            padding: 5%;
+        html {
+
+            --primary: rgb(229, 145, 148);
+            --background: rgb(55, 54, 54);
+            --background-alt: #fff;
+            --text: #ccc;
 
         }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-
-        caption {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .grdding {
-            columns: 2;
-            column-gap: 10px;
-            grid-auto-rows: auto;
-
-            margin: 0 5rem 5rem 5rem;
-            padding: 10px;
-        }
-        .about {
-  left: 0.2%;
-  top: 42%;
-  width: 80px;
-  height: 50px;
-  display: flex;
-  z-index: 100;
-  font-size: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(254, 255, 233);
-  border: solid 2px black;
-  border-radius: 15%;
-  color: #222;
-  content: "ABOUT";
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1.3em;
-  font-family: monospace;
-  position: fixed;
-}
-
-.about:hover {
-  transform: scale(1.1);
-  filter: blur(1px);
-  box-shadow: 3px 6px 8px rgb(254, 255, 233);
-}
-
     </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-
 </head>
 
-<button class="nav__link" style="z-index:3; position: fixed;" onclick="location.href='/index.html'">
-</button>
-
-<svg class="nav__link" onclick="location.href='/index.html#mouth'"
-    style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:white;filter: drop-shadow(0px 3px 6px #ff1744 );z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
-    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"# 
-    version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100"
-    xml:space="preserve">
-    <path
-        d="M53.9,17.6c1.5-0.2,3,0.2,4.5,0.6c3,0.9,5.2,3.3,8,4.5c1.9,0.9,4,1.3,6.1,1.6c1.2,0.2,2.3,1,3.5,1.2c3,0.6,6.1,1.8,8,4.3  c1.4,1.7,2.4,3.7,3,5.8c1.1,3.8,2,7.7,2.8,11.5c0.6,2.5,1.3,4.9,1.1,7.5c-0.2,2.3,0.2,4.6-0.4,6.9c-4.2,7-9.7,13.5-16.8,17.6  c-3.2,1.6-6.5,2.9-10,3.7c-2.2,0.3-4.4,1.3-6.6,0.8c-4.3-0.2-8.2-2-12.1-3.6c-1.5-0.8-3.1-1.6-4.7-2.2c-2.5-1.4-5.4-2.2-7.9-3.6  c-4.5-2.3-8.1-5.8-11.1-9.8C18.3,59.6,16,54.3,14,49c-2.4-5.4-5.3-11-5-17.1c0.1-1.2,0.8-2.3,1.8-3c3.8-2.5,8.4-3.2,12.6-4.5  c3.5-1.1,7-2.1,10.7-2.7c2.5-0.5,4.9-1.3,7.4-1.8C45.6,19,49.8,18.4,53.9,17.6 M31.7,24.8c-6.8,1.6-13.7,2.9-20,6  c1.6,0.6,3.2,1.3,4.9,1.5c4.3,0.8,8.7-0.1,13-0.6c3-0.2,6-0.5,9-0.9c4.5-0.5,9-2,13.5-1.1c1.9,0.6,3.5,2.1,4.8,3.6  c1.5,1.7,3.4,3.1,5.5,4c1.5,0.4,3.1,0.3,4.6,0.1c2.9-0.7,6-1.1,9-0.6c-0.9,0.7-2.9,1.1-2.3,2.6c1.8,5,4.3,9.8,7.3,14.2  c1.5,2.3,3.6,4.3,4.2,7.1c0.6,1.5,2.4,1.8,3.9,2.1c-0.2-2-0.6-4-1.2-5.9c-1.5-6.7-2.3-13.5-4.4-20.1c-1.2-3-2.6-6.3-5.7-7.7  c-3-1.3-6.3-0.3-9.3-1.1c-5.1-0.9-7.9-6.1-12.9-7.3C47.6,20.7,39.7,23.6,31.7,24.8 M42.1,33.4c-2.6,0.4-5.3,0.5-8,0.8  c7.7,5.3,16.1,9.6,24.7,13.4c4.3,1.8,8.9,2.6,13.5,3.2c1.5,0.4,3,0.8,4.5,1.1c-0.5-1.6-1.6-3-2.3-4.5c-1.1-2.6-2.4-5.2-3-7.9  c-2.2,0.5-4.3,1.2-6.6,0.8c-4.6-0.8-8.9-3.1-12.2-6.2c-0.7-0.6-1.3-1.4-2.2-1.5C47.6,32.2,44.9,33,42.1,33.4 M11,33.2  c0.3,5.1,2.8,9.7,4.8,14.3c1.3,3.2,2.4,6.4,3.9,9.5c1.5,2.9,3,5.9,5.3,8.3c2,1.9,3.8,4.2,6.4,5.4c2.5,1.2,5.2,2.3,7.7,3.5  c3.8,1.7,8,2.6,11.9,4.1c4,1.1,8.3,2,12.3,0.7c1.8-0.5,3.4-1.6,5-2.4c2.5-1.1,4.9-2.4,7.2-3.8c3.9-2.6,7.2-6,10.6-9.1  c-4.8-0.8-9.7-1.3-14.5-2.2c-5-0.9-10.1-1.4-15.1-2.1c-3.1-0.5-6.3-0.3-9.3-1.3c-1.3-0.4-1.9-1.6-3-2.3c-2.8-2.1-4.7-5-7.2-7.3  c-3-2.7-6.2-5.2-9.8-7.1c-2.3-1.2-4.3-3.1-6.3-4.7c-0.6-0.4-1-1.1-1.8-1.1c-1.7-0.3-3.4-0.3-5-0.9C13.2,34,12.1,33.5,11,33.2  L11,33.2z" />
-</svg>
-<a href="../about/about.html" class="about">ABOUT</a>
-
 <body>
+    <button style="z-index:1; position: fixed;" onclick="location.href='../index.html'"></button>
+    <a style="font-family: Roboto, sans-serif; font-size: 0.9em;" href="../about/about.html" class="about">ABOUT</a>
+    <div class="abouty"></div>
+    <svg class="nav__link" onclick="location.href='../index.html#mouth'"
+        style="filter:none;cursor:pointer;width:70px;height:70px; align-items: center;fill:aqua; width: 70px; left:6px; top: 10px; filter: drop-shadow(0px 0px 1px rgb(55, 54, 54));z-index:1; position: fixed;display: inline-block;padding-top:25vh;padding-left:2vw"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" # version="1.1" x="0px" y="0px"
+        viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve">
+        <path
+            d="M53.9,17.6c1.5-0.2,3,0.2,4.5,0.6c3,0.9,5.2,3.3,8,4.5c1.9,0.9,4,1.3,6.1,1.6c1.2,0.2,2.3,1,3.5,1.2c3,0.6,6.1,1.8,8,4.3  c1.4,1.7,2.4,3.7,3,5.8c1.1,3.8,2,7.7,2.8,11.5c0.6,2.5,1.3,4.9,1.1,7.5c-0.2,2.3,0.2,4.6-0.4,6.9c-4.2,7-9.7,13.5-16.8,17.6  c-3.2,1.6-6.5,2.9-10,3.7c-2.2,0.3-4.4,1.3-6.6,0.8c-4.3-0.2-8.2-2-12.1-3.6c-1.5-0.8-3.1-1.6-4.7-2.2c-2.5-1.4-5.4-2.2-7.9-3.6  c-4.5-2.3-8.1-5.8-11.1-9.8C18.3,59.6,16,54.3,14,49c-2.4-5.4-5.3-11-5-17.1c0.1-1.2,0.8-2.3,1.8-3c3.8-2.5,8.4-3.2,12.6-4.5  c3.5-1.1,7-2.1,10.7-2.7c2.5-0.5,4.9-1.3,7.4-1.8C45.6,19,49.8,18.4,53.9,17.6 M31.7,24.8c-6.8,1.6-13.7,2.9-20,6  c1.6,0.6,3.2,1.3,4.9,1.5c4.3,0.8,8.7-0.1,13-0.6c3-0.2,6-0.5,9-0.9c4.5-0.5,9-2,13.5-1.1c1.9,0.6,3.5,2.1,4.8,3.6  c1.5,1.7,3.4,3.1,5.5,4c1.5,0.4,3.1,0.3,4.6,0.1c2.9-0.7,6-1.1,9-0.6c-0.9,0.7-2.9,1.1-2.3,2.6c1.8,5,4.3,9.8,7.3,14.2  c1.5,2.3,3.6,4.3,4.2,7.1c0.6,1.5,2.4,1.8,3.9,2.1c-0.2-2-0.6-4-1.2-5.9c-1.5-6.7-2.3-13.5-4.4-20.1c-1.2-3-2.6-6.3-5.7-7.7  c-3-1.3-6.3-0.3-9.3-1.1c-5.1-0.9-7.9-6.1-12.9-7.3C47.6,20.7,39.7,23.6,31.7,24.8 M42.1,33.4c-2.6,0.4-5.3,0.5-8,0.8  c7.7,5.3,16.1,9.6,24.7,13.4c4.3,1.8,8.9,2.6,13.5,3.2c1.5,0.4,3,0.8,4.5,1.1c-0.5-1.6-1.6-3-2.3-4.5c-1.1-2.6-2.4-5.2-3-7.9  c-2.2,0.5-4.3,1.2-6.6,0.8c-4.6-0.8-8.9-3.1-12.2-6.2c-0.7-0.6-1.3-1.4-2.2-1.5C47.6,32.2,44.9,33,42.1,33.4 M11,33.2  c0.3,5.1,2.8,9.7,4.8,14.3c1.3,3.2,2.4,6.4,3.9,9.5c1.5,2.9,3,5.9,5.3,8.3c2,1.9,3.8,4.2,6.4,5.4c2.5,1.2,5.2,2.3,7.7,3.5  c3.8,1.7,8,2.6,11.9,4.1c4,1.1,8.3,2,12.3,0.7c1.8-0.5,3.4-1.6,5-2.4c2.5-1.1,4.9-2.4,7.2-3.8c3.9-2.6,7.2-6,10.6-9.1  c-4.8-0.8-9.7-1.3-14.5-2.2c-5-0.9-10.1-1.4-15.1-2.1c-3.1-0.5-6.3-0.3-9.3-1.3c-1.3-0.4-1.9-1.6-3-2.3c-2.8-2.1-4.7-5-7.2-7.3  c-3-2.7-6.2-5.2-9.8-7.1c-2.3-1.2-4.3-3.1-6.3-4.7c-0.6-0.4-1-1.1-1.8-1.1c-1.7-0.3-3.4-0.3-5-0.9C13.2,34,12.1,33.5,11,33.2  L11,33.2z" />
+    </svg>
+    <header class="header">
+        <h1 class="header-title masthead" style=" opacity: 0.8;mix-blend-mode:color-dodge; ">
+           Brand Identity
+        </h1>
+    </header>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.8.1/tachyons.min.css'>
-
-
-
-        <div class="links ttu tracked f6 avenir pt5 b tc nb4">
-            <a style="color:   #1d2db2;
-            text-align:center;" target="_blank">Business ·</a> <a style="color: #1d2db2
-                ;text-align:center " target="_blank">Startup</a>
-        </div>
-
-
-        <h2 style="padding-top:70px;" class="f3 georgia tracked tc lh-copy ph8 b">
-            Skincare Bar Brand Identity.<br>2020.09-2020.12<small></small>
-        </h2>
-
-        <div class="grid">
-            <div style=" height:130px; margin-left: 0%; margin-right: 20%;" class="folio-1 f4 tr pt3 pr3">
-                <li class="article-red fa fa-compass" aria-hidden="true"></li>
-            </div>
-            <div style=" height:130px; margin-left:0%; margin-right:-50%;" class="folio-2 pt3">
-                <p class="f8 ttu avenir tracked lh-hi b">Info.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red ">As part of a visual systems course project and as a lead designer at Don't Want No Trouble, designed the brand manual.
+    <main class="main">
+        <article class="entry entry-lede" style="margin-bottom: 5em;">
+            <img class="entry-img" style="width:600px; height:430px; " src="../images/OHDAMN_페이지_13.png" />
+            <div class="entry-content">
+                <h1 class="entry-headline big-headline" style="">A Skincare Boutique with Boozes and Fun
+                </h1>
+                <time class="entry-date meta">September, 2020 - December, 2020</time>
+                <span class="entry-byline meta">Brand Identity Design</span>
+                <p class="entry-summary">
+                  As part of a Visual Systems course project and as a lead designer at DON'T WANT NO TROUBLE, I have produced a brand manual over the course of a semester. Designing, printing and publishing an entire brand identity has been required for a viable start.
                 </p>
             </div>
-            <div class="folio-3 pt3" style=" height:130px; margin-left: 45%; margin-right: -35%;border-right: 1px solid #222;
-            ">
-                <p class="f8 ttu avenir tracked lh-hi b">Methods.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red "> <b> ·Adobe Indesign</b><br><b> · Adobe After Effects <br> · manuscript
-                </p>
-            </div>
+        </article>
+        <article class="entry" style="color:rgb(55, 54, 54)">
 
-            <div class="folio-5 pt3" style="margin-right: -200%; margin-left: 100%;">
-                <p class="f8 ttu avenir tracked lh-hi b">Background.</p>
-                <p class="f8 ttu avenir tracked lh-hi article-red">designing, printing and publishing an entire brand identity is required for a viable start.
-            </div>
-        </div>
+          
+        </article>
 
-        <h2 style="color:    #1d2db2
-        ;filter:blur(1px);margin-top:-10%;margin-bottom:-10%;" class="f2 ttu avenir tracked tc lh-copy pa7 b">
-            What if a skincare boutique sold boozes and fun? Bubble-themed skincare bar soon-to-be launched in Monterry, Mexico. </h2>
-            <div style="color:#222;font-weight:300;"
-            class="links ttu tracked f5 b avenir pt5 tc nb4">Brand Manual / Guidelines </div>
 
-            <div style = "background-image: url('../images/MANUAL_01.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_02.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_03.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_04.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_05.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_06.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_07.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_08.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_09.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_10.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_11.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-image: url('../images/MANUAL_12.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-color:  #222 ;background-image: url('../images/IMG_0824.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-color:   #222; background-image: url('../images/this girl.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
-            <div style = "background-color:   #222; background-image: url('../images/dwnt_door.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center;"class = "con"></div>
+    </main>
+  
 
+    <main class="main" style="margin-left:-15em;background: var(--background-alt); z-index:-2;margin-top: -2em;">
+        <article class="entry entry-lede">
+            <div class="entry-content" style="margin-left:-15em;color:#222; ">
+                <h1 class="entry-headline big-headline" style="font-size:2.5em;"> Brand Manual
+                </h1>
+                <time class="entry-date meta"></time>
+                <span class="entry-byline meta"></span>
+                <p class="entry-summary"> What if a skincare boutique sold boozes and fun? Bubble-themed skincare bar soon-to-be launched in Monterrey Mexico.
+           </p> </div>
+        </article>
+        <article class="entry">
+            <img class="entry-img"
+                style="width:260px; height:260px;margin-left:-2em; border:solid 1px rgb(55, 54, 54);"
+                src="../images/MANUAL_01.png" />
+        </article>
+        <article class="entry">
+            <img class="entry-img" style="width:500px; margin-left: 2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                src="../images/MANUAL_02.png" />
+            <br><br>
+        </article>
+
+    </main>
+
+    <main class="main" style="margin-left:-15em;background: var(--background-alt); z-index:-2;margin-top: -6em;">
+        <article class="entry entry-lede">
+            <article class="entry entry-lede">
+
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px;margin-left:-2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_03.png" />
+                <br><br>
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px; margin-left: 2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_04.png" />
+                <br><br>
+            </article>
+        </article>
+
+    </main>
+    <main class="main" style="margin-left:-15em;background: var(--background-alt); z-index:-2;margin-top: -10em;">
+        <article class="entry entry-lede">
+            <article class="entry entry-lede">
+
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px;margin-left:-2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_05.png" />
+                <br><br>
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px; margin-left: 2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_06.png" />
+                <br><br>
+            </article>
+        </article>
+
+    </main>
+    <main class="main" style="margin-left:-15em;background: var(--background-alt); z-index:-2;margin-top: -10em;">
+        <article class="entry entry-lede">
+            <article class="entry entry-lede">
+
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px;margin-left:-2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_07.png" />
+                <br><br>
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px; margin-left: 2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_08.png" />
+                <br><br>
+            </article>
+        </article>
+
+    </main>
+    <main class="main" style="margin-left:-15em;background: var(--background-alt); z-index:-2;margin-top: -10em;">
+        <article class="entry entry-lede">
+            <article class="entry entry-lede">
+
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px;margin-left:-2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_09.png" />
+                <br><br>
+            </article>
+            <article class="entry">
+                <img class="entry-img" style="width:500px; margin-left: 2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                    src="../images/MANUAL_10.png" />
+                <br><br>
+            </article>
+        </article>
+
+    </main>
+    <main class="main" style="margin-left:-15em;background: var(--background-alt); z-index:-2;margin-top: -10em;">
+        <article class="entry entry-lede">
            
+        </article>
+        <article class="entry">
+            <img class="entry-img" style="width:500px; margin-left: -2em; height:260px;border:solid 1px rgb(55, 54, 54);"
+                src="../images/MANUAL_11.png" />
+            <br><br>
+        </article>
+        <article class="entry">
+            <img class="entry-img"
+                style="width:260px; height:260px;margin-left: 2em; border:solid 1px rgb(55, 54, 54);"
+                src="../images/MANUAL_12.png" />
+        </article>
+      
 
+    </main>
 
-
-
-
+    <main class="main" style="margin-left:-15em; z-index:-2;margin-top: -2em;">
+        <article class="entry entry-lede">
+            <div class="entry-content" style="margin-left:-15em; ">
+                <h1 class="entry-headline big-headline" style="font-size:2.5em;"> Printed Version
+                </h1>
+                <time class="entry-date meta"></time>
+                <span class="entry-byline meta"></span>
+                <p class="entry-summary"> </p>
               
-            <div style="color:rgb(0, 0, 0);font-weight:500; margin-top: 0%;"
-            class="links ttu tracked f5 fw1 avenir pt5 tc nb4">Launching the brand</div>
-                    <div style="line-height: 1.5;margin-bottom: 40%; margin-top: -10%;color:#222; font-weight:300;margin-right: 30%;"
-                        class="links tracked f6 avenir pa7 tl nb4">As the retailer name "don't want no trouble", my partner and I had a meeting with over eight skincare brands in Korea, all of which are renowned both in Korea and the US, with our business proposal.
-                        Prior to starting the brand, aiming to distribute Korean skincare to entire Mexico, I was a designer and the salesperson in Monterrey.
-                        We have managed to obtain the sales rights from all seven brands both in Mexico and some in the US, however, the launch was temporarily delayed due to import restrictions and the pandemic.
-                        Now, I have created the brand identity manual and guidelines as a fun project (it was never to sell alcohol), as we have decided to focus on our own skincare brand rather than to distribute. Our own skincare brand <b style = "font-weight: 700; cursor: pointer;" onclick="location.href='/startup/makeupfood.html'"> can be found here:</b>
-
-
-                        <img style = "margin-left: 140%; width: 60%;margin-top: -200%;" src = "../images/jungsaemmool.jpg">
-
-            
-        </div>
-
-
             </div>
+        </article>
+        <article class="entry">
+            <img class="entry-img" style="width:500px; margin-left: -3em; height:350px; transform:scale(1.1)"
+                src="../images/this girl.png" />
+            <br><br>
+        </article>
+        <article class="entry">
+            <img class="entry-img" style="width:500px; margin-left: 0em; height:350px"
+                src="../images/IMG_0824.png" />
+            <br><br>
+        </article>
 
-<div style = "margin-top: 50%;">
+    </main>
+
+
+    <main class="main" style = "margin-top:6em;">
+
+        <article class="entry entry-lede" style="margin-bottom:5em;background: var(--background)">
+          
+      
+
+        </article>
    
-            <div style="border: 1px solid #000;
-            color: #222;
-            background-color: #ccc;
-            border-radius: 8px;
-            padding: 20px 20px;
-            display: inline-block;
-            width: 20vw;
-            margin: 10%;
-            left: 50vw;
-            bottom: 40%;
 
-            align-items: center;
-            position: relative;
-            justify-content: center;
-            cursor: pointer;
-            line-height: 1.2;" class="f5 avenir tc ttu b" id="another_button"
-                onclick="location.href='../startup/calendar.html'"> Next Project → <br>
-                <p class="f8 tts avenir"> Calendar Design </p>
-            </div>
-
-            <div style="border: 1px solid #222;
-           bottom: 40%;
-    
-
-            color: #222;
-            border-radius: 8px;
-            padding: 20px 20px;
-            display: inline-block;
-            width: 20vw;
-            margin: 10%;
-            right: 30vw;
-            align-items: center;
-            position: relative;
-            justify-content: center;
-            cursor: pointer;
-            line-height: 1.2;" class="f5 avenir ttu tc b" id="another_button"
-                onclick="location.href='../startup/makeupfood.html'">← Previous Project <br>
-                <p class="f8 tts avenir"> Makeupfood </p>
-            </div>
+        <article class="damn">
+        </article>
+        <a style="font-size: 0.9em;" href="../startup/startup.html" class="nev">⇽Previous Project<br> Sales Work
+        </a>
+        <div class="nevy"></div>
 
 
-    <div class="f7 avenir tc" style = "align-items:center; margin:100px;color:black;border-top: 1px solid black;" > <br><br><br> © 2021 Eunsol Choi. All Rights Reserved.  Built with HTML/JS/JQUERY/🌞 </div>
-</div>
+        <article class="next">
+        </article>
 
-                <script src="/blob.js"></script>
-                <script src="/scrollTrigger.js"></script>
-                <script>
-                    ScrollReveal().reveal(document.querySelectorAll('div', 'h2', 'table'), { delay: 500 });
-                </script>
-
+        <a style="font-size: 0.9em;" href="../startup/calendar.html" class="prev">Next Project⇾ <br> Saucendar </a>
+        <div class="prevy"></div>
+    </main>
 
 </body>
 
-
+<script>
+    ScrollReveal().reveal(document.querySelectorAll('header'), { delay: 500 });
+    ScrollReveal().reveal(document.querySelectorAll('section'), { delay: 300 });
+    ScrollReveal().reveal(document.querySelectorAll('div'), { delay: 300 });
+</script>
 
 </html>
