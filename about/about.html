@@ -92,11 +92,24 @@
 </body>
 
 <script>
-    ScrollReveal().reveal(document.querySelector('header'), { delay: 500 });
-    ScrollReveal().reveal(document.querySelector('article'), { delay: 500 });
-    ScrollReveal().reveal(document.querySelector('section'), { delay: 500 });
-    ScrollReveal().reveal(document.querySelector('div'), { delay: 500 });
-    ScrollReveal().reveal(document.querySelector('main'), { delay: 500 });
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
+
+/*SCROLL HOME*/
+
+sr.reveal('.nev',{delay:200}); 
+sr.reveal('.prev',{delay: 200}); 
+sr.reveal('.masthead',{delay: 400}); 
+sr.reveal('.entry',{delay: 100}); 
+sr.reveal('.entry',{damn: 100}); 
+
+  
+
+
 </script>
 
 </html>

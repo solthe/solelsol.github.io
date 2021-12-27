@@ -225,9 +225,23 @@
 </body>
 
 <script>
-    ScrollReveal().reveal(document.querySelectorAll('header'), { delay: 500 });
-    ScrollReveal().reveal(document.querySelectorAll('section'), { delay: 300 });
-    ScrollReveal().reveal(document.querySelectorAll('div'), { delay: 300 });
+ const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
+
+/*SCROLL HOME*/
+
+sr.reveal('.nev',{delay:200}); 
+sr.reveal('.prev',{delay: 200}); 
+sr.reveal('.masthead',{delay: 400}); 
+sr.reveal('.big-headline',{delay: 100}); 
+
+  
+
+
 </script>
 
 </html>
